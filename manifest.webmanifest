@@ -1,0 +1,18 @@
+{
+  "name": "ASN Kidney Week English Phrase Trainer",
+  "short_name": "Kidney English",
+  "description": "ASN Kidney Weekで使える英語表現100文を音声再生とチェック保存で学習するWebアプリです。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f5",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

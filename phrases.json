@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "category": "Arrival and Logistics",
+    "english": "Could you tell me where the registration desk is?",
+    "japanese": "受付の場所を教えていただけますか。",
+    "note": "Could you tell me where ... is? は場所確認に広く使えます。"
+  },
+  {
+    "id": 2,
+    "category": "Arrival and Logistics",
+    "english": "I am here for the ASN Kidney Week meeting.",
+    "japanese": "ASN Kidney Weekの会議に参加するために来ました。",
+    "note": "I am here for ... は目的を簡潔に伝える基本表現です。"
+  },
+  {
+    "id": 3,
+    "category": "Arrival and Logistics",
+    "english": "Could I pick up my badge here?",
+    "japanese": "こちらで名札を受け取れますか。",
+    "note": "Could I ... here? は丁寧な手続き確認に応用できます。"
+  },
+  {
+    "id": 4,
+    "category": "Arrival and Logistics",
+    "english": "Which room is the nephrology session in?",
+    "japanese": "腎臓内科のセッションはどの部屋ですか。",
+    "note": "Which room is ... in? は会場内での確認に便利です。"
+  },
+  {
+    "id": 5,
+    "category": "Arrival and Logistics",
+    "english": "Is this the line for conference check-in?",
+    "japanese": "これは学会受付の列ですか。",
+    "note": "Is this the line for ...? は列や窓口の確認に使えます。"
+  },
+  {
+    "id": 6,
+    "category": "Arrival and Logistics",
+    "english": "Could you show me how to get to the poster hall?",
+    "japanese": "ポスター会場への行き方を教えていただけますか。",
+    "note": "show me how to get to ... は道案内を頼む自然な形です。"
+  },
+  {
+    "id": 7,
+    "category": "Arrival and Logistics",
+    "english": "I may be a few minutes late for the next session.",
+    "japanese": "次のセッションに数分遅れるかもしれません。",
+    "note": "I may be ... は控えめに見込みを伝えられます。"
+  },
+  {
+    "id": 8,
+    "category": "Arrival and Logistics",
+    "english": "Do I need a ticket for this workshop?",
+    "japanese": "このワークショップにはチケットが必要ですか。",
+    "note": "Do I need ...? は必要条件の確認に使えます。"
+  },
+  {
+    "id": 9,
+    "category": "Arrival and Logistics",
+    "english": "Where can I find the shuttle bus schedule?",
+    "japanese": "シャトルバスの時刻表はどこで確認できますか。",
+    "note": "Where can I find ...? は資料や情報源を探す時に便利です。"
+  },
+  {
+    "id": 10,
+    "category": "Arrival and Logistics",
+    "english": "Could you recommend a quiet place to review my slides?",
+    "japanese": "スライドを確認できる静かな場所をすすめていただけますか。",
+    "note": "Could you recommend ...? は助言を求める丁寧な定型です。"
+  },
+  {
+    "id": 11,
+    "category": "Sessions and Learning",
+    "english": "I am looking forward to the late-breaking clinical trials session.",
+    "japanese": "最新臨床試験のセッションを楽しみにしています。",
+    "note": "I am looking forward to ... は期待を自然に伝えます。"
+  },
+  {
+    "id": 12,
+    "category": "Sessions and Learning",
+    "english": "This topic is closely related to my clinical practice.",
+    "japanese": "このテーマは私の臨床に深く関係しています。",
+    "note": "closely related to ... は関連性を端的に述べられます。"
+  },
+  {
+    "id": 13,
+    "category": "Sessions and Learning",
+    "english": "I would like to learn more about kidney outcomes in this study.",
+    "japanese": "この研究での腎アウトカムについてもっと学びたいです。",
+    "note": "I would like to learn more about ... は学習目的を丁寧に示します。"
+  },
+  {
+    "id": 14,
+    "category": "Sessions and Learning",
+    "english": "Could you clarify the main takeaway from your talk?",
+    "japanese": "ご講演の主要な結論を明確にしていただけますか。",
+    "note": "Could you clarify ...? は質疑で非常に使いやすい表現です。"
+  },
+  {
+    "id": 15,
+    "category": "Sessions and Learning",
+    "english": "How would you apply these findings to older patients?",
+    "japanese": "これらの知見を高齢患者にどのように応用しますか。",
+    "note": "How would you apply ... to ...? は応用可能性を聞く型です。"
+  },
+  {
+    "id": 16,
+    "category": "Sessions and Learning",
+    "english": "I found your explanation of residual kidney function very helpful.",
+    "japanese": "残存腎機能の説明がとても参考になりました。",
+    "note": "I found ... very helpful は具体的な感謝に使えます。"
+  },
+  {
+    "id": 17,
+    "category": "Sessions and Learning",
+    "english": "Could you repeat the last point more slowly?",
+    "japanese": "最後の点をもう少しゆっくり繰り返していただけますか。",
+    "note": "repeat ... more slowly は聞き取りが難しい時の基本です。"
+  },
+  {
+    "id": 18,
+    "category": "Sessions and Learning",
+    "english": "I missed the question because the microphone was unclear.",
+    "japanese": "マイクが聞き取りにくく、質問を聞き逃しました。",
+    "note": "I missed ... because ... は理由を添えた聞き返しに使えます。"
+  },
+  {
+    "id": 19,
+    "category": "Sessions and Learning",
+    "english": "What evidence supports this change in practice?",
+    "japanese": "この診療変更を支持する根拠は何ですか。",
+    "note": "What evidence supports ...? は根拠を確認する強い表現です。"
+  },
+  {
+    "id": 20,
+    "category": "Sessions and Learning",
+    "english": "This session gave me a clearer framework for risk stratification.",
+    "japanese": "このセッションでリスク層別化の枠組みがより明確になりました。",
+    "note": "gave me a clearer framework for ... は学びを上品に表現できます。"
+  },
+  {
+    "id": 21,
+    "category": "Sessions and Learning",
+    "english": "Could you share the reference for that guideline statement?",
+    "japanese": "そのガイドライン記載の出典を共有していただけますか。",
+    "note": "Could you share the reference for ...? は出典確認に便利です。"
+  },
+  {
+    "id": 22,
+    "category": "Sessions and Learning",
+    "english": "I am particularly interested in the subgroup analysis.",
+    "japanese": "特にサブグループ解析に関心があります。",
+    "note": "particularly interested in ... は関心の焦点を示せます。"
+  },
+  {
+    "id": 23,
+    "category": "Sessions and Learning",
+    "english": "Does this recommendation differ for patients on dialysis?",
+    "japanese": "この推奨は透析患者では異なりますか。",
+    "note": "Does this differ for ...? は集団差を確認する型です。"
+  },
+  {
+    "id": 24,
+    "category": "Sessions and Learning",
+    "english": "I would appreciate any practical tips from your experience.",
+    "japanese": "ご経験に基づく実践的な助言をいただけるとありがたいです。",
+    "note": "I would appreciate ... は丁寧に依頼する時に有用です。"
+  },
+  {
+    "id": 25,
+    "category": "Sessions and Learning",
+    "english": "May I ask how your center handles this situation?",
+    "japanese": "貴施設ではこの状況にどう対応しているか伺ってもよいですか。",
+    "note": "May I ask how ...? は相手の実践を尋ねる丁寧な型です。"
+  },
+  {
+    "id": 26,
+    "category": "Poster Discussion",
+    "english": "Your poster caught my attention because it addresses a common problem.",
+    "japanese": "よくある問題を扱っているため、先生のポスターに興味を持ちました。",
+    "note": "caught my attention because ... は会話の入り口に使えます。"
+  },
+  {
+    "id": 27,
+    "category": "Poster Discussion",
+    "english": "Could you walk me through the key findings?",
+    "japanese": "主要な結果を順に説明していただけますか。",
+    "note": "walk me through ... は説明を依頼する自然な口語です。"
+  },
+  {
+    "id": 28,
+    "category": "Poster Discussion",
+    "english": "What was the primary endpoint of your study?",
+    "japanese": "研究の主要評価項目は何でしたか。",
+    "note": "primary endpoint は臨床研究で必須の語彙です。"
+  },
+  {
+    "id": 29,
+    "category": "Poster Discussion",
+    "english": "How did you define kidney recovery in this cohort?",
+    "japanese": "このコホートでは腎機能回復をどのように定義しましたか。",
+    "note": "How did you define ...? は研究定義を確認する型です。"
+  },
+  {
+    "id": 30,
+    "category": "Poster Discussion",
+    "english": "Were patients with advanced CKD included in the analysis?",
+    "japanese": "進行したCKDの患者は解析に含まれていましたか。",
+    "note": "Were patients with ... included? は対象集団の確認に使えます。"
+  },
+  {
+    "id": 31,
+    "category": "Poster Discussion",
+    "english": "I am curious about the baseline albuminuria levels.",
+    "japanese": "ベースラインのアルブミン尿の程度に関心があります。",
+    "note": "I am curious about ... は柔らかく詳細を尋ねる表現です。"
+  },
+  {
+    "id": 32,
+    "category": "Poster Discussion",
+    "english": "Did you adjust for diabetes and blood pressure control?",
+    "japanese": "糖尿病と血圧管理で調整しましたか。",
+    "note": "adjust for ... は交絡調整を述べる重要表現です。"
+  },
+  {
+    "id": 33,
+    "category": "Poster Discussion",
+    "english": "The sample size seems impressive for a single-center study.",
+    "japanese": "単施設研究としてはサンプルサイズが印象的です。",
+    "note": "seems impressive for ... は評価を添える自然な言い方です。"
+  },
+  {
+    "id": 34,
+    "category": "Poster Discussion",
+    "english": "What were the main limitations of this analysis?",
+    "japanese": "この解析の主な限界は何でしたか。",
+    "note": "main limitations は研究討論で頻出です。"
+  },
+  {
+    "id": 35,
+    "category": "Poster Discussion",
+    "english": "Do you plan to validate these findings externally?",
+    "japanese": "これらの知見を外部検証する予定はありますか。",
+    "note": "validate these findings externally は汎用性の高い研究表現です。"
+  },
+  {
+    "id": 36,
+    "category": "Poster Discussion",
+    "english": "This result may have important implications for outpatient care.",
+    "japanese": "この結果は外来診療に重要な示唆を持つかもしれません。",
+    "note": "have important implications for ... は結果の意義を述べる定型です。"
+  },
+  {
+    "id": 37,
+    "category": "Poster Discussion",
+    "english": "Could I take a photo of your poster for later review?",
+    "japanese": "後で見直すためにポスターの写真を撮ってもよいですか。",
+    "note": "Could I take a photo of ...? は許可を丁寧に求める表現です。"
+  },
+  {
+    "id": 38,
+    "category": "Poster Discussion",
+    "english": "Would you mind sharing your contact information?",
+    "japanese": "連絡先を共有していただいてもよろしいですか。",
+    "note": "Would you mind ...? は相手への配慮がある依頼です。"
+  },
+  {
+    "id": 39,
+    "category": "Poster Discussion",
+    "english": "I would like to cite your work if it is published.",
+    "japanese": "出版されたら先生の研究を引用したいと思います。",
+    "note": "I would like to ... if ... は条件付きの意向に使えます。"
+  },
+  {
+    "id": 40,
+    "category": "Poster Discussion",
+    "english": "Thank you for explaining the poster so clearly.",
+    "japanese": "ポスターをとても分かりやすく説明していただきありがとうございました。",
+    "note": "Thank you for explaining ... は発表後の自然な締め方です。"
+  },
+  {
+    "id": 41,
+    "category": "Research Methods",
+    "english": "Could you explain why you chose this statistical model?",
+    "japanese": "この統計モデルを選んだ理由を説明していただけますか。",
+    "note": "why you chose ... は方法選択の理由を尋ねる型です。"
+  },
+  {
+    "id": 42,
+    "category": "Research Methods",
+    "english": "How did you handle missing laboratory data?",
+    "japanese": "欠測した検査データをどのように扱いましたか。",
+    "note": "handle missing data は研究発表でよく使う表現です。"
+  },
+  {
+    "id": 43,
+    "category": "Research Methods",
+    "english": "Was eGFR calculated with the same equation across sites?",
+    "japanese": "eGFRは施設間で同じ式により計算されましたか。",
+    "note": "across sites は多施設研究で使える語句です。"
+  },
+  {
+    "id": 44,
+    "category": "Research Methods",
+    "english": "Did you perform a sensitivity analysis for the main outcome?",
+    "japanese": "主要アウトカムについて感度解析を行いましたか。",
+    "note": "sensitivity analysis は結果の頑健性を尋ねる語彙です。"
+  },
+  {
+    "id": 45,
+    "category": "Research Methods",
+    "english": "How long was the median follow-up period?",
+    "japanese": "追跡期間の中央値はどのくらいでしたか。",
+    "note": "median follow-up period は臨床研究でよく使います。"
+  },
+  {
+    "id": 46,
+    "category": "Research Methods",
+    "english": "Were the outcomes adjudicated by an independent committee?",
+    "japanese": "アウトカムは独立委員会により判定されましたか。",
+    "note": "adjudicated by ... はイベント判定を述べる専門表現です。"
+  },
+  {
+    "id": 47,
+    "category": "Research Methods",
+    "english": "The confidence interval is wide, so the estimate should be interpreted carefully.",
+    "japanese": "信頼区間が広いため、推定値は慎重に解釈すべきです。",
+    "note": "should be interpreted carefully は結果解釈で汎用性があります。"
+  },
+  {
+    "id": 48,
+    "category": "Research Methods",
+    "english": "Did you account for competing risks in the survival analysis?",
+    "japanese": "生存解析で競合リスクを考慮しましたか。",
+    "note": "account for ... は考慮や調整を表す便利な動詞です。"
+  },
+  {
+    "id": 49,
+    "category": "Research Methods",
+    "english": "How was treatment adherence measured in your trial?",
+    "japanese": "試験では治療アドヒアランスをどのように測定しましたか。",
+    "note": "How was ... measured? は測定方法を尋ねる受動態です。"
+  },
+  {
+    "id": 50,
+    "category": "Research Methods",
+    "english": "Could selection bias have influenced the results?",
+    "japanese": "選択バイアスが結果に影響した可能性はありますか。",
+    "note": "Could ... have influenced ...? は可能性を丁寧に問えます。"
+  },
+  {
+    "id": 51,
+    "category": "Research Methods",
+    "english": "The effect size appears clinically meaningful.",
+    "japanese": "効果量は臨床的に意味があるように見えます。",
+    "note": "clinically meaningful は統計的有意性以外の価値を示します。"
+  },
+  {
+    "id": 52,
+    "category": "Research Methods",
+    "english": "Did the protocol specify this analysis in advance?",
+    "japanese": "プロトコルでこの解析は事前に規定されていましたか。",
+    "note": "in advance は事前性を確認する時に便利です。"
+  },
+  {
+    "id": 53,
+    "category": "Research Methods",
+    "english": "How generalizable are the results to community hospitals?",
+    "japanese": "結果は市中病院にどの程度一般化できますか。",
+    "note": "How generalizable are ... to ...? は外的妥当性を尋ねる型です。"
+  },
+  {
+    "id": 54,
+    "category": "Research Methods",
+    "english": "I wonder whether residual confounding remains a concern.",
+    "japanese": "残余交絡が依然として懸念点かどうか気になります。",
+    "note": "I wonder whether ... は控えめに論点を出せます。"
+  },
+  {
+    "id": 55,
+    "category": "Research Methods",
+    "english": "Your methods section helped me understand the design quickly.",
+    "japanese": "方法の説明のおかげでデザインをすぐ理解できました。",
+    "note": "helped me understand ... quickly は感謝と評価を同時に伝えます。"
+  },
+  {
+    "id": 56,
+    "category": "Clinical Nephrology",
+    "english": "How do you approach hyperkalemia in patients with CKD?",
+    "japanese": "CKD患者の高カリウム血症にどのように対応していますか。",
+    "note": "How do you approach ...? は診療方針を尋ねる万能表現です。"
+  },
+  {
+    "id": 57,
+    "category": "Clinical Nephrology",
+    "english": "I usually start by reviewing medications and dietary potassium intake.",
+    "japanese": "私は通常、薬剤と食事中カリウム摂取の確認から始めます。",
+    "note": "I usually start by ... は自分の実践を述べる型です。"
+  },
+  {
+    "id": 58,
+    "category": "Clinical Nephrology",
+    "english": "Would you continue the SGLT2 inhibitor during acute illness?",
+    "japanese": "急性疾患中もSGLT2阻害薬を継続しますか。",
+    "note": "Would you continue ...? は臨床判断を尋ねる丁寧な仮定表現です。"
+  },
+  {
+    "id": 59,
+    "category": "Clinical Nephrology",
+    "english": "The patient had rapidly progressive kidney dysfunction.",
+    "japanese": "その患者には急速に進行する腎機能障害がありました。",
+    "note": "rapidly progressive ... は臨床経過の説明に有用です。"
+  },
+  {
+    "id": 60,
+    "category": "Clinical Nephrology",
+    "english": "We considered kidney biopsy after excluding reversible causes.",
+    "japanese": "可逆的原因を除外した後に腎生検を検討しました。",
+    "note": "after excluding ... は診療の順序を簡潔に示します。"
+  },
+  {
+    "id": 61,
+    "category": "Clinical Nephrology",
+    "english": "What threshold do you use for starting dialysis?",
+    "japanese": "透析開始にはどの閾値を用いていますか。",
+    "note": "What threshold do you use for ...? は判断基準を尋ねられます。"
+  },
+  {
+    "id": 62,
+    "category": "Clinical Nephrology",
+    "english": "I try to align dialysis planning with the patient's goals.",
+    "japanese": "透析計画を患者の目標に合わせるよう努めています。",
+    "note": "align ... with ... は医療方針や組織方針にも応用できます。"
+  },
+  {
+    "id": 63,
+    "category": "Clinical Nephrology",
+    "english": "Do you use shared decision-making for modality selection?",
+    "japanese": "治療法選択に共同意思決定を用いていますか。",
+    "note": "shared decision-making は患者中心医療で重要な語彙です。"
+  },
+  {
+    "id": 64,
+    "category": "Clinical Nephrology",
+    "english": "This case highlights the importance of early referral.",
+    "japanese": "この症例は早期紹介の重要性を示しています。",
+    "note": "This case highlights ... は症例の学びを述べる定型です。"
+  },
+  {
+    "id": 65,
+    "category": "Clinical Nephrology",
+    "english": "How often do you monitor albuminuria after treatment changes?",
+    "japanese": "治療変更後、アルブミン尿をどのくらいの頻度で確認しますか。",
+    "note": "How often do you monitor ...? はフォロー間隔を尋ねる型です。"
+  },
+  {
+    "id": 66,
+    "category": "Clinical Nephrology",
+    "english": "The main challenge is balancing kidney protection and adverse effects.",
+    "japanese": "主な課題は腎保護と有害事象のバランスを取ることです。",
+    "note": "balancing ... and ... は利点とリスクを表現できます。"
+  },
+  {
+    "id": 67,
+    "category": "Clinical Nephrology",
+    "english": "Do you have a protocol for contrast exposure in high-risk patients?",
+    "japanese": "高リスク患者の造影剤曝露に関するプロトコルはありますか。",
+    "note": "Do you have a protocol for ...? は施設方針の確認に便利です。"
+  },
+  {
+    "id": 68,
+    "category": "Clinical Nephrology",
+    "english": "I would discuss transplant eligibility early in the course of CKD.",
+    "japanese": "CKDの早い段階で移植適格性について話し合います。",
+    "note": "early in the course of ... は疾患経過の早期を示します。"
+  },
+  {
+    "id": 69,
+    "category": "Clinical Nephrology",
+    "english": "How do you counsel patients about home dialysis options?",
+    "japanese": "在宅透析の選択肢について患者にどのように説明していますか。",
+    "note": "counsel patients about ... は患者説明を表す自然な動詞です。"
+  },
+  {
+    "id": 70,
+    "category": "Clinical Nephrology",
+    "english": "This approach seems feasible in a busy outpatient clinic.",
+    "japanese": "このアプローチは忙しい外来でも実行可能に見えます。",
+    "note": "seems feasible in ... は現場での実行可能性を述べられます。"
+  },
+  {
+    "id": 71,
+    "category": "Networking",
+    "english": "May I introduce myself briefly?",
+    "japanese": "簡単に自己紹介してもよろしいですか。",
+    "note": "May I ... briefly? は会話開始に使いやすい丁寧表現です。"
+  },
+  {
+    "id": 72,
+    "category": "Networking",
+    "english": "I am a nephrologist from Japan with an interest in CKD care.",
+    "japanese": "私は日本から来た腎臓内科医で、CKD診療に関心があります。",
+    "note": "with an interest in ... は専門関心を自然に追加できます。"
+  },
+  {
+    "id": 73,
+    "category": "Networking",
+    "english": "What kind of research are you currently working on?",
+    "japanese": "現在どのような研究に取り組んでいますか。",
+    "note": "currently working on は研究や業務の話題に広く使えます。"
+  },
+  {
+    "id": 74,
+    "category": "Networking",
+    "english": "I enjoyed your question during the session.",
+    "japanese": "セッション中のご質問が印象的でした。",
+    "note": "I enjoyed your ... は相手の発言をきっかけにできます。"
+  },
+  {
+    "id": 75,
+    "category": "Networking",
+    "english": "It would be great to exchange ideas after the meeting.",
+    "japanese": "会議後に意見交換できればうれしいです。",
+    "note": "It would be great to ... は控えめな提案に適しています。"
+  },
+  {
+    "id": 76,
+    "category": "Networking",
+    "english": "Could we connect on email or a professional network?",
+    "japanese": "メールか専門職向けネットワークでつながれますか。",
+    "note": "Could we connect on ...? は連絡先交換に使えます。"
+  },
+  {
+    "id": 77,
+    "category": "Networking",
+    "english": "I would be happy to share our experience from Japan.",
+    "japanese": "日本での経験を共有できればうれしいです。",
+    "note": "I would be happy to ... は前向きな協力姿勢を示せます。"
+  },
+  {
+    "id": 78,
+    "category": "Networking",
+    "english": "Your work overlaps with a project at our hospital.",
+    "japanese": "先生の研究は当院のプロジェクトと重なる部分があります。",
+    "note": "overlaps with ... は共通点を示す便利な動詞です。"
+  },
+  {
+    "id": 79,
+    "category": "Networking",
+    "english": "Would you be open to a short follow-up meeting online?",
+    "japanese": "後日オンラインで短く打ち合わせることは可能でしょうか。",
+    "note": "Would you be open to ...? は柔らかく提案できます。"
+  },
+  {
+    "id": 80,
+    "category": "Networking",
+    "english": "I appreciate your perspective on international collaboration.",
+    "japanese": "国際共同研究に関するご見解に感謝します。",
+    "note": "I appreciate your perspective on ... は相手の見解への敬意を示します。"
+  },
+  {
+    "id": 81,
+    "category": "Networking",
+    "english": "This is my first time attending Kidney Week in person.",
+    "japanese": "Kidney Weekに現地参加するのは今回が初めてです。",
+    "note": "This is my first time ... は経験を共有する定型です。"
+  },
+  {
+    "id": 82,
+    "category": "Networking",
+    "english": "Which sessions would you recommend for clinicians?",
+    "japanese": "臨床医にはどのセッションがおすすめですか。",
+    "note": "Which ... would you recommend? は推薦を尋ねる型です。"
+  },
+  {
+    "id": 83,
+    "category": "Networking",
+    "english": "I hope we can stay in touch after the conference.",
+    "japanese": "学会後も連絡を取り合えればと思います。",
+    "note": "stay in touch は関係継続を表す自然な表現です。"
+  },
+  {
+    "id": 84,
+    "category": "Networking",
+    "english": "Please let me know if you visit Japan for a meeting.",
+    "japanese": "学会で日本に来られる際はぜひ教えてください。",
+    "note": "Please let me know if ... は今後の連絡を促せます。"
+  },
+  {
+    "id": 85,
+    "category": "Networking",
+    "english": "It was a pleasure speaking with you today.",
+    "japanese": "本日はお話しできてうれしかったです。",
+    "note": "It was a pleasure ... は丁寧な会話の締めに使えます。"
+  },
+  {
+    "id": 86,
+    "category": "Polite Repair",
+    "english": "I am sorry, but could you say that again?",
+    "japanese": "すみません、もう一度言っていただけますか。",
+    "note": "I am sorry, but ... は聞き返しを丁寧にします。"
+  },
+  {
+    "id": 87,
+    "category": "Polite Repair",
+    "english": "Could you speak a little more slowly?",
+    "japanese": "もう少しゆっくり話していただけますか。",
+    "note": "a little more slowly は自然で角が立ちにくい依頼です。"
+  },
+  {
+    "id": 88,
+    "category": "Polite Repair",
+    "english": "Let me make sure I understood your point correctly.",
+    "japanese": "先生の要点を正しく理解したか確認させてください。",
+    "note": "Let me make sure ... は誤解を防ぐ上級表現です。"
+  },
+  {
+    "id": 89,
+    "category": "Polite Repair",
+    "english": "Do you mean that the effect was stronger in younger patients?",
+    "japanese": "効果は若年患者でより強かったという意味でしょうか。",
+    "note": "Do you mean that ...? は解釈確認に使えます。"
+  },
+  {
+    "id": 90,
+    "category": "Polite Repair",
+    "english": "I may not have expressed my question clearly.",
+    "japanese": "私の質問が明確でなかったかもしれません。",
+    "note": "I may not have ... は自分側に引き取って言い換えられます。"
+  },
+  {
+    "id": 91,
+    "category": "Polite Repair",
+    "english": "What I meant to ask was how you selected the control group.",
+    "japanese": "伺いたかったのは対照群をどのように選んだかです。",
+    "note": "What I meant to ask was ... は質問の言い直しに有用です。"
+  },
+  {
+    "id": 92,
+    "category": "Polite Repair",
+    "english": "Could you give me one concrete example?",
+    "japanese": "具体例を一つ挙げていただけますか。",
+    "note": "one concrete example は抽象的な説明を補う依頼に便利です。"
+  },
+  {
+    "id": 93,
+    "category": "Polite Repair",
+    "english": "I am not familiar with that term yet.",
+    "japanese": "その用語にはまだ詳しくありません。",
+    "note": "I am not familiar with ... yet は知識不足を自然に伝えます。"
+  },
+  {
+    "id": 94,
+    "category": "Polite Repair",
+    "english": "Could you spell the name of that assay?",
+    "japanese": "その測定法の名前をつづっていただけますか。",
+    "note": "Could you spell ...? は固有名詞を確認する実用表現です。"
+  },
+  {
+    "id": 95,
+    "category": "Polite Repair",
+    "english": "I want to be careful not to overstate the conclusion.",
+    "japanese": "結論を言い過ぎないよう慎重にしたいです。",
+    "note": "not to overstate ... は研究解釈で品よく使えます。"
+  },
+  {
+    "id": 96,
+    "category": "Polite Repair",
+    "english": "That is a very helpful distinction.",
+    "japanese": "その区別はとても参考になります。",
+    "note": "helpful distinction は相手の整理を評価する表現です。"
+  },
+  {
+    "id": 97,
+    "category": "Polite Repair",
+    "english": "I see your point, but I wonder about patients with severe frailty.",
+    "japanese": "ご指摘は理解しましたが、重度フレイルの患者について気になります。",
+    "note": "I see your point, but ... は丁寧に別視点を出せます。"
+  },
+  {
+    "id": 98,
+    "category": "Polite Repair",
+    "english": "Could we come back to that after the session?",
+    "japanese": "その点はセッション後にまた話せますか。",
+    "note": "come back to that は議論を後で再開する表現です。"
+  },
+  {
+    "id": 99,
+    "category": "Polite Repair",
+    "english": "Thank you for your patience with my English.",
+    "japanese": "私の英語に辛抱強く対応してくださりありがとうございます。",
+    "note": "Thank you for your patience with ... は丁寧な感謝です。"
+  },
+  {
+    "id": 100,
+    "category": "Polite Repair",
+    "english": "I learned a lot from this conversation.",
+    "japanese": "この会話から多くを学びました。",
+    "note": "I learned a lot from ... は締めの一言として使えます。"
+  }
+]

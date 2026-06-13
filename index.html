@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f766e" />
+    <meta
+      name="description"
+      content="ASN Kidney Weekで使える英会話表現100文を、音声再生とチェック保存で学習できるWebアプリです。"
+    />
+    <title>ASN Kidney Week English</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">ASN Kidney Week 2026</p>
+          <h1>English Phrase Trainer</h1>
+        </div>
+        <div class="progress-panel" aria-live="polite">
+          <span id="progressCount">0 / 100</span>
+          <span>mastered</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="controls" aria-label="学習コントロール">
+          <label class="search-box">
+            <span>Search</span>
+            <input id="searchInput" type="search" autocomplete="off" placeholder="poster, dialysis, clarify" />
+          </label>
+
+          <label class="select-box">
+            <span>Category</span>
+            <select id="categorySelect">
+              <option value="all">All categories</option>
+            </select>
+          </label>
+
+          <label class="select-box">
+            <span>Voice</span>
+            <select id="voiceSelect">
+              <option value="">System default</option>
+            </select>
+          </label>
+
+          <label class="range-box">
+            <span>Speed</span>
+            <input id="rateInput" type="range" min="0.65" max="1.05" step="0.05" value="0.85" />
+          </label>
+
+          <div class="button-row">
+            <button id="playVisibleButton" class="primary-button" type="button">Play visible</button>
+            <button id="reviewButton" type="button" aria-pressed="false">Unchecked only</button>
+            <button id="shuffleButton" type="button">Shuffle</button>
+            <button id="resetButton" type="button">Reset checks</button>
+          </div>
+        </section>
+
+        <section class="status-strip" aria-label="進捗">
+          <div>
+            <strong id="visibleCount">100</strong>
+            <span>visible</span>
+          </div>
+          <div>
+            <strong id="uncheckedCount">100</strong>
+            <span>unchecked</span>
+          </div>
+          <div>
+            <strong id="categoryCount">7</strong>
+            <span>categories</span>
+          </div>
+        </section>
+
+        <section id="phraseList" class="phrase-list" aria-label="英語表現リスト"></section>
+      </main>
+    </div>
+
+    <template id="phraseTemplate">
+      <article class="phrase-card">
+        <div class="phrase-head">
+          <span class="phrase-number"></span>
+          <span class="phrase-category"></span>
+        </div>
+        <p class="phrase-english"></p>
+        <p class="phrase-japanese"></p>
+        <p class="phrase-note"></p>
+        <div class="phrase-actions">
+          <button class="play-button" type="button" aria-label="音声を再生">Play</button>
+          <label class="check-label">
+            <input class="mastered-checkbox" type="checkbox" />
+            <span>Mastered</span>
+          </label>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
