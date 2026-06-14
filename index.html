@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#0f766e" />
     <meta
       name="description"
-      content="ASN Kidney Weekで使える英会話表現100文を、音声再生とチェック保存で学習できるWebアプリです。"
+      content="ASN Kidney Weekで使える英会話表現200文を、音声再生とチェック保存で学習できるWebアプリです。"
     />
     <title>ASN Kidney Week English</title>
     <link rel="manifest" href="manifest.webmanifest" />
@@ -34,6 +34,11 @@
           </label>
 
           <label class="select-box">
+            <span>Set</span>
+            <select id="setSelect"></select>
+          </label>
+
+          <label class="select-box">
             <span>Category</span>
             <select id="categorySelect">
               <option value="all">All categories</option>
@@ -53,7 +58,7 @@
           </label>
 
           <div class="button-row">
-            <button id="playVisibleButton" class="primary-button" type="button">Play visible</button>
+            <button id="playVisibleButton" class="primary-button" type="button">Play sequence</button>
             <button id="reviewButton" type="button" aria-pressed="false">Unchecked only</button>
             <button id="shuffleButton" type="button">Shuffle</button>
             <button id="resetButton" type="button">Reset checks</button>

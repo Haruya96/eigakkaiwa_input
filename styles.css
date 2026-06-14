@@ -124,7 +124,9 @@ h1 {
 
 .controls {
   display: grid;
-  grid-template-columns: minmax(200px, 1.35fr) minmax(150px, 0.75fr) minmax(150px, 0.85fr) minmax(132px, 0.55fr);
+  grid-template-columns:
+    minmax(200px, 1.25fr) minmax(150px, 0.75fr) minmax(150px, 0.75fr)
+    minmax(150px, 0.85fr) minmax(132px, 0.55fr);
   gap: 12px;
   align-items: end;
   padding: 14px;

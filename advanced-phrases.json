@@ -1,0 +1,702 @@
+[
+  {
+    "id": 101,
+    "category": "Advanced Glomerular Disease",
+    "english": "I would separate active inflammation from chronic scarring before choosing immunosuppression.",
+    "japanese": "免疫抑制を選ぶ前に、活動性炎症と慢性瘢痕化を分けて考えます。",
+    "note": "separate A from B は複雑な論点を整理する時に使えます。"
+  },
+  {
+    "id": 102,
+    "category": "Advanced Glomerular Disease",
+    "english": "How much weight do you give to crescents when the chronicity score is high?",
+    "japanese": "慢性化スコアが高い場合、半月体をどの程度重視しますか。",
+    "note": "give weight to ... は判断材料の重みづけを尋ねる表現です。"
+  },
+  {
+    "id": 103,
+    "category": "Advanced Glomerular Disease",
+    "english": "The biopsy suggests a mixed pattern rather than a single dominant lesion.",
+    "japanese": "生検は単一の優勢病変というより混合パターンを示唆しています。",
+    "note": "rather than ... は対比しながら解釈を示せます。"
+  },
+  {
+    "id": 104,
+    "category": "Advanced Glomerular Disease",
+    "english": "Could complement activation explain the discrepancy between proteinuria and eGFR decline?",
+    "japanese": "補体活性化で蛋白尿とeGFR低下の乖離を説明できますか。",
+    "note": "explain the discrepancy between ... and ... は矛盾の説明に便利です。"
+  },
+  {
+    "id": 105,
+    "category": "Advanced Glomerular Disease",
+    "english": "I am concerned that delayed treatment may reduce the chance of renal recovery.",
+    "japanese": "治療の遅れが腎回復の可能性を下げることを懸念しています。",
+    "note": "I am concerned that ... は専門的懸念を丁寧に示せます。"
+  },
+  {
+    "id": 106,
+    "category": "Advanced Glomerular Disease",
+    "english": "Would you taper steroids faster in a patient with recurrent infections?",
+    "japanese": "感染を繰り返す患者ではステロイドをより速く漸減しますか。",
+    "note": "Would you ... in a patient with ...? は症例ベースの質問に適します。"
+  },
+  {
+    "id": 107,
+    "category": "Advanced Glomerular Disease",
+    "english": "The serologic profile does not fully match the histologic findings.",
+    "japanese": "血清学的プロファイルは組織所見と完全には一致しません。",
+    "note": "does not fully match ... は不一致を柔らかく表現できます。"
+  },
+  {
+    "id": 108,
+    "category": "Advanced Glomerular Disease",
+    "english": "How do you decide between rituximab and cyclophosphamide in this setting?",
+    "japanese": "この状況でリツキシマブとシクロホスファミドをどう選び分けますか。",
+    "note": "decide between A and B は治療選択の議論に使えます。"
+  },
+  {
+    "id": 109,
+    "category": "Advanced Glomerular Disease",
+    "english": "I would monitor hematuria trends together with proteinuria rather than in isolation.",
+    "japanese": "血尿の推移は単独ではなく蛋白尿と合わせて見ます。",
+    "note": "rather than in isolation は統合的評価を示す表現です。"
+  },
+  {
+    "id": 110,
+    "category": "Advanced Glomerular Disease",
+    "english": "The key question is whether this lesion is reversible enough to justify risk.",
+    "japanese": "重要なのは、この病変がリスクに見合うほど可逆的かどうかです。",
+    "note": "The key question is whether ... は核心を明確にできます。"
+  },
+  {
+    "id": 111,
+    "category": "Advanced Glomerular Disease",
+    "english": "Could genetic testing change management for suspected podocytopathy?",
+    "japanese": "ポドサイト障害が疑われる場合、遺伝学的検査で管理が変わりますか。",
+    "note": "change management は検査の臨床的意義を問う時に使えます。"
+  },
+  {
+    "id": 112,
+    "category": "Advanced Glomerular Disease",
+    "english": "I find it difficult to distinguish primary FSGS from adaptive FSGS in practice.",
+    "japanese": "実臨床で一次性FSGSと適応性FSGSを区別するのは難しいと感じます。",
+    "note": "I find it difficult to ... は自分の課題を自然に共有できます。"
+  },
+  {
+    "id": 113,
+    "category": "Advanced Glomerular Disease",
+    "english": "What would make you repeat the kidney biopsy in this patient?",
+    "japanese": "この患者で腎生検を再検する決め手は何ですか。",
+    "note": "What would make you ...? は判断のトリガーを聞けます。"
+  },
+  {
+    "id": 114,
+    "category": "Advanced Glomerular Disease",
+    "english": "I would frame the discussion around prognosis, treatment toxicity, and patient preference.",
+    "japanese": "予後、治療毒性、患者の希望を軸に議論を組み立てます。",
+    "note": "frame the discussion around ... は議論の構造化に有用です。"
+  },
+  {
+    "id": 115,
+    "category": "Dialysis and Access",
+    "english": "The access plan should consider life expectancy, vascular anatomy, and patient priorities.",
+    "japanese": "アクセス計画では生命予後、血管解剖、患者の優先事項を考慮すべきです。",
+    "note": "should consider ... は複数要素の意思決定を示せます。"
+  },
+  {
+    "id": 116,
+    "category": "Dialysis and Access",
+    "english": "I worry that chasing a lower dry weight could worsen intradialytic hypotension.",
+    "japanese": "より低いドライウェイトを追うことで透析中低血圧が悪化することを懸念します。",
+    "note": "chasing ... could worsen ... は過剰介入の懸念に使えます。"
+  },
+  {
+    "id": 117,
+    "category": "Dialysis and Access",
+    "english": "How do you balance solute clearance with preservation of residual kidney function?",
+    "japanese": "溶質除去と残存腎機能の温存をどのように両立させますか。",
+    "note": "balance A with B は臨床上のトレードオフに適します。"
+  },
+  {
+    "id": 118,
+    "category": "Dialysis and Access",
+    "english": "The ultrafiltration rate may be a more actionable target than total fluid removal.",
+    "japanese": "総除水量より除水速度の方が介入しやすい目標かもしれません。",
+    "note": "more actionable than ... は実行可能性の比較に使えます。"
+  },
+  {
+    "id": 119,
+    "category": "Dialysis and Access",
+    "english": "Would you intensify dialysis before escalating antihypertensive therapy?",
+    "japanese": "降圧治療を強化する前に透析を強化しますか。",
+    "note": "before escalating ... は治療順序の議論に便利です。"
+  },
+  {
+    "id": 120,
+    "category": "Dialysis and Access",
+    "english": "Peritoneal dialysis may offer better flexibility, but the caregiver burden matters.",
+    "japanese": "腹膜透析は柔軟性に優れるかもしれませんが、介護者負担も重要です。",
+    "note": "X may offer ..., but ... matters は利点と制約を同時に示せます。"
+  },
+  {
+    "id": 121,
+    "category": "Dialysis and Access",
+    "english": "I would assess symptoms and volume status before changing the dialysis prescription.",
+    "japanese": "透析処方を変える前に症状と体液量状態を評価します。",
+    "note": "before changing ... は処方変更前の確認事項に使えます。"
+  },
+  {
+    "id": 122,
+    "category": "Dialysis and Access",
+    "english": "The recurrent access thrombosis makes me question the underlying inflammatory state.",
+    "japanese": "アクセス血栓を繰り返すため、背景の炎症状態が気になります。",
+    "note": "makes me question ... は所見から疑問が生じる時に使えます。"
+  },
+  {
+    "id": 123,
+    "category": "Dialysis and Access",
+    "english": "How often do you revisit goals of care for patients with dialysis intolerance?",
+    "japanese": "透析不耐の患者ではケアの目標をどの頻度で見直しますか。",
+    "note": "revisit goals of care は方針再確認の重要表現です。"
+  },
+  {
+    "id": 124,
+    "category": "Dialysis and Access",
+    "english": "We should not equate dialysis adequacy with the Kt over V number alone.",
+    "japanese": "透析量の妥当性をKt over Vの数値だけと同一視すべきではありません。",
+    "note": "should not equate A with B は単純化を避ける表現です。"
+  },
+  {
+    "id": 125,
+    "category": "Dialysis and Access",
+    "english": "What strategies have reduced catheter dependence in your program?",
+    "japanese": "貴施設のプログラムではどの戦略でカテーテル依存を減らしましたか。",
+    "note": "What strategies have reduced ...? は実装面の成功要因を聞けます。"
+  },
+  {
+    "id": 126,
+    "category": "Dialysis and Access",
+    "english": "I would discuss conservative kidney management as an active care pathway.",
+    "japanese": "保存的腎臓管理を積極的なケアの選択肢として話し合います。",
+    "note": "as an active care pathway は保存的管理を前向きに表現できます。"
+  },
+  {
+    "id": 127,
+    "category": "Dialysis and Access",
+    "english": "The challenge is aligning technical success with meaningful quality of life.",
+    "japanese": "課題は技術的成功を意味のある生活の質と一致させることです。",
+    "note": "aligning ... with ... は価値に沿った医療を述べられます。"
+  },
+  {
+    "id": 128,
+    "category": "Dialysis and Access",
+    "english": "Could home dialysis training be adapted for patients with limited health literacy?",
+    "japanese": "在宅透析トレーニングはヘルスリテラシーが限られる患者に合わせられますか。",
+    "note": "be adapted for ... は個別化や配慮の議論に使えます。"
+  },
+  {
+    "id": 129,
+    "category": "Transplant Immunology",
+    "english": "I would interpret donor-specific antibodies in the context of graft function and biopsy findings.",
+    "japanese": "ドナー特異的抗体は移植腎機能と生検所見の文脈で解釈します。",
+    "note": "in the context of ... は解釈の文脈を明確にできます。"
+  },
+  {
+    "id": 130,
+    "category": "Transplant Immunology",
+    "english": "How do you approach borderline rejection when the clinical picture is stable?",
+    "japanese": "臨床像が安定している境界型拒絶反応にどう対応しますか。",
+    "note": "when the clinical picture is stable は条件を添えた質問に使えます。"
+  },
+  {
+    "id": 131,
+    "category": "Transplant Immunology",
+    "english": "The timing of antibody-mediated rejection may influence how aggressively we treat it.",
+    "japanese": "抗体関連拒絶反応の時期は治療強度に影響するかもしれません。",
+    "note": "may influence how aggressively ... は治療強度の議論に適します。"
+  },
+  {
+    "id": 132,
+    "category": "Transplant Immunology",
+    "english": "Would you lower immunosuppression in a patient with recurrent malignancy?",
+    "japanese": "悪性腫瘍を繰り返す患者では免疫抑制を弱めますか。",
+    "note": "lower immunosuppression は移植領域で使いやすい表現です。"
+  },
+  {
+    "id": 133,
+    "category": "Transplant Immunology",
+    "english": "I am cautious about attributing late graft dysfunction to calcineurin toxicity alone.",
+    "japanese": "晩期移植腎機能障害をカルシニューリン毒性だけに帰することには慎重です。",
+    "note": "attributing ... to ... alone は原因の単純化を避けられます。"
+  },
+  {
+    "id": 134,
+    "category": "Transplant Immunology",
+    "english": "The infection risk changes the threshold for lymphocyte-depleting therapy.",
+    "japanese": "感染リスクによりリンパ球除去療法の閾値が変わります。",
+    "note": "changes the threshold for ... は判断基準の変化を示せます。"
+  },
+  {
+    "id": 135,
+    "category": "Transplant Immunology",
+    "english": "How do you counsel candidates with high sensitization about realistic waiting times?",
+    "japanese": "高感作の候補者に現実的な待機期間をどう説明していますか。",
+    "note": "counsel candidates about ... は移植候補者への説明に適します。"
+  },
+  {
+    "id": 136,
+    "category": "Transplant Immunology",
+    "english": "I would screen for medication adherence before labeling the patient as refractory.",
+    "japanese": "難治性と判断する前に服薬アドヒアランスを確認します。",
+    "note": "before labeling ... as ... は評価の順序を丁寧に示します。"
+  },
+  {
+    "id": 137,
+    "category": "Transplant Immunology",
+    "english": "The biopsy pattern raises concern for chronic active rejection.",
+    "japanese": "生検パターンから慢性活動性拒絶反応が懸念されます。",
+    "note": "raises concern for ... は所見から懸念を述べる表現です。"
+  },
+  {
+    "id": 138,
+    "category": "Transplant Immunology",
+    "english": "Could recurrent primary disease be contributing to graft injury?",
+    "japanese": "原疾患再発が移植腎障害に寄与している可能性はありますか。",
+    "note": "be contributing to ... は複数原因の一部を表せます。"
+  },
+  {
+    "id": 139,
+    "category": "Transplant Immunology",
+    "english": "I would coordinate closely with the transplant pharmacist before changing tacrolimus.",
+    "japanese": "タクロリムスを変更する前に移植薬剤師と緊密に調整します。",
+    "note": "coordinate closely with ... は多職種連携に使えます。"
+  },
+  {
+    "id": 140,
+    "category": "Transplant Immunology",
+    "english": "What monitoring strategy do you use after treating BK virus nephropathy?",
+    "japanese": "BKウイルス腎症の治療後にどのようなモニタリング戦略を用いますか。",
+    "note": "What monitoring strategy do you use after ...? は治療後管理を聞けます。"
+  },
+  {
+    "id": 141,
+    "category": "Transplant Immunology",
+    "english": "The ethical issue is how to balance organ utility and equity.",
+    "japanese": "倫理的課題は臓器の有効活用と公平性をどう両立するかです。",
+    "note": "how to balance ... and ... は倫理的議論にも応用できます。"
+  },
+  {
+    "id": 142,
+    "category": "Transplant Immunology",
+    "english": "I would explain uncertainty without undermining trust in the transplant team.",
+    "japanese": "移植チームへの信頼を損なわずに不確実性を説明します。",
+    "note": "without undermining ... は配慮しながら行う動作を示せます。"
+  },
+  {
+    "id": 143,
+    "category": "CKD Risk and Therapy",
+    "english": "I would prioritize absolute risk reduction over relative risk reduction when counseling patients.",
+    "japanese": "患者説明では相対リスク低下より絶対リスク低下を優先します。",
+    "note": "prioritize A over B は説明で何を重視するかを示せます。"
+  },
+  {
+    "id": 144,
+    "category": "CKD Risk and Therapy",
+    "english": "How do you sequence SGLT2 inhibitors, finerenone, and blood pressure optimization?",
+    "japanese": "SGLT2阻害薬、フィネレノン、血圧最適化をどの順序で行いますか。",
+    "note": "How do you sequence ...? は治療の順番を尋ねられます。"
+  },
+  {
+    "id": 145,
+    "category": "CKD Risk and Therapy",
+    "english": "The benefit may be modest for an individual but substantial at the population level.",
+    "japanese": "個人では利益が控えめでも、集団レベルでは大きいかもしれません。",
+    "note": "modest for ... but substantial at ... は視点差を示せます。"
+  },
+  {
+    "id": 146,
+    "category": "CKD Risk and Therapy",
+    "english": "I worry that therapeutic inertia is delaying kidney-protective therapy.",
+    "japanese": "治療慣性により腎保護治療が遅れていることを懸念します。",
+    "note": "therapeutic inertia は実装上の遅れを表す重要語です。"
+  },
+  {
+    "id": 147,
+    "category": "CKD Risk and Therapy",
+    "english": "Would you accept a small early eGFR dip if albuminuria improves?",
+    "japanese": "アルブミン尿が改善するなら初期の小さなeGFR低下を許容しますか。",
+    "note": "Would you accept ... if ...? は条件付き判断に使えます。"
+  },
+  {
+    "id": 148,
+    "category": "CKD Risk and Therapy",
+    "english": "The main barrier is not efficacy but implementation in routine care.",
+    "japanese": "主な障壁は有効性ではなく日常診療での実装です。",
+    "note": "not A but B は論点の焦点を移す時に有効です。"
+  },
+  {
+    "id": 149,
+    "category": "CKD Risk and Therapy",
+    "english": "I would individualize the blood pressure target based on frailty and orthostatic symptoms.",
+    "japanese": "フレイルと起立性症状に基づいて血圧目標を個別化します。",
+    "note": "individualize ... based on ... は個別化医療に広く使えます。"
+  },
+  {
+    "id": 150,
+    "category": "CKD Risk and Therapy",
+    "english": "How do you discuss kidney failure risk without creating unnecessary fear?",
+    "japanese": "不要な恐怖を生まずに腎不全リスクをどう説明しますか。",
+    "note": "without creating unnecessary fear はリスク説明で使いやすい表現です。"
+  },
+  {
+    "id": 151,
+    "category": "CKD Risk and Therapy",
+    "english": "The trajectory of eGFR decline is more informative than a single value.",
+    "japanese": "eGFR低下の軌跡は単回値より多くの情報を与えます。",
+    "note": "trajectory is more informative than ... は経時変化の重要性を示せます。"
+  },
+  {
+    "id": 152,
+    "category": "CKD Risk and Therapy",
+    "english": "I would reassess sodium intake before adding another antihypertensive medication.",
+    "japanese": "別の降圧薬を追加する前にナトリウム摂取を再評価します。",
+    "note": "reassess ... before adding ... は介入前の見直しに使えます。"
+  },
+  {
+    "id": 153,
+    "category": "CKD Risk and Therapy",
+    "english": "Could social determinants explain part of the gap in CKD outcomes?",
+    "japanese": "社会的決定要因がCKDアウトカム格差の一部を説明しますか。",
+    "note": "explain part of the gap in ... は格差の要因を議論できます。"
+  },
+  {
+    "id": 154,
+    "category": "CKD Risk and Therapy",
+    "english": "The patient may benefit from multidisciplinary care before reaching kidney failure.",
+    "japanese": "腎不全に至る前に多職種ケアが有益かもしれません。",
+    "note": "may benefit from ... before ... は早期介入の意義を示せます。"
+  },
+  {
+    "id": 155,
+    "category": "CKD Risk and Therapy",
+    "english": "I would avoid stopping RAAS blockade unless the adverse effect is clearly causal.",
+    "japanese": "有害事象との因果関係が明確でない限りRAAS阻害の中止は避けます。",
+    "note": "unless ... is clearly causal は中止判断の条件を示せます。"
+  },
+  {
+    "id": 156,
+    "category": "CKD Risk and Therapy",
+    "english": "How do you integrate cardiovascular risk into kidney-focused decision-making?",
+    "japanese": "腎臓中心の意思決定に心血管リスクをどう統合しますか。",
+    "note": "integrate ... into ... は複数領域の統合に使えます。"
+  },
+  {
+    "id": 157,
+    "category": "CKD Risk and Therapy",
+    "english": "The therapy is evidence-based, but affordability may determine adherence.",
+    "japanese": "治療はエビデンスに基づいていますが、費用負担がアドヒアランスを左右するかもしれません。",
+    "note": "affordability may determine ... は費用面の影響を示す表現です。"
+  },
+  {
+    "id": 158,
+    "category": "AKI and Critical Care",
+    "english": "I would define the clinical question before choosing a fluid strategy.",
+    "japanese": "輸液戦略を選ぶ前に臨床的な問いを定義します。",
+    "note": "define the clinical question は議論の出発点を整える表現です。"
+  },
+  {
+    "id": 159,
+    "category": "AKI and Critical Care",
+    "english": "How do you distinguish hemodynamic AKI from evolving tubular injury at the bedside?",
+    "japanese": "ベッドサイドで血行動態性AKIと進行する尿細管障害をどう区別しますか。",
+    "note": "distinguish A from B は鑑別の質問に使えます。"
+  },
+  {
+    "id": 160,
+    "category": "AKI and Critical Care",
+    "english": "The urine sediment can still change management when biomarkers are unavailable.",
+    "japanese": "バイオマーカーが利用できない時でも尿沈渣は管理を変え得ます。",
+    "note": "can still change management は古典的検査の価値を述べられます。"
+  },
+  {
+    "id": 161,
+    "category": "AKI and Critical Care",
+    "english": "I am cautious about using creatinine alone in a rapidly changing ICU course.",
+    "japanese": "急速に変化するICU経過でクレアチニンだけを用いることには慎重です。",
+    "note": "be cautious about using ... alone は単独指標への警戒に使えます。"
+  },
+  {
+    "id": 162,
+    "category": "AKI and Critical Care",
+    "english": "Would you start kidney replacement therapy for volume control rather than solute clearance?",
+    "japanese": "溶質除去ではなく体液管理を目的に腎代替療法を開始しますか。",
+    "note": "for A rather than B は治療目的の違いを明確にします。"
+  },
+  {
+    "id": 163,
+    "category": "AKI and Critical Care",
+    "english": "The timing question depends on trajectory, complications, and reversibility.",
+    "japanese": "開始時期の問題は経過、合併症、可逆性に依存します。",
+    "note": "depends on ... は複数要因の判断に使えます。"
+  },
+  {
+    "id": 164,
+    "category": "AKI and Critical Care",
+    "english": "I would reassess nephrotoxic exposure every day during critical illness.",
+    "japanese": "重症疾患中は腎毒性曝露を毎日再評価します。",
+    "note": "reassess ... every day はICU管理の反復確認に使えます。"
+  },
+  {
+    "id": 165,
+    "category": "AKI and Critical Care",
+    "english": "How do you manage anticoagulation for continuous kidney replacement therapy?",
+    "japanese": "持続的腎代替療法の抗凝固をどのように管理していますか。",
+    "note": "How do you manage ... for ...? は具体的管理を尋ねる型です。"
+  },
+  {
+    "id": 166,
+    "category": "AKI and Critical Care",
+    "english": "The patient needs source control before kidney function can realistically recover.",
+    "japanese": "腎機能が現実的に回復するには、その前に感染源制御が必要です。",
+    "note": "before ... can realistically recover は回復条件を説明できます。"
+  },
+  {
+    "id": 167,
+    "category": "AKI and Critical Care",
+    "english": "I would not assume oliguria always reflects irreversible kidney injury.",
+    "japanese": "乏尿が常に不可逆的腎障害を反映すると決めつけません。",
+    "note": "would not assume ... always ... は過度な推定を避ける表現です。"
+  },
+  {
+    "id": 168,
+    "category": "AKI and Critical Care",
+    "english": "Could venous congestion be a major driver of the worsening kidney function?",
+    "japanese": "静脈うっ血が腎機能悪化の主な駆動因子でしょうか。",
+    "note": "major driver of ... は病態の主因を議論する時に使えます。"
+  },
+  {
+    "id": 169,
+    "category": "AKI and Critical Care",
+    "english": "The decision to stop therapy should include prognosis beyond the kidney.",
+    "japanese": "治療中止の判断には腎臓以外の予後も含めるべきです。",
+    "note": "beyond the kidney は腎臓に限らない全体像を示せます。"
+  },
+  {
+    "id": 170,
+    "category": "AKI and Critical Care",
+    "english": "How do you communicate AKI uncertainty to families in the ICU?",
+    "japanese": "ICUでAKIの不確実性を家族にどう伝えていますか。",
+    "note": "communicate uncertainty to ... は予後説明に重要な表現です。"
+  },
+  {
+    "id": 171,
+    "category": "AKI and Critical Care",
+    "english": "The recovery phase requires a clear handoff to outpatient nephrology.",
+    "japanese": "回復期には外来腎臓内科への明確な引き継ぎが必要です。",
+    "note": "requires a clear handoff to ... は移行期医療に使えます。"
+  },
+  {
+    "id": 172,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "I would treat congestion as a kidney problem, not only a heart problem.",
+    "japanese": "うっ血を心臓だけでなく腎臓の問題として扱います。",
+    "note": "as ..., not only ... は見方を広げる表現です。"
+  },
+  {
+    "id": 173,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "How do you decide when worsening creatinine is acceptable during decongestion?",
+    "japanese": "除うっ血中のクレアチニン悪化をどの時点で許容可能と判断しますか。",
+    "note": "when ... is acceptable は許容範囲を議論できます。"
+  },
+  {
+    "id": 174,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "The sodium level reflects water balance, solute intake, and neurohormonal activation.",
+    "japanese": "ナトリウム値は水バランス、溶質摂取、神経体液性活性化を反映します。",
+    "note": "reflects A, B, and C は病態の複数要因を整理できます。"
+  },
+  {
+    "id": 175,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "I worry that correcting sodium too quickly could create more harm than benefit.",
+    "japanese": "ナトリウムを速く補正しすぎると利益より害が大きくなることを懸念します。",
+    "note": "more harm than benefit は介入リスクを端的に示せます。"
+  },
+  {
+    "id": 176,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "Would you use potassium binders to preserve guideline-directed heart failure therapy?",
+    "japanese": "ガイドラインに沿った心不全治療を維持するためにカリウム吸着薬を使いますか。",
+    "note": "to preserve ... therapy は治療継続の目的を示せます。"
+  },
+  {
+    "id": 177,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "The acid-base pattern suggests more than one process is occurring.",
+    "japanese": "酸塩基パターンは複数の過程が起きていることを示唆します。",
+    "note": "more than one process is occurring は混合性病態に使えます。"
+  },
+  {
+    "id": 178,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "I would confirm the potassium result before acting on an unexpected value.",
+    "japanese": "予想外のカリウム値に対応する前に結果を確認します。",
+    "note": "before acting on ... は対応前の確認に便利です。"
+  },
+  {
+    "id": 179,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "How do you approach diuretic resistance in advanced CKD?",
+    "japanese": "進行CKDでの利尿薬抵抗性にどう対応しますか。",
+    "note": "approach ... in advanced CKD は専門的方針を尋ねる型です。"
+  },
+  {
+    "id": 180,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "The patient may need a higher diuretic dose because tubular delivery is reduced.",
+    "japanese": "尿細管への到達が低下しているため、より高用量の利尿薬が必要かもしれません。",
+    "note": "because ... is reduced は薬理学的理由を説明できます。"
+  },
+  {
+    "id": 181,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "I would use urine electrolytes to test whether the physiology fits the story.",
+    "japanese": "病態生理が臨床経過と合うかを確認するために尿中電解質を使います。",
+    "note": "fits the story は臨床像との整合性を示す自然な口語です。"
+  },
+  {
+    "id": 182,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "Could metabolic acidosis be contributing to muscle loss and progression risk?",
+    "japanese": "代謝性アシドーシスが筋量低下と進行リスクに寄与している可能性はありますか。",
+    "note": "be contributing to ... and ... は複数影響を示せます。"
+  },
+  {
+    "id": 183,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "The tradeoff is maintaining RAAS inhibition while preventing recurrent hyperkalemia.",
+    "japanese": "トレードオフはRAAS阻害を維持しながら高カリウム血症再発を防ぐことです。",
+    "note": "The tradeoff is ... while ... は両立困難な課題に使えます。"
+  },
+  {
+    "id": 184,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "How often do you reassess volume status after changing diuretics?",
+    "japanese": "利尿薬変更後、体液量状態をどの頻度で再評価しますか。",
+    "note": "after changing ... は処方変更後の確認に使えます。"
+  },
+  {
+    "id": 185,
+    "category": "Cardiorenal and Electrolytes",
+    "english": "The cardiorenal interaction makes single-organ thinking misleading.",
+    "japanese": "心腎相互作用により単一臓器だけで考えると誤解を招きます。",
+    "note": "makes ... misleading は思考の限界を指摘できます。"
+  },
+  {
+    "id": 186,
+    "category": "Research Implementation and Ethics",
+    "english": "I would ask whether the outcome matters to patients as much as to investigators.",
+    "japanese": "そのアウトカムが研究者だけでなく患者にも同じくらい重要かを問います。",
+    "note": "matters to patients は患者中心アウトカムの議論に使えます。"
+  },
+  {
+    "id": 187,
+    "category": "Research Implementation and Ethics",
+    "english": "How do you avoid excluding patients who most need the intervention?",
+    "japanese": "介入を最も必要とする患者を除外しないためにどうしていますか。",
+    "note": "avoid excluding ... は選択基準や公平性の議論に使えます。"
+  },
+  {
+    "id": 188,
+    "category": "Research Implementation and Ethics",
+    "english": "The trial may be internally valid but difficult to implement broadly.",
+    "japanese": "その試験は内的妥当性があっても広く実装するのは難しいかもしれません。",
+    "note": "internally valid but ... は妥当性と実装性を分けて述べられます。"
+  },
+  {
+    "id": 189,
+    "category": "Research Implementation and Ethics",
+    "english": "I worry that surrogate endpoints may overstate patient-centered benefit.",
+    "japanese": "代替エンドポイントが患者中心の利益を過大評価することを懸念します。",
+    "note": "overstate ... benefit は研究解釈で便利な表現です。"
+  },
+  {
+    "id": 190,
+    "category": "Research Implementation and Ethics",
+    "english": "Could pragmatic trial design make the evidence more useful for clinicians?",
+    "japanese": "実践的試験デザインにより臨床医にとってエビデンスがより有用になりますか。",
+    "note": "make the evidence more useful for ... は研究設計の意義を問えます。"
+  },
+  {
+    "id": 191,
+    "category": "Research Implementation and Ethics",
+    "english": "The consent process should acknowledge uncertainty without overwhelming participants.",
+    "japanese": "同意プロセスでは参加者を圧倒せずに不確実性を認めるべきです。",
+    "note": "acknowledge uncertainty without ... は倫理的説明に使えます。"
+  },
+  {
+    "id": 192,
+    "category": "Research Implementation and Ethics",
+    "english": "I would look for heterogeneity of treatment effect before generalizing the result.",
+    "japanese": "結果を一般化する前に治療効果の異質性を確認します。",
+    "note": "before generalizing ... は外的妥当性の議論に有用です。"
+  },
+  {
+    "id": 193,
+    "category": "Research Implementation and Ethics",
+    "english": "How do you handle equipoise when usual care varies across countries?",
+    "japanese": "通常診療が国によって異なる場合、臨床的均衡をどう扱いますか。",
+    "note": "when usual care varies across ... は国際研究の論点に使えます。"
+  },
+  {
+    "id": 194,
+    "category": "Research Implementation and Ethics",
+    "english": "The registry captures real-world practice, but data completeness remains a limitation.",
+    "japanese": "レジストリは実臨床を捉えますが、データ完全性は依然として限界です。",
+    "note": "remains a limitation は研究の限界を簡潔に示します。"
+  },
+  {
+    "id": 195,
+    "category": "Research Implementation and Ethics",
+    "english": "I would distinguish statistical interaction from a clinically meaningful subgroup effect.",
+    "japanese": "統計学的交互作用と臨床的に意味のあるサブグループ効果を区別します。",
+    "note": "distinguish ... from ... は解析解釈に使いやすい型です。"
+  },
+  {
+    "id": 196,
+    "category": "Research Implementation and Ethics",
+    "english": "Could implementation support be as important as the intervention itself?",
+    "japanese": "実装支援は介入そのものと同じくらい重要でしょうか。",
+    "note": "as important as ... は比較の強調に使えます。"
+  },
+  {
+    "id": 197,
+    "category": "Research Implementation and Ethics",
+    "english": "The negative result still informs practice if the trial was adequately powered.",
+    "japanese": "試験の検出力が十分なら、陰性結果でも診療に示唆を与えます。",
+    "note": "still informs practice if ... は陰性研究の意義を述べられます。"
+  },
+  {
+    "id": 198,
+    "category": "Research Implementation and Ethics",
+    "english": "I would be careful about applying cost-effectiveness data across health systems.",
+    "japanese": "医療制度をまたいで費用対効果データを適用することには慎重です。",
+    "note": "be careful about applying ... across ... は制度差の議論に使えます。"
+  },
+  {
+    "id": 199,
+    "category": "Research Implementation and Ethics",
+    "english": "How do you ensure that patient voices shape the research agenda?",
+    "japanese": "患者の声が研究課題を形作るようにするにはどうしていますか。",
+    "note": "ensure that ... shape ... は参加型研究の議論に向いています。"
+  },
+  {
+    "id": 200,
+    "category": "Research Implementation and Ethics",
+    "english": "The best discussion starts by naming the uncertainty we are trying to reduce.",
+    "japanese": "最良の議論は、減らそうとしている不確実性を明示することから始まります。",
+    "note": "starts by naming ... は議論の始め方を洗練して表現できます。"
+  }
+]
