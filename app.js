@@ -323,12 +323,17 @@ function wireControls() {
 }
 
 async function loadPhrases() {
-  const [coreResponse, advancedResponse] = await Promise.all([fetch("phrases.json"), fetch("advanced-phrases.json")]);
-  if (!coreResponse.ok || !advancedResponse.ok) {
+  const [coreResponse, advancedResponse, selectedResponse] = await Promise.all([
+    fetch("phrases.json"),
+    fetch("advanced-phrases.json"),
+    fetch("nephrology_selected_100.json"),
+  ]);
+  if (!coreResponse.ok || !advancedResponse.ok || !selectedResponse.ok) {
     throw new Error("phrase data could not be loaded");
   }
   const corePhrases = await coreResponse.json();
   const advancedPhrases = await advancedResponse.json();
+  const selectedPhrases = await selectedResponse.json();
   state.phrases = [
     ...corePhrases.map((phrase, index) => ({
       ...phrase,
@@ -343,6 +348,14 @@ async function loadPhrases() {
       setLabel: "Advanced 100",
       localId: index + 1,
       shuffleKey: `${Math.random().toString(36).slice(2)}-${phrase.id}`,
+    })),
+    ...selectedPhrases.map((phrase, index) => ({
+      ...phrase,
+      id: 201 + index,
+      set: "selected",
+      setLabel: "Selected 100",
+      localId: phrase.id || index + 1,
+      shuffleKey: `${Math.random().toString(36).slice(2)}-selected-${index + 1}`,
     })),
   ];
 }

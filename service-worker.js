@@ -1,4 +1,4 @@
-const CACHE_NAME = "asn-kidney-week-english-v2";
+const CACHE_NAME = "asn-kidney-week-english-v3";
 const ASSETS = [
   "./",
   "index.html",
@@ -6,6 +6,7 @@ const ASSETS = [
   "app.js",
   "phrases.json",
   "advanced-phrases.json",
+  "nephrology_selected_100.json",
   "manifest.webmanifest",
   "icon.svg"
 ];

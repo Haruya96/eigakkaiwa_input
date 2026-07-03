@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "category": "Arrival and Getting Around",
+    "english": "Could you tell me where the registration desk is? I registered online in advance.",
+    "japanese": "受付はどちらでしょうか。事前にオンラインで登録しています。",
+    "note": "Could you tell me where ... is? は場所を尋ねる最も丁寧で応用の利く型。I registered ... in advance の in advance は「前もって」で、二文目で状況を補足する言い回し。"
+  },
+  {
+    "id": 2,
+    "category": "Arrival and Getting Around",
+    "english": "Which hall is the plenary session in, and how do I get there from here?",
+    "japanese": "全体講演はどのホールで、ここからはどう行けばよいですか。",
+    "note": "Which hall is ... in? で開催場所を、how do I get there from here? で道順を尋ねる。and でつないで一度に二つ質問する自然な形。"
+  },
+  {
+    "id": 3,
+    "category": "Arrival and Getting Around",
+    "english": "Is this session being live-streamed? I'd like to catch up on it later if I miss it.",
+    "japanese": "このセッションはライブ配信されていますか。見逃したら後で追いたいのですが。",
+    "note": "Is ... being live-streamed? は「配信されているか」を進行形受動態で尋ねる型。catch up on it later（後で追いつく）と if I miss it（見逃したら）も口語で頻出。"
+  },
+  {
+    "id": 4,
+    "category": "Arrival and Getting Around",
+    "english": "Sorry, I seem to be lost. Am I heading the right way to the poster hall?",
+    "japanese": "すみません、道に迷ったようです。ポスター会場はこの方向で合っていますか。",
+    "note": "I seem to be lost は断定を避けた「道に迷ったようだ」。Am I heading the right way to ...? は「この方向で合っているか」を確認する定番。"
+  },
+  {
+    "id": 5,
+    "category": "Arrival and Getting Around",
+    "english": "Where can I get a certificate of attendance, and until what time is the desk open?",
+    "japanese": "参加証明書はどこで受け取れますか。受付は何時まで開いていますか。",
+    "note": "Where can I get ...? で入手場所を、until what time is ... open? で終了時刻を尋ねる。certificate of attendance は「参加証明書」。"
+  },
+  {
+    "id": 6,
+    "category": "Networking and Introductions",
+    "english": "Hi, I don't think we've met. I'm Haruya, a nephrologist from Tokyo. What's your main area of interest?",
+    "japanese": "初めまして。東京から来た腎臓内科医のハルヤです。ご専門はどのあたりですか。",
+    "note": "I don't think we've met は初対面の切り出し。文末の What's your main area of interest?（ご専門は？）で相手に質問を返し会話を広げる。"
+  },
+  {
+    "id": 7,
+    "category": "Networking and Introductions",
+    "english": "I really enjoyed your talk this morning. What first drew you to this line of research?",
+    "japanese": "今朝のご講演、大変興味深く拝聴しました。この研究に取り組まれた最初のきっかけは何だったのですか。",
+    "note": "I really enjoyed your talk は講演者への褒め言葉の定番。What first drew you to ...?（何がきっかけで〜に）は関心の原点を尋ね会話を深める。"
+  },
+  {
+    "id": 8,
+    "category": "Networking and Introductions",
+    "english": "Have you been to this congress before? What did you find most worthwhile last time?",
+    "japanese": "この学会には以前も参加されましたか。前回、最も有意義だったのは何でしたか。",
+    "note": "Have you been to ... before? は経験を問う現在完了。What did you find most worthwhile?（最も有意義だったのは）で具体的に掘り下げる。"
+  },
+  {
+    "id": 9,
+    "category": "Networking and Introductions",
+    "english": "Here's my card. Would it be all right if I reached out to discuss a possible collaboration?",
+    "japanese": "名刺をどうぞ。共同研究の可能性についてご連絡してもよろしいでしょうか。",
+    "note": "Here's my card は名刺を渡す決まり文句。Would it be all right if I ...?（〜してもよろしいですか）は許可を求める丁寧表現。reach out（連絡を取る）も必須。"
+  },
+  {
+    "id": 10,
+    "category": "Networking and Introductions",
+    "english": "Let me introduce my colleague, Dr. Sato. She leads our transplant program.",
+    "japanese": "同僚の佐藤先生を紹介させてください。当院の移植プログラムを率いています。",
+    "note": "Let me introduce ...（〜を紹介させてください）は第三者紹介の定型。She leads our ... program のように一言添えると印象的。"
+  },
+  {
+    "id": 11,
+    "category": "Networking and Introductions",
+    "english": "It was a real pleasure talking with you. I hope our paths cross again at the next meeting.",
+    "japanese": "お話しできて本当に嬉しかったです。次回の学会でまたお会いできれば幸いです。",
+    "note": "It was a real pleasure ...ing は別れ際の丁寧な感謝。paths cross again（またお会いする）は再会を願う洒落た比喩表現。"
+  },
+  {
+    "id": 12,
+    "category": "Small Talk and Social",
+    "english": "How are you finding the conference so far? Is there a session you'd particularly recommend?",
+    "japanese": "ここまで学会はいかがですか。特にお勧めのセッションはありますか。",
+    "note": "How are you finding ...?（〜はいかがですか）は感想を尋ねるスモールトーク。Is there a session you'd recommend? で相手に助言を求める。"
+  },
+  {
+    "id": 13,
+    "category": "Small Talk and Social",
+    "english": "Is this your first time in this city? If you have a free evening, I'd be happy to show you around.",
+    "japanese": "この街は初めてですか。お時間のある晩があれば、喜んでご案内します。",
+    "note": "Is this your first time in ...? は話題作りの定番。I'd be happy to show you around（ご案内します）は親切な申し出の型。"
+  },
+  {
+    "id": 14,
+    "category": "Small Talk and Social",
+    "english": "Would you like to grab a coffee during the break? There's something I've been meaning to ask you.",
+    "japanese": "休憩にコーヒーでもいかがですか。かねてお尋ねしたいことがあったのです。",
+    "note": "Would you like to grab a coffee? は気軽な誘い。I've been meaning to ask you（前から聞きたかった）は切り出しに便利。"
+  },
+  {
+    "id": 15,
+    "category": "Small Talk and Social",
+    "english": "Are you free for dinner tonight? A few of us are heading to a place nearby.",
+    "japanese": "今夜ご一緒に夕食はいかがですか。何人かで近くの店に行く予定です。",
+    "note": "Are you free for ...?（〜のご都合は）は誘いの基本。A few of us are heading to ...（何人かで〜へ行く）で具体的に誘う。"
+  },
+  {
+    "id": 16,
+    "category": "Small Talk and Social",
+    "english": "The jet lag is finally wearing off. How long are you staying after the congress?",
+    "japanese": "時差ぼけがようやく抜けてきました。学会の後はいつまで滞在されますか。",
+    "note": "jet lag is wearing off（時差ぼけが抜けてきた）は旅の話題の定番。How long are you staying? は滞在期間を尋ねる自然な質問。"
+  },
+  {
+    "id": 17,
+    "category": "Small Talk and Social",
+    "english": "Please give my regards to your team back home. Safe travels, and let's stay in touch.",
+    "japanese": "ご帰国後はチームの皆様によろしくお伝えください。道中お気をつけて、今後も連絡を取り合いましょう。",
+    "note": "give my regards to ...（〜によろしく）、Safe travels（道中お気をつけて）、stay in touch（連絡を取り合う）— 別れ際の三点セット。"
+  },
+  {
+    "id": 18,
+    "category": "Presenting Your Research",
+    "english": "Good morning, everyone. Thank you for the kind introduction. Today I'd like to share our recent findings on CKD progression.",
+    "japanese": "皆様おはようございます。ご丁寧なご紹介をありがとうございます。本日はCKD進行に関する最近の知見を共有します。",
+    "note": "Thank you for the kind introduction は座長への謝辞。Today I'd like to share ...（本日は〜を共有します）で本題に入る発表冒頭の型。"
+  },
+  {
+    "id": 19,
+    "category": "Presenting Your Research",
+    "english": "The aim of our study was to evaluate the renoprotective effect of SGLT2 inhibitors. Let me start by outlining the background.",
+    "japanese": "本研究の目的はSGLT2阻害薬の腎保護効果の評価でした。まず背景を概説します。",
+    "note": "The aim of our study was to ...（本研究の目的は〜）で目的提示。Let me start by outlining ...（まず〜を概説します）で構成を予告。"
+  },
+  {
+    "id": 20,
+    "category": "Presenting Your Research",
+    "english": "As you can see on this slide, eGFR declined more slowly in the treatment group, and the difference was statistically significant.",
+    "japanese": "このスライドのとおり、治療群ではeGFRの低下が緩やかで、その差は統計的に有意でした。",
+    "note": "As you can see on this slide（このスライドの通り）は結果提示の常套句。statistically significant（統計的に有意）は必須語。"
+  },
+  {
+    "id": 21,
+    "category": "Presenting Your Research",
+    "english": "Let me move on to the secondary outcomes. These results are consistent with previous large-scale trials.",
+    "japanese": "次に副次的アウトカムに移ります。これらは過去の大規模試験と一致しています。",
+    "note": "Let me move on to ...（次に〜へ移ります）は話題転換。be consistent with ...（〜と一致する）で先行研究との整合を示す。"
+  },
+  {
+    "id": 22,
+    "category": "Presenting Your Research",
+    "english": "One limitation of our study is its retrospective design. In conclusion, early intervention may slow the decline in kidney function.",
+    "japanese": "本研究の限界は後ろ向きデザインである点です。結論として、早期介入は腎機能低下を遅らせる可能性があります。",
+    "note": "One limitation of our study is ...（限界の一つは）は考察の型。In conclusion, ... may ...（結論として〜かもしれない）と控えめに締める作法。"
+  },
+  {
+    "id": 23,
+    "category": "Presenting Your Research",
+    "english": "That's an excellent question. If I understood it correctly, you're asking about dose adjustment—let me address that in two parts.",
+    "japanese": "素晴らしいご質問です。用量調整についてのお尋ねと理解しました。二つに分けてお答えします。",
+    "note": "That's an excellent question で受け、If I understood it correctly（正しく理解していれば）と言い換え確認。let me address that in two parts（二つに分けて）も有用。"
+  },
+  {
+    "id": 24,
+    "category": "Chairing and Poster Session",
+    "english": "We're running slightly behind, so may I ask you to keep your question brief? We'll take one more from the floor.",
+    "japanese": "少し時間が押していますので、ご質問は手短にお願いできますか。あと一つフロアからお受けします。",
+    "note": "We're running behind（時間が押している）＋ may I ask you to keep your question brief?（手短に）は座長の時間管理表現。"
+  },
+  {
+    "id": 25,
+    "category": "Chairing and Poster Session",
+    "english": "Thank you both for a stimulating exchange. In the interest of time, let's continue this discussion offline.",
+    "japanese": "活発な議論をありがとうございました。時間の都合上、続きは後ほど個別にお願いします。",
+    "note": "a stimulating exchange（活発な議論）を称え、In the interest of time（時間の都合上）、continue offline（後で個別に）で締める司会表現。"
+  },
+  {
+    "id": 26,
+    "category": "Chairing and Poster Session",
+    "english": "Thanks for stopping by my poster. Would you like me to walk you through the main findings?",
+    "japanese": "ポスターにお立ち寄りいただきありがとうございます。主要な結果をご説明しましょうか。",
+    "note": "Thanks for stopping by（お立ち寄りありがとう）はポスターの挨拶。walk you through ...（順を追って説明する）は案内の定番。"
+  },
+  {
+    "id": 27,
+    "category": "Chairing and Poster Session",
+    "english": "What I find most novel here is the mechanism. Could you say a bit more about how you controlled for confounders?",
+    "japanese": "ここで最も新しいのは機序だと思います。交絡の調整方法についてもう少し伺えますか。",
+    "note": "What I find most novel here is ...（最も新しいのは〜）と評価を述べ、Could you say a bit more about ...?（もう少し詳しく）で掘り下げる。"
+  },
+  {
+    "id": 28,
+    "category": "Probing Questions in Discussion",
+    "english": "Thank you for the excellent presentation. What was the rationale for choosing this particular cohort?",
+    "japanese": "素晴らしいご発表をありがとうございました。このコホートを選ばれた根拠は何でしたか。",
+    "note": "Thank you for the excellent presentation の後、What was the rationale for ...?（〜の根拠は）で研究設計の意図を問う。"
+  },
+  {
+    "id": 29,
+    "category": "Probing Questions in Discussion",
+    "english": "Did you adjust for confounding factors such as baseline eGFR and albuminuria?",
+    "japanese": "ベースラインのeGFRやアルブミン尿といった交絡因子で調整されましたか。",
+    "note": "Did you adjust for confounding factors such as ...?（〜のような交絡因子で調整したか）は統計的妥当性を問う必須質問。"
+  },
+  {
+    "id": 30,
+    "category": "Probing Questions in Discussion",
+    "english": "How do you interpret the discrepancy between the two subgroups? Could it be driven by differences in follow-up?",
+    "japanese": "2群間の食い違いをどう解釈されますか。追跡期間の差によるものではないでしょうか。",
+    "note": "How do you interpret ...?（どう解釈するか）で考察を促し、Could it be driven by ...?（〜が原因では）で対案を提示する二段構え。"
+  },
+  {
+    "id": 31,
+    "category": "Probing Questions in Discussion",
+    "english": "How generalizable are these findings to Asian populations with lower body mass?",
+    "japanese": "この結果は、体格の小さいアジア人集団にどの程度一般化できるとお考えですか。",
+    "note": "How generalizable are ... to ...?（〜にどの程度一般化できるか）は外的妥当性を突く鋭い問い。lower body mass のように条件を添える。"
+  },
+  {
+    "id": 32,
+    "category": "Probing Questions in Discussion",
+    "english": "Have you considered the possibility of selection bias? What might it do to the direction of the effect?",
+    "japanese": "選択バイアスの可能性は検討されましたか。それは効果の向きにどう影響し得るでしょうか。",
+    "note": "Have you considered the possibility of ...?（〜の可能性を検討したか）＋ What might it do to the direction of the effect?（効果の向きへの影響）で批判的に。"
+  },
+  {
+    "id": 33,
+    "category": "Probing Questions in Discussion",
+    "english": "Do you think the association is causal, or could reverse causation be at play here?",
+    "japanese": "この関連は因果的だとお考えですか、それとも逆の因果が働いている可能性はありますか。",
+    "note": "Do you think the association is causal?（因果的か）＋ could reverse causation be at play?（逆の因果が働くか）で因果推論を問う。"
+  },
+  {
+    "id": 34,
+    "category": "Probing Questions in Discussion",
+    "english": "If the mechanism is truly hemodynamic, why did the benefit persist after the drug was stopped?",
+    "japanese": "もし機序が本当に血行動態的なものなら、なぜ薬剤中止後も効果が持続したのでしょうか。",
+    "note": "If ... is truly ..., why did ...?（もし本当に〜なら、なぜ〜か）は仮説の内的整合性を突く強力な問いの型。persist（持続する）も重要。"
+  },
+  {
+    "id": 35,
+    "category": "Probing Questions in Discussion",
+    "english": "What would it take to change your practice based on these results—a larger effect size, or replication in a prospective cohort?",
+    "japanese": "この結果で実臨床を変えるには何が必要でしょうか。確認試験を待たれますか。",
+    "note": "What would it take to change your practice?（実臨床を変えるには何が必要か）は臨床実装の閾値を問う。a larger effect size / replication in a prospective cohort と具体化。"
+  },
+  {
+    "id": 36,
+    "category": "Probing Questions in Discussion",
+    "english": "Just to follow up on the previous question—how did the sickest patients, those with heavy proteinuria, fare?",
+    "japanese": "先ほどの質問に関連してですが、最も重症の高度蛋白尿の患者はどうでしたか。",
+    "note": "Just to follow up on the previous question（前の質問に関連して）は接続表現。how did ... fare?（〜はどうだったか）で経過を尋ねる。"
+  },
+  {
+    "id": 37,
+    "category": "Answering and Handling Questions",
+    "english": "That's a fair point, and I take it seriously. However, I'd interpret the data slightly differently—let me explain why.",
+    "japanese": "もっともなご指摘で、真摯に受け止めます。ただ、私はデータをやや異なる形で解釈します。理由をご説明します。",
+    "note": "That's a fair point（もっともなご指摘）で受け、However, I'd interpret ... differently（私は違う解釈を）と建設的に反論する型。"
+  },
+  {
+    "id": 38,
+    "category": "Answering and Handling Questions",
+    "english": "I'm afraid we don't have that data yet, but it's an important direction for future work.",
+    "japanese": "残念ながらそのデータはまだありませんが、今後の重要な課題だと考えています。",
+    "note": "I'm afraid we don't have that data yet（残念ながらまだ）＋ an important direction for future work（今後の重要課題）で前向きに返す。"
+  },
+  {
+    "id": 39,
+    "category": "Answering and Handling Questions",
+    "english": "I'm not sure I fully followed your question. Are you asking about the timing of dialysis initiation?",
+    "japanese": "ご質問を十分に理解できたか自信がありません。透析導入の時期についてのお尋ねでしょうか。",
+    "note": "I'm not sure I fully followed your question（十分理解できたか自信がない）＋ Are you asking about ...?（〜のことか）で意図を確認。"
+  },
+  {
+    "id": 40,
+    "category": "Answering and Handling Questions",
+    "english": "You raise an important caveat. I'd agree we should be careful not to over-interpret a post-hoc analysis.",
+    "japanese": "重要な但し書きをご指摘いただきました。事後解析を過剰解釈しないよう注意すべき点、同意します。",
+    "note": "You raise an important caveat（重要な但し書き）と認め、be careful not to over-interpret ...（過剰解釈しないよう注意）で慎重さを示す。"
+  },
+  {
+    "id": 41,
+    "category": "Clarifying, Collaboration and Closing",
+    "english": "Sorry, could you speak up a little? I didn't quite catch the last part. Do you mean the intention-to-treat population?",
+    "japanese": "すみません、もう少し大きな声でお願いできますか。最後が聞き取れませんでした。ITT集団のことでしょうか。",
+    "note": "could you speak up a little?（もう少し大きな声で）で聞き返し、Do you mean ...?（〜という意味か）で内容を確認する合わせ技。"
+  },
+  {
+    "id": 42,
+    "category": "Clarifying, Collaboration and Closing",
+    "english": "Let me make sure I understand you correctly. Are you saying the effect was limited to diabetic patients?",
+    "japanese": "正しく理解できているか確認させてください。効果は糖尿病患者に限られていた、という意味でしょうか。",
+    "note": "Let me make sure I understand you correctly（正しく理解できているか確認）＋ Are you saying ...?（〜ということか）で誤解を防ぐ。"
+  },
+  {
+    "id": 43,
+    "category": "Clarifying, Collaboration and Closing",
+    "english": "Would you be open to co-authoring a review on this topic? I think our datasets are quite complementary.",
+    "japanese": "このテーマで総説を共同執筆することにご関心はありますか。我々のデータは互いによく補い合うと思います。",
+    "note": "Would you be open to ...?（〜にご関心は）は打診の丁寧表現。complementary（互いに補い合う）はデータ・研究の相性を語る語。"
+  },
+  {
+    "id": 44,
+    "category": "Clarifying, Collaboration and Closing",
+    "english": "Could we set up a call after the congress to explore a multicenter study? What time zone works best for you?",
+    "japanese": "学会後に多施設研究の可能性を話し合うため、オンラインで打ち合わせできますか。どの時間帯がご都合よいですか。",
+    "note": "Could we set up a call?（オンラインで打ち合わせを）＋ What time zone works best for you?（どの時間帯が）で時差に配慮した提案。"
+  },
+  {
+    "id": 45,
+    "category": "Clarifying, Collaboration and Closing",
+    "english": "Thank you again for such an insightful discussion. I've learned a great deal, and I'll follow up by email.",
+    "japanese": "示唆に富む議論を重ねてありがとうございました。多くを学びました。追ってメールでご連絡します。",
+    "note": "an insightful discussion（示唆に富む議論）を称え、learned a great deal（多くを学んだ）、follow up by email（メールで連絡）で締める。"
+  },
+  {
+    "id": 46,
+    "category": "CKD and Diabetic Kidney Disease",
+    "english": "This patient has stage 3b CKD, and his eGFR has been declining by about 4 mL/min per year. What do you think is driving the progression?",
+    "japanese": "この患者はステージ3bのCKDで、eGFRは年約4 mL/minのペースで低下しています。進行の原因は何だとお考えですか。",
+    "note": "病状提示に続く What do you think is driving the progression?（進行の原因は何とお考えか）で相手の見解を引き出す。drive（引き起こす）に注目。"
+  },
+  {
+    "id": 47,
+    "category": "CKD and Diabetic Kidney Disease",
+    "english": "Proteinuria is a strong predictor of progression to end-stage kidney disease. Would you escalate RAS blockade further here?",
+    "japanese": "蛋白尿は末期腎不全への進行を強く予測します。この症例ではRAS阻害をさらに強化されますか。",
+    "note": "a strong predictor of progression to ...（〜への進行を強く予測する）＋ Would you escalate ...?（〜を強化するか）で治療判断を問う。"
+  },
+  {
+    "id": 48,
+    "category": "CKD and Diabetic Kidney Disease",
+    "english": "We started an SGLT2 inhibitor and saw a small initial dip in eGFR. In your experience, when is that dip acceptable rather than alarming?",
+    "japanese": "SGLT2阻害薬を開始し、eGFRの軽度な初期低下がみられました。その低下が警戒ではなく許容範囲となるのはどんな時ですか。",
+    "note": "a small initial dip in eGFR（eGFRの軽度な初期低下）＋ In your experience, when is that acceptable rather than alarming?（許容範囲となるのはいつか）で経験知を尋ねる。"
+  },
+  {
+    "id": 49,
+    "category": "CKD and Diabetic Kidney Disease",
+    "english": "Not all kidney disease in diabetics is diabetic in origin. What features make you suspect a non-diabetic cause and prompt a biopsy?",
+    "japanese": "糖尿病患者の腎疾患がすべて糖尿病由来とは限りません。非糖尿病性を疑い生検に踏み切る所見は何ですか。",
+    "note": "Not all ... is ... in origin（すべてが〜由来とは限らない）＋ What features make you suspect ...?（〜を疑う所見は）で鑑別の閾値を問う。"
+  },
+  {
+    "id": 50,
+    "category": "CKD and Diabetic Kidney Disease",
+    "english": "Blood pressure control is the cornerstone of CKD management, but how low would you go in an elderly, frail patient?",
+    "japanese": "血圧管理はCKD管理の要ですが、高齢で虚弱な患者ではどこまで下げますか。",
+    "note": "the cornerstone of ...（〜の要）と重要性を述べ、but how low would you go ...?（どこまで下げるか）で個別化を議論。"
+  },
+  {
+    "id": 51,
+    "category": "CKD and Diabetic Kidney Disease",
+    "english": "His potassium tends to run high on maximal RAS blockade. Do you add a potassium binder or accept a lower dose?",
+    "japanese": "最大量のRAS阻害下で彼のカリウムは高めに推移します。カリウム吸着薬を追加しますか、それとも減量を受け入れますか。",
+    "note": "tends to run high（高めに推移する）は検査値の傾向表現。Do you add ... or accept ...?（追加か、受け入れるか）と二択で選好を問う。"
+  },
+  {
+    "id": 52,
+    "category": "CKD and Diabetic Kidney Disease",
+    "english": "We've added finerenone on top of an ACE inhibitor for extra proteinuria reduction. Do you worry about hyperkalemia when you stack these agents, and does concurrent SGLT2 inhibition reassure you?",
+    "japanese": "蛋白尿をさらに減らすため、ACE阻害薬にフィネレノンを上乗せしました。これらを重ねる際に高カリウム血症を懸念されますか。また、SGLT2阻害薬の併用は安心材料になりますか。",
+    "note": "on top of ...（〜に上乗せして）＋ stack these agents（薬剤を重ねる）は多剤併用を語る自然な表現。高K血症の懸念は finerenone＋RAS阻害で生じ、SGLT2阻害薬はむしろ K を下げ相殺する—does ... reassure you?（安心材料になるか）で相手に確認する。"
+  },
+  {
+    "id": 53,
+    "category": "Glomerular Diseases",
+    "english": "The biopsy confirmed IgA nephropathy with crescents. Given the activity, would you add immunosuppression to supportive care?",
+    "japanese": "生検で半月体を伴うIgA腎症が確定しました。活動性を踏まえ、支持療法に免疫抑制を追加されますか。",
+    "note": "The biopsy confirmed ...（生検で〜が確定）＋ Given the activity, would you add ...?（活動性を踏まえ〜を追加するか）で治療方針を問う。"
+  },
+  {
+    "id": 54,
+    "category": "Glomerular Diseases",
+    "english": "He presented with nephrotic-range proteinuria and anti-PLA2R antibodies were positive. Does that change how aggressively you'd treat?",
+    "japanese": "彼はネフローゼ域の蛋白尿で受診し、抗PLA2R抗体が陽性でした。それは治療の積極性を変えますか。",
+    "note": "He presented with ...（〜を主訴に受診）は病歴の基本。Does that change how aggressively you'd treat?（治療の積極性を変えるか）で議論を促す。"
+  },
+  {
+    "id": 55,
+    "category": "Glomerular Diseases",
+    "english": "The disease relapsed after we tapered the steroids. At what point would you consider rituximab instead of another steroid course?",
+    "japanese": "ステロイド漸減後に再燃しました。ステロイド再投与ではなくリツキシマブを考えるのはどの時点ですか。",
+    "note": "The disease relapsed after ...（〜の後に再燃）＋ At what point would you consider ...?（どの時点で〜を考えるか）で治療切替の閾値を問う。"
+  },
+  {
+    "id": 56,
+    "category": "Glomerular Diseases",
+    "english": "Crescents on biopsy suggest rapidly progressive glomerulonephritis. How quickly do we need to act to preserve function?",
+    "japanese": "生検での半月体は急速進行性糸球体腎炎を示唆します。機能温存のためどれほど迅速に対応すべきとお考えですか。",
+    "note": "Crescents ... suggest ...（半月体は〜を示唆）＋ How quickly do we need to act ...?（どれほど迅速に対応すべきか）で緊急性をすり合わせる。"
+  },
+  {
+    "id": 57,
+    "category": "Glomerular Diseases",
+    "english": "We should rule out a secondary cause before labeling this FSGS as primary. Which work-up do you consider indispensable?",
+    "japanese": "これを原発性FSGSと判断する前に二次性を除外すべきです。必須とお考えの精査はどれですか。",
+    "note": "rule out a secondary cause（二次性を除外する）＋ Which work-up do you consider indispensable?（必須の精査はどれか）で鑑別の実務を問う。"
+  },
+  {
+    "id": 58,
+    "category": "AKI and Critical Care Nephrology",
+    "english": "His creatinine doubled within 48 hours after major surgery. How would you tease apart prerenal AKI from acute tubular necrosis here?",
+    "japanese": "大手術後48時間で彼のクレアチニンが倍増しました。腎前性AKIと急性尿細管壊死をどう鑑別されますか。",
+    "note": "doubled within 48 hours（48時間以内に倍増）＋ How would you tease apart A from B?（AとBをどう切り分けるか）— tease apart は口語的な鑑別表現。"
+  },
+  {
+    "id": 59,
+    "category": "AKI and Critical Care Nephrology",
+    "english": "He's fluid-overloaded and no longer responding to diuretics. At what threshold would you initiate renal replacement therapy?",
+    "japanese": "彼は溢水状態で利尿薬にもう反応しません。どの閾値で腎代替療法を開始されますか。",
+    "note": "fluid-overloaded / no longer responding to diuretics（溢水・利尿薬無反応）＋ At what threshold would you initiate ...?（どの閾値で開始するか）。"
+  },
+  {
+    "id": 60,
+    "category": "AKI and Critical Care Nephrology",
+    "english": "In septic AKI, restoring perfusion pressure is the first priority. Do you favor early CRRT, or a watch-and-wait approach?",
+    "japanese": "敗血症性AKIでは灌流圧の回復が最優先です。早期CRRTを好まれますか、それとも経過観察ですか。",
+    "note": "restoring perfusion pressure is the first priority（灌流圧回復が最優先）＋ Do you favor A, or B?（AとBどちらを好むか）で論争点を提示。"
+  },
+  {
+    "id": 61,
+    "category": "AKI and Critical Care Nephrology",
+    "english": "Even a single episode of AKI can leave lasting damage. What do you tell patients about their long-term risk of CKD?",
+    "japanese": "一度のAKIでも持続的な障害を残し得ます。長期的なCKDリスクをどう患者に説明されますか。",
+    "note": "can leave lasting damage（持続的障害を残し得る）＋ What do you tell patients about their long-term risk?（長期リスクをどう説明するか）。"
+  },
+  {
+    "id": 62,
+    "category": "AKI and Critical Care Nephrology",
+    "english": "We're weighing regional citrate against heparin for anticoagulation. Which do you prefer in a patient with a high bleeding risk?",
+    "japanese": "抗凝固として局所クエン酸とヘパリンを比較検討中です。出血リスクの高い患者ではどちらを選ばれますか。",
+    "note": "weighing A against B（AとBを比較検討）＋ Which do you prefer in ...?（〜ではどちらを選ぶか）で専門的判断を問う。"
+  },
+  {
+    "id": 63,
+    "category": "Dialysis and Vascular Access",
+    "english": "He's been on hemodialysis for five years and his interdialytic weight gain is around three kilograms. What's your approach to a patient who struggles with fluid restriction?",
+    "japanese": "彼は5年間血液透析中で、透析間体重増加は約3kgです。水分制限が難しい患者にどう対応されますか。",
+    "note": "interdialytic weight gain（透析間体重増加）は透析管理の要語。What's your approach to a patient who ...?（〜な患者にどう対応するか）で経験を共有。"
+  },
+  {
+    "id": 64,
+    "category": "Dialysis and Vascular Access",
+    "english": "We recommend a fistula-first strategy for most candidates. But in an elderly patient with poor vessels, would you still avoid a graft?",
+    "japanese": "ほとんどの症例でシャント優先を推奨します。ただ血管の乏しい高齢者でも、なおグラフトを避けますか。",
+    "note": "a fistula-first strategy（シャント優先方針）＋ would you still avoid a graft?（それでもグラフトを避けるか）で原則の例外を議論。"
+  },
+  {
+    "id": 65,
+    "category": "Dialysis and Vascular Access",
+    "english": "She's doing well on peritoneal dialysis at home, but her ultrafiltration is declining. When do you decide it's time to switch modalities?",
+    "japanese": "彼女は在宅腹膜透析で良好ですが、除水が低下してきました。療法変更の時期をどう判断されますか。",
+    "note": "her ultrafiltration is declining（除水が低下）＋ When do you decide it's time to switch modalities?（療法変更の時期をいつと判断するか）。"
+  },
+  {
+    "id": 66,
+    "category": "Dialysis and Vascular Access",
+    "english": "Adequacy is assessed with Kt/V, but should residual kidney function carry more weight than we currently give it?",
+    "japanese": "透析効率はKt/Vで評価しますが、残存腎機能に今より重きを置くべきだとお考えですか。",
+    "note": "Adequacy is assessed with Kt/V（適正度はKt/Vで評価）＋ should residual kidney function carry more weight?（残存腎機能をより重視すべきか）で通説に一石。"
+  },
+  {
+    "id": 67,
+    "category": "Dialysis and Vascular Access",
+    "english": "Intradialytic hypotension is limiting how much fluid we can remove. What strategies have worked best in your unit?",
+    "japanese": "透析中低血圧が除水量を制限しています。貴施設で最も有効だった対策は何ですか。",
+    "note": "Intradialytic hypotension（透析中低血圧）は専門語。What strategies have worked best in your unit?（貴施設で最も有効な対策は）で実践知を引き出す。"
+  },
+  {
+    "id": 68,
+    "category": "Dialysis and Vascular Access",
+    "english": "This patient is still fit and working. Shouldn't we be evaluating him for pre-emptive transplantation rather than starting dialysis?",
+    "japanese": "この患者はまだ元気で就労中です。透析導入より先行的腎移植の適応評価をすべきではないでしょうか。",
+    "note": "still fit and working（まだ元気で就労中）＋ Shouldn't we be evaluating him for ...?（〜の評価をすべきでは）は再考を促す修辞疑問。"
+  },
+  {
+    "id": 69,
+    "category": "Kidney Transplantation",
+    "english": "His creatinine rose sharply three months post-transplant, raising suspicion of rejection. Would you biopsy first or treat empirically?",
+    "japanese": "移植後3か月で彼のクレアチニンが急上昇し、拒絶が疑われます。まず生検されますか、それとも経験的に治療されますか。",
+    "note": "raising suspicion of ...（〜を疑わせる）＋ Would you biopsy first or treat empirically?（まず生検か経験的治療か）で二択を問う。"
+  },
+  {
+    "id": 70,
+    "category": "Kidney Transplantation",
+    "english": "The biopsy showed antibody-mediated rejection. Which regimen do you reach for first, and how do you judge the response?",
+    "japanese": "生検で抗体関連型拒絶が示されました。まずどの治療を選び、反応をどう判断されますか。",
+    "note": "antibody-mediated rejection（抗体関連型拒絶）＋ Which regimen do you reach for first?（まずどの治療を選ぶか）— reach for は「手を伸ばす＝選ぶ」。"
+  },
+  {
+    "id": 71,
+    "category": "Kidney Transplantation",
+    "english": "He developed new-onset diabetes after transplantation. Where do you strike the balance between tacrolimus levels and the metabolic cost?",
+    "japanese": "彼は移植後に新規発症糖尿病を来しました。タクロリムス濃度と代謝への負担をどう天秤にかけますか。",
+    "note": "new-onset diabetes after transplantation（移植後新規発症糖尿病）＋ Where do you strike the balance between A and B?（AとBの折り合いをどこでつけるか）。"
+  },
+  {
+    "id": 72,
+    "category": "Kidney Transplantation",
+    "english": "Adherence to immunosuppressants is critical for graft survival. What has actually worked to improve adherence in your patients?",
+    "japanese": "免疫抑制薬の服薬遵守は移植腎の生着に不可欠です。患者の遵守改善に実際に効果があったのは何ですか。",
+    "note": "Adherence ... is critical for graft survival（服薬遵守は生着に不可欠）＋ What has actually worked to improve adherence?（実際に効いた工夫は）。"
+  },
+  {
+    "id": 73,
+    "category": "Kidney Transplantation",
+    "english": "Recurrence of the original disease can threaten the graft. Before transplanting, what do you tell patients about that risk?",
+    "japanese": "原疾患の再発は移植腎を脅かし得ます。移植前にそのリスクをどう説明されますか。",
+    "note": "Recurrence of the original disease（原疾患の再発）＋ Before transplanting, what do you tell patients about that risk?（移植前にどう説明するか）。"
+  },
+  {
+    "id": 74,
+    "category": "Fluid, Electrolytes and Acid-Base",
+    "english": "His serum sodium is 118 and he's symptomatic. How fast is too fast when correcting hyponatremia in a case like this?",
+    "japanese": "彼の血清ナトリウムは118で症状があります。このような症例で低ナトリウム血症を補正する際、どの速さが速すぎるのでしょうか。",
+    "note": "symptomatic（症状がある）＋ How fast is too fast when correcting ...?（補正で速すぎるのはどの速さか）は補正速度の議論を端的に開く名フレーズ。"
+  },
+  {
+    "id": 75,
+    "category": "Fluid, Electrolytes and Acid-Base",
+    "english": "The blood gas shows a high anion gap metabolic acidosis, but the delta ratio suggests a mixed picture. Do you agree there's a concurrent process?",
+    "japanese": "血ガスは高アニオンギャップ代謝性アシドーシスですが、デルタ比は混合像を示唆します。併存病態があるとお考えですか。",
+    "note": "high anion gap metabolic acidosis / delta ratio（高AG代謝性アシドーシス／デルタ比）＋ Do you agree there's a concurrent process?（併存病態があると同意するか）。"
+  },
+  {
+    "id": 76,
+    "category": "Fluid, Electrolytes and Acid-Base",
+    "english": "His potassium is 7.0 with ECG changes. Walk me through the order in which you'd give your interventions.",
+    "japanese": "彼のカリウムは7.0で心電図変化があります。どの順序で治療を行うか、順を追って教えてください。",
+    "note": "with ECG changes（心電図変化を伴い）＋ Walk me through the order in which you'd ...（どの順序で行うか順を追って）で思考過程を引き出す。"
+  },
+  {
+    "id": 77,
+    "category": "Fluid, Electrolytes and Acid-Base",
+    "english": "Persistent hypokalemia despite replacement makes me suspect renal potassium wasting. Would you check the TTKG or go straight to a tubular work-up?",
+    "japanese": "補充にもかかわらず低カリウムが続き、腎性カリウム喪失を疑います。TTKGを確認しますか、尿細管精査に直接進みますか。",
+    "note": "Persistent hypokalemia despite replacement（補充にもかかわらず持続する低K）＋ Would you check the TTKG or go straight to ...?（TTKGか、直接〜か）。"
+  },
+  {
+    "id": 78,
+    "category": "Fluid, Electrolytes and Acid-Base",
+    "english": "We calculated the free water deficit to guide correction. In practice, how much do you rely on formulas versus frequent re-measurement?",
+    "japanese": "補正の指針として自由水欠乏量を算出しました。実際には計算式と頻回の再測定をどの程度使い分けますか。",
+    "note": "the free water deficit（自由水欠乏量）＋ how much do you rely on formulas versus frequent re-measurement?（計算式と再測定をどの程度使い分けるか）。"
+  },
+  {
+    "id": 79,
+    "category": "Hypertension and Cardiorenal",
+    "english": "His blood pressure stays high despite three agents, meeting the definition of resistant hypertension. Would you screen for primary aldosteronism first?",
+    "japanese": "3剤でも血圧が高く、治療抵抗性高血圧の定義に合致します。まず原発性アルドステロン症を検索されますか。",
+    "note": "meeting the definition of resistant hypertension（治療抵抗性高血圧の定義に合致）＋ Would you screen for ... first?（まず〜を検索するか）。"
+  },
+  {
+    "id": 80,
+    "category": "Hypertension and Cardiorenal",
+    "english": "Volume overload is driving both his hypertension and his dyspnea. In cardiorenal syndrome, how do you decongest without compromising kidney function?",
+    "japanese": "溢水が彼の高血圧と呼吸困難の両方の原因です。心腎症候群において、腎機能を損なわずにどう除水しますか。",
+    "note": "is driving both ...（両方の原因になっている）＋ decongest（除水・うっ血解除）。without compromising kidney function（腎機能を損なわずに）はフォーマルな言い回しで、心腎症候群の核心的ジレンマを表す。"
+  },
+  {
+    "id": 81,
+    "category": "Hypertension and Cardiorenal",
+    "english": "Ambulatory monitoring revealed nocturnal hypertension. Do you think chronotherapy meaningfully changes renal outcomes, or is the evidence still soft?",
+    "japanese": "24時間血圧測定で夜間高血圧が判明しました。服薬タイミング療法は腎予後を実際に変えるとお考えですか、それとも根拠はまだ弱いですか。",
+    "note": "Ambulatory monitoring revealed ...（24時間血圧測定で〜が判明）＋ Do you think ..., or is the evidence still soft?（それとも根拠はまだ弱いか）でエビデンスの強弱を問う。"
+  },
+  {
+    "id": 82,
+    "category": "Hypertension and Cardiorenal",
+    "english": "We're cautious about lowering perfusion too aggressively. Where do you set the blood pressure target in advanced CKD?",
+    "japanese": "灌流を過度に下げることには慎重です。進行CKDでは血圧目標をどこに設定されますか。",
+    "note": "cautious about lowering perfusion too aggressively（灌流を下げ過ぎることに慎重）＋ Where do you set the ... target?（目標をどこに設定するか）。"
+  },
+  {
+    "id": 83,
+    "category": "Pathology, Pharmacology and Mechanisms",
+    "english": "About 40 percent of the glomeruli were globally sclerosed with significant interstitial fibrosis. How much does that temper your enthusiasm for immunosuppression?",
+    "japanese": "糸球体の約40%が全節性硬化し、間質線維化も顕著でした。それは免疫抑制への積極性をどの程度和らげますか。",
+    "note": "globally sclerosed / interstitial fibrosis（全節性硬化／間質線維化）＋ How much does that temper your enthusiasm for ...?（〜への積極性をどれだけ和らげるか）— temper は「和らげる」。"
+  },
+  {
+    "id": 84,
+    "category": "Pathology, Pharmacology and Mechanisms",
+    "english": "The immunofluorescence showed a full-house pattern. Does that clinch lupus nephritis for you, or would you still want serologies?",
+    "japanese": "蛍光抗体法でフルハウスパターンを認めました。それでループス腎炎と確定されますか、なお血清学的検査を求めますか。",
+    "note": "a full-house pattern（フルハウスパターン）＋ Does that clinch ... for you, or would you still want ...?（それで確定か、なお〜を求めるか）— clinch は「決定づける」。"
+  },
+  {
+    "id": 85,
+    "category": "Pathology, Pharmacology and Mechanisms",
+    "english": "This drug is cleared by the kidneys and can accumulate. When you adjust the dose, do you rely on eGFR or on measured clearance?",
+    "japanese": "この薬は腎排泄性で蓄積し得ます。用量をどう調整し、eGFRと実測クリアランスのどちらを頼りにされますか。",
+    "note": "cleared by the kidneys / can accumulate（腎排泄性・蓄積し得る）＋ do you rely on eGFR or on measured clearance?（eGFRか実測クリアランスか）。"
+  },
+  {
+    "id": 86,
+    "category": "Pathology, Pharmacology and Mechanisms",
+    "english": "NSAIDs and contrast are classic nephrotoxins. In a high-risk patient, how far do you go to avoid them versus accepting some risk for a needed test?",
+    "japanese": "NSAIDsと造影剤は典型的な腎毒性物質です。高リスク患者で、必要な検査のためのリスク許容とどう折り合いをつけますか。",
+    "note": "classic nephrotoxins（典型的な腎毒性物質）＋ how far do you go to avoid them versus accepting some risk ...?（回避と許容のどこで折り合うか）。"
+  },
+  {
+    "id": 87,
+    "category": "Pathology, Pharmacology and Mechanisms",
+    "english": "Finerenone reduces the risk of CKD progression on top of standard therapy. In whom do you think the absolute benefit is largest?",
+    "japanese": "フィネレノンは標準治療に上乗せしてCKD進行リスクを減らします。絶対的な有益性が最も大きいのはどのような患者だとお考えですか。",
+    "note": "on top of standard therapy（標準治療に上乗せして）＋ In whom do you think the absolute benefit is largest?（絶対的有益性が最大なのは誰か）。"
+  },
+  {
+    "id": 88,
+    "category": "Pathology, Pharmacology and Mechanisms",
+    "english": "We counseled him about sick-day rules for his medications. Do you routinely give written guidance, and has it reduced admissions for you?",
+    "japanese": "彼に薬剤のシックデイ・ルールを説明しました。書面での指導を日常的に行っていますか、それで入院は減りましたか。",
+    "note": "sick-day rules（シックデイ・ルール）＋ Do you routinely give written guidance, and has it reduced admissions?（書面指導を行うか、入院は減ったか）。"
+  },
+  {
+    "id": 89,
+    "category": "Pathology, Pharmacology and Mechanisms",
+    "english": "Hyperfiltration accelerates the loss of remaining nephrons. Can we reliably detect it clinically, or is it mostly a conceptual model?",
+    "japanese": "過剰濾過は残存ネフロンの喪失を加速します。臨床で確実に検出できるとお考えですか、それとも概念モデルにとどまりますか。",
+    "note": "Hyperfiltration accelerates the loss of ...（過剰濾過が〜の喪失を加速）＋ Can we reliably detect it clinically, or is it mostly a conceptual model?（臨床で検出可能か、概念モデルか）。"
+  },
+  {
+    "id": 90,
+    "category": "Pathology, Pharmacology and Mechanisms",
+    "english": "SGLT2 inhibitors lower intraglomerular pressure via tubuloglomerular feedback. How much of their renal benefit do you attribute to this mechanism versus others?",
+    "japanese": "SGLT2阻害薬は尿細管糸球体フィードバックを介して糸球体内圧を下げます。腎保護のうちこの機序に帰する割合はどの程度とお考えですか。",
+    "note": "via tubuloglomerular feedback（尿細管糸球体フィードバックを介して）＋ How much of ... do you attribute to this mechanism?（どれだけこの機序に帰するか）— attribute A to B。"
+  },
+  {
+    "id": 91,
+    "category": "Evidence, Guidelines and Consultation",
+    "english": "The hazard ratio was 0.61 and the confidence interval didn't cross one, so the result is significant. But is the absolute risk reduction large enough to change practice?",
+    "japanese": "ハザード比は0.61で信頼区間は1をまたがず、有意でした。しかし絶対リスク減少は実臨床を変えるほど大きいでしょうか。",
+    "note": "the confidence interval didn't cross one（信頼区間が1をまたがない）＋ is the absolute risk reduction large enough to change practice?（絶対リスク減少は実臨床を変えるほどか）。"
+  },
+  {
+    "id": 92,
+    "category": "Evidence, Guidelines and Consultation",
+    "english": "This was a post-hoc subgroup analysis, so it's hypothesis-generating at best. Would you act on it, or wait for a confirmatory trial?",
+    "japanese": "これは事後のサブグループ解析で、せいぜい仮説生成的です。これに基づいて行動されますか、確認試験を待たれますか。",
+    "note": "hypothesis-generating at best（せいぜい仮説生成的）＋ Would you act on it, or wait for ...?（これに基づき行動するか、待つか）。"
+  },
+  {
+    "id": 93,
+    "category": "Evidence, Guidelines and Consultation",
+    "english": "There was significant heterogeneity across the pooled trials. When do you consider a meta-analysis still trustworthy?",
+    "japanese": "統合された試験間に有意な異質性がありました。メタ解析がなお信頼できると判断する基準は何ですか。",
+    "note": "significant heterogeneity across the pooled trials（統合試験間の有意な異質性）＋ When do you consider a meta-analysis still trustworthy?（信頼できると判断する基準は）。"
+  },
+  {
+    "id": 94,
+    "category": "Evidence, Guidelines and Consultation",
+    "english": "According to the KDIGO guidelines, this recommendation is strong but based on moderate-quality evidence. How much do you let guidelines override clinical judgment?",
+    "japanese": "KDIGOガイドラインでは強い推奨ですが、根拠は中等度の質です。ガイドラインをどの程度、臨床判断に優先させますか。",
+    "note": "According to the KDIGO guidelines（KDIGOガイドラインによれば）＋ How much do you let guidelines override clinical judgment?（ガイドラインを臨床判断にどれだけ優先させるか）。"
+  },
+  {
+    "id": 95,
+    "category": "Evidence, Guidelines and Consultation",
+    "english": "I'd like to present a 65-year-old man referred for worsening kidney function and unexplained hyperkalemia. My main concern is the rapid rise in creatinine.",
+    "japanese": "腎機能悪化と原因不明の高カリウム血症で紹介された65歳男性を提示します。最大の懸念はクレアチニンの急上昇です。",
+    "note": "I'd like to present a 65-year-old man ...（〜歳男性を提示します）は症例提示の型。My main concern is ...（最大の懸念は）で論点を焦点化。"
+  },
+  {
+    "id": 96,
+    "category": "Evidence, Guidelines and Consultation",
+    "english": "We've ruled out obstruction with ultrasound, and the differential now includes vasculitis and myeloma. Would you appreciate our thoughts, or go straight to biopsy?",
+    "japanese": "超音波で閉塞は除外し、鑑別には血管炎と骨髄腫が残ります。ご意見を伺うべきか、直ちに生検すべきでしょうか。",
+    "note": "We've ruled out ... with ...（〜で除外した）＋ Would you appreciate our thoughts, or go straight to biopsy?（意見を伺うか、直ちに生検か）でコンサルト。"
+  },
+  {
+    "id": 97,
+    "category": "Evidence, Guidelines and Consultation",
+    "english": "In hindsight, we should have checked his volume status earlier. What would you do differently if you saw this patient at presentation?",
+    "japanese": "振り返れば、もっと早く体液量を評価すべきでした。初診でこの患者を診ていたら、何を変えますか。",
+    "note": "In hindsight（振り返れば）＋ What would you do differently if you saw this patient at presentation?（初診で診ていたら何を変えるか）で学びを深める。"
+  },
+  {
+    "id": 98,
+    "category": "Genetic and Rare Kidney Diseases",
+    "english": "With this family history and enlarged kidneys, ADPKD is likely. Would you start tolvaptan, and how do you select who benefits most?",
+    "japanese": "この家族歴と腫大した腎臓から、ADPKDが疑わしいです。トルバプタンを開始されますか、また最も恩恵を受ける患者をどう選びますか。",
+    "note": "With this family history ...（この家族歴から）＋ Would you start tolvaptan, and how do you select who benefits most?（トルバプタンを開始するか、適応をどう選ぶか）。ADPKD/tolvaptan は必須語。"
+  },
+  {
+    "id": 99,
+    "category": "Onconephrology",
+    "english": "He developed AKI two weeks after starting a checkpoint inhibitor. Are you confident this is immune-related interstitial nephritis, or would you biopsy before starting steroids?",
+    "japanese": "チェックポイント阻害薬開始2週間後に彼はAKIを来しました。これは免疫関連の間質性腎炎だと確信されますか、それともステロイド開始前に生検されますか。",
+    "note": "He developed AKI ... weeks after starting ...（〜開始の数週後にAKIを発症）＋ Are you confident this is ..., or would you biopsy before starting steroids?（確信できるか、ステロイド前に生検か）。"
+  },
+  {
+    "id": 100,
+    "category": "Pregnancy and Kidney Disease",
+    "english": "She has CKD and wishes to conceive. What do you tell her about the risks to both her kidneys and the pregnancy, and which medications would you switch beforehand?",
+    "japanese": "彼女はCKDがあり妊娠を希望しています。腎臓と妊娠の双方へのリスクをどう説明し、事前にどの薬剤を変更されますか。",
+    "note": "wishes to conceive（妊娠を希望）＋ What do you tell her about the risks ...?（リスクをどう説明するか）＋ which medications would you switch beforehand?（事前にどの薬を変えるか）。"
+  }
+]
