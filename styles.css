@@ -219,6 +219,11 @@ input[type="range"] {
   gap: 14px;
 }
 
+.phrase-list.is-sequence-playing {
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
+}
+
 .phrase-card {
   display: grid;
   grid-template-rows: auto auto auto 1fr auto;
@@ -229,6 +234,15 @@ input[type="range"] {
   border-radius: 8px;
   background: var(--surface);
   box-shadow: 0 7px 22px rgba(23, 33, 31, 0.07);
+}
+
+.phrase-card[hidden] {
+  display: none;
+}
+
+.phrase-card.is-playing {
+  border-color: var(--teal);
+  box-shadow: 0 12px 32px rgba(15, 118, 110, 0.18);
 }
 
 .phrase-card.is-mastered {

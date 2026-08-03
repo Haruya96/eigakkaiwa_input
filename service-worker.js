@@ -1,4 +1,4 @@
-const CACHE_NAME = "asn-kidney-week-english-v3";
+const CACHE_NAME = "asn-kidney-week-english-v4";
 const ASSETS = [
   "./",
   "index.html",

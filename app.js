@@ -12,7 +12,11 @@ const state = {
   voices: [],
   currentUtterance: null,
   playbackToken: 0,
+  playbackActive: false,
+  playbackQueue: [],
   playingVisible: false,
+  sequencePhraseId: null,
+  wakeLock: null,
 };
 
 const elements = {
@@ -118,6 +122,7 @@ function render() {
   for (const phrase of state.visiblePhrases) {
     const node = elements.template.content.firstElementChild.cloneNode(true);
     const mastered = state.mastered.has(phrase.id);
+    node.dataset.phraseId = String(phrase.id);
     node.classList.toggle("is-mastered", mastered);
     node.querySelector(".phrase-number").textContent = String(phrase.localId).padStart(2, "0");
     node.querySelector(".phrase-category").textContent = phrase.category;
@@ -137,7 +142,7 @@ function render() {
       saveMastered();
       updateStats();
       node.classList.toggle("is-mastered", checkbox.checked);
-      if (state.reviewOnly) {
+      if (state.reviewOnly && !state.playingVisible) {
         render();
       }
     });
@@ -146,6 +151,9 @@ function render() {
   }
 
   elements.phraseList.append(fragment);
+  if (state.playingVisible && state.sequencePhraseId !== null) {
+    showOnlySequencePhrase(state.sequencePhraseId, false);
+  }
   updateStats();
 }
 
@@ -170,10 +178,95 @@ function pickVoiceFor(lang) {
   );
 }
 
-function stopPlayback() {
-  state.playbackToken += 1;
+function showOnlySequencePhrase(phraseId, shouldScroll = true) {
+  state.sequencePhraseId = phraseId;
+  elements.phraseList.classList.add("is-sequence-playing");
+  let currentCard = null;
+
+  for (const card of elements.phraseList.querySelectorAll(".phrase-card")) {
+    const isCurrent = card.dataset.phraseId === String(phraseId);
+    card.hidden = !isCurrent;
+    card.classList.toggle("is-playing", isCurrent);
+    if (isCurrent) {
+      card.setAttribute("aria-current", "true");
+      currentCard = card;
+    } else {
+      card.removeAttribute("aria-current");
+    }
+  }
+
+  if (shouldScroll && currentCard) {
+    currentCard.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
+function restorePhraseCards() {
+  state.sequencePhraseId = null;
+  elements.phraseList.classList.remove("is-sequence-playing");
+  for (const card of elements.phraseList.querySelectorAll(".phrase-card")) {
+    card.hidden = false;
+    card.classList.remove("is-playing");
+    card.removeAttribute("aria-current");
+  }
+}
+
+async function requestWakeLock(token = state.playbackToken) {
+  if (
+    !state.playbackActive ||
+    token !== state.playbackToken ||
+    !("wakeLock" in navigator) ||
+    document.visibilityState !== "visible" ||
+    state.wakeLock
+  ) {
+    return;
+  }
+
+  try {
+    const lock = await navigator.wakeLock.request("screen");
+    if (!state.playbackActive || token !== state.playbackToken || state.wakeLock) {
+      await lock.release();
+      return;
+    }
+    state.wakeLock = lock;
+    lock.addEventListener("release", () => {
+      if (state.wakeLock === lock) {
+        state.wakeLock = null;
+      }
+    });
+  } catch {
+    // Playback remains available when Wake Lock is unsupported or denied.
+  }
+}
+
+async function releaseWakeLock() {
+  const lock = state.wakeLock;
+  state.wakeLock = null;
+  if (!lock || lock.released) {
+    return;
+  }
+  try {
+    await lock.release();
+  } catch {
+    // The browser may already have released the lock after visibility changed.
+  }
+}
+
+function finishPlayback() {
+  const shouldRefreshReview = state.playingVisible && state.reviewOnly;
+  state.playbackActive = false;
+  state.playbackQueue = [];
   state.playingVisible = false;
   elements.playVisibleButton.textContent = "Play sequence";
+  restorePhraseCards();
+  void releaseWakeLock();
+  if (shouldRefreshReview) {
+    render();
+  }
+}
+
+function stopPlayback() {
+  state.playbackToken += 1;
+  finishPlayback();
   if ("speechSynthesis" in window) {
     window.speechSynthesis.cancel();
   }
@@ -182,6 +275,7 @@ function stopPlayback() {
 function speakSegment(segment, token, onEnd) {
   if (!("speechSynthesis" in window)) {
     alert("このブラウザでは音声合成を利用できません。");
+    stopPlayback();
     return;
   }
 
@@ -228,20 +322,23 @@ function playSegments(segments, index, token, onDone) {
 function playPhraseSequence(phrase) {
   stopPlayback();
   const token = state.playbackToken;
-  playSegments(getPhraseSequence(phrase), 0, token);
+  state.playbackActive = true;
+  void requestWakeLock(token);
+  playSegments(getPhraseSequence(phrase), 0, token, finishPlayback);
 }
 
 function playVisibleFrom(index = 0, token = state.playbackToken) {
   if (token !== state.playbackToken) {
     return;
   }
-  if (index >= state.visiblePhrases.length) {
-    state.playingVisible = false;
-    elements.playVisibleButton.textContent = "Play sequence";
+  if (index >= state.playbackQueue.length) {
+    finishPlayback();
     return;
   }
-  elements.playVisibleButton.textContent = `Playing ${index + 1}/${state.visiblePhrases.length}`;
-  playSegments(getPhraseSequence(state.visiblePhrases[index]), 0, token, () => playVisibleFrom(index + 1, token));
+  const phrase = state.playbackQueue[index];
+  showOnlySequencePhrase(phrase.id);
+  elements.playVisibleButton.textContent = `Playing ${index + 1}/${state.playbackQueue.length}`;
+  playSegments(getPhraseSequence(phrase), 0, token, () => playVisibleFrom(index + 1, token));
 }
 
 function loadVoices() {
@@ -301,6 +398,7 @@ function wireControls() {
     if (!ok) {
       return;
     }
+    stopPlayback();
     for (const id of activeIds) {
       state.mastered.delete(id);
     }
@@ -312,13 +410,28 @@ function wireControls() {
     if (!state.visiblePhrases.length) {
       return;
     }
-    if (state.playingVisible || window.speechSynthesis.speaking) {
+    if (state.playbackActive || ("speechSynthesis" in window && window.speechSynthesis.speaking)) {
       stopPlayback();
       return;
     }
+    if (!("speechSynthesis" in window)) {
+      alert("このブラウザでは音声合成を利用できません。");
+      return;
+    }
+    state.playbackQueue = [...state.visiblePhrases];
     state.playingVisible = true;
+    state.playbackActive = true;
     state.playbackToken += 1;
+    void requestWakeLock(state.playbackToken);
     playVisibleFrom(0, state.playbackToken);
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && state.playbackActive) {
+      void requestWakeLock(state.playbackToken);
+    } else if (document.visibilityState !== "visible") {
+      void releaseWakeLock();
+    }
   });
 }
 
