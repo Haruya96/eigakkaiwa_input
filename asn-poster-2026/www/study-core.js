@@ -16,7 +16,7 @@
   function filter(cards, category, status, query, mastered) {
     const search = query.trim().toLocaleLowerCase();
     return cards.filter(card =>
-      (category === 'all' || card.category === category) &&
+      (category === 'all' || card.category === category || (category === 'discussion' && card.category.startsWith('Discussion:'))) &&
       (status === 'all' || (status === 'learned') === mastered.has(card.id)) &&
       (!search || [card.phrase, card.japanese, card.example, card.question, card.answer, card.category]
         .filter(Boolean).some(value => value.toLocaleLowerCase().includes(search)))

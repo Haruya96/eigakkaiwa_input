@@ -4,7 +4,7 @@ const CARDS = window.ASN_CARDS || [];
 const QA = window.ASN_QA || [];
 const CORE = window.PosterStudyCore;
 const MASTERED_KEY = "asn-poster-2026-mastered-v1";
-const QA_MASTERED_KEY = "asn-poster-2026-qa-mastered-v1";
+const QA_MASTERED_KEY = "asn-poster-2026-qa-mastered-v2";
 const RATE_KEY = "asn-poster-2026-rate-v1";
 const $ = selector => document.querySelector(selector);
 
@@ -234,6 +234,7 @@ function setDeck(deck) {
   $("#shuffle").textContent = "シャッフル";
   $("#shuffle").setAttribute("aria-pressed", "false");
   $("#category").innerHTML = '<option value="all">すべてのカテゴリー</option>';
+  if (deck === "qa") $("#category").append(new Option("考察のみ（35題）", "discussion"));
   for (const category of new Set(deckCards().map(card => card.category))) $("#category").append(new Option(category, category));
   $("#category").value = "all";
   $("#status").value = "all";
@@ -246,7 +247,7 @@ function setDeck(deck) {
 }
 
 function init() {
-  if (CARDS.length !== 100 || QA.length !== 30 || !CORE) {
+  if (CARDS.length !== 100 || QA.length !== 50 || !CORE) {
     $("#empty").textContent = "カードデータの読み込みに失敗しました。";
     $("#empty").hidden = false;
     $("#listenPanel").hidden = true;

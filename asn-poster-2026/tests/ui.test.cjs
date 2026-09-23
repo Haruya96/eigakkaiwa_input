@@ -7,7 +7,7 @@ const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'www/index.html'), 'utf8');
 
-function makeApp() {
+function makeApp(initialStorage = []) {
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   class Element {
     constructor(id) {
@@ -27,7 +27,7 @@ function makeApp() {
     change() { this.handlers.change?.({target: this}); }
   }
   const elements = Object.fromEntries(ids.map(id => [id, new Element(id)]));
-  const storage = new Map();
+  const storage = new Map(initialStorage);
   const spoken = [];
   const document = {
     querySelector: selector => elements[selector.slice(1)],
@@ -101,28 +101,51 @@ test('continuous playback advances through every visible card in order', async (
 test('Q&A switches to English-only audio, question-front flashcards, and independent mastery', async () => {
   const {elements, spoken, storage} = makeApp();
   elements.qaDeck.click();
-  assert.equal(elements.progressText.textContent, '0 / 30');
+  assert.equal(elements.progressText.textContent, '0 / 50');
   assert.equal(elements.japaneseItem.hidden, true);
   assert.equal(elements.flashDirectionWrap.hidden, true);
-  assert.equal(elements.phrase.textContent, 'What was the main research question?');
+  assert.equal(elements.phrase.textContent, 'What should a visitor take away from your poster?');
   elements.flashTab.click();
-  assert.equal(elements.flashPrompt.textContent, 'What was the main research question?');
+  assert.equal(elements.flashPrompt.textContent, 'What should a visitor take away from your poster?');
   elements.flip.click();
   assert.ok(elements.flashAnswer.textContent.includes('baseline proteinuria'));
   assert.equal(elements.flashAnswer.hidden, false);
   elements.flashLearn.click();
-  assert.deepEqual(JSON.parse(storage.get('asn-poster-2026-qa-mastered-v1')), [1]);
+  assert.deepEqual(JSON.parse(storage.get('asn-poster-2026-qa-mastered-v2')), [1]);
   assert.equal(storage.get('asn-poster-2026-mastered-v1'), undefined);
   elements.flashPlay.click();
   await new Promise(resolve => setTimeout(resolve, 10));
   assert.deepEqual(spoken.map(item => item.text), [
-    'What was the main research question?',
-    'We asked whether baseline proteinuria changes the association between serum uric acid and subsequent decline in estimated GFR.',
-    'We asked whether baseline proteinuria changes the association between serum uric acid and subsequent decline in estimated GFR.',
+    'What should a visitor take away from your poster?',
+    'Higher serum uric acid was associated with faster subsequent kidney function decline mainly among participants with baseline proteinuria. Proteinuria may help us interpret the prognostic meaning of uric acid, although the study does not establish causality.',
+    'Higher serum uric acid was associated with faster subsequent kidney function decline mainly among participants with baseline proteinuria. Proteinuria may help us interpret the prognostic meaning of uric acid, although the study does not establish causality.',
   ]);
   assert.ok(spoken.every(item => item.lang === 'en-US'));
   elements.phrasesDeck.click();
   assert.equal(elements.progressText.textContent, '0 / 100');
   assert.equal(elements.japaneseItem.hidden, false);
   assert.equal(elements.flashDirectionWrap.hidden, false);
+});
+
+test('rewritten Q&A starts fresh, retains phrase progress, and plays only the 35 discussion cards', async () => {
+  const {elements, spoken, storage} = makeApp([
+    ['asn-poster-2026-qa-mastered-v1', '[1,2]'],
+    ['asn-poster-2026-mastered-v1', '[1]'],
+  ]);
+  assert.equal(elements.progressText.textContent, '1 / 100');
+  elements.qaDeck.click();
+  assert.equal(elements.progressText.textContent, '0 / 50');
+  elements.category.value = 'discussion';
+  elements.category.change();
+  assert.equal(elements.position.textContent, '1 / 35');
+  assert.equal(elements.listenNumber.textContent, 'Q 016');
+  elements.playAll.click();
+  await new Promise(resolve => setTimeout(resolve, 20));
+  assert.equal(spoken.length, 105);
+  assert.ok(spoken.every(part => part.lang === 'en-US'));
+  assert.equal(elements.listenNumber.textContent, 'Q 050');
+  assert.equal(elements.stop.hidden, true);
+  assert.equal(storage.get('asn-poster-2026-qa-mastered-v1'), '[1,2]');
+  elements.phrasesDeck.click();
+  assert.equal(elements.progressText.textContent, '1 / 100');
 });
