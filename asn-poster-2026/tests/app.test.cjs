@@ -6,7 +6,38 @@ const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
 const dataSource = fs.readFileSync(path.join(root, 'www/cards-data.js'), 'utf8');
+const qaSource = fs.readFileSync(path.join(root, 'www/qa-data.js'), 'utf8');
 const core = require('../www/study-core.js');
+
+test('questions and answers are 30 distinct English-only study cards', () => {
+  const context = {window: {}};
+  vm.runInNewContext(qaSource, context);
+  const qa = context.window.ASN_QA;
+  assert.equal(qa.length, 30);
+  assert.equal(new Set(qa.map(card => card.question)).size, 30);
+  qa.forEach((card, index) => {
+    assert.equal(card.id, index + 1);
+    assert.ok(card.question.endsWith('?'));
+    assert.ok(card.answer);
+    assert.match(card.question + card.answer, /^[\x00-\x7F]+$/);
+    assert.equal(card.japanese, undefined);
+  });
+  assert.ok(qa.some(card => card.answer.includes('8,266')));
+  assert.ok(qa.some(card => card.answer.includes('Bonferroni')));
+});
+
+test('question is spoken once and answer twice, all in English', () => {
+  const card = {question: 'What did you observe?', answer: 'The groups differed.'};
+  const parts = core.segments(card, 'qa');
+  assert.deepEqual(parts.map(part => part.text), [card.question, card.answer, card.answer]);
+  assert.deepEqual(parts.map(part => part.lang), ['en-US', 'en-US', 'en-US']);
+});
+
+test('Q&A search covers both questions and answers', () => {
+  const cards = [{id: 1, category: 'Results', question: 'Which subgroup?', answer: 'Baseline estimated GFR.'}];
+  assert.deepEqual(core.filter(cards, 'all', 'unlearned', 'GFR', new Set()).map(card => card.id), [1]);
+  assert.deepEqual(core.filter(cards, 'all', 'learned', '', new Set()).map(card => card.id), []);
+});
 
 test('approved data has 100 unique, complete cards with stable IDs', () => {
   const context = {window: {}};

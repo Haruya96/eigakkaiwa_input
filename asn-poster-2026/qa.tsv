@@ -1,0 +1,31 @@
+category	question	answer
+Overview	What was the main research question?	We asked whether baseline proteinuria changes the association between serum uric acid and subsequent decline in estimated GFR.
+Overview	Why did you focus on proteinuria?	Proteinuria may identify people whose kidneys are more vulnerable. We tested whether the uric acid association differs according to proteinuria status.
+Overview	What is new about this study?	We examined this association in a community cohort using repeated kidney function measurements, nonlinear modeling of uric acid, and a formal interaction test.
+Cohort	Who was included in the analysis?	We analyzed 8,266 adults aged 20 years or older from coastal communities in Iwate, Japan.
+Cohort	When were the participants followed?	The baseline survey began in September 2011, and follow-up surveys were conducted annually through 2020. Mean follow-up was 7.1 years.
+Cohort	Who was excluded?	We excluded people with prior myocardial infarction or stroke, gout or urate-lowering therapy, no follow-up estimated GFR data, or missing baseline covariates.
+Cohort	Could excluding people without follow-up data have affected the findings?	Yes. We excluded 1,334 people without follow-up estimated GFR data, so selection bias is possible.
+Measurements	What were the exposure and outcome?	The exposure was baseline serum uric acid. The outcome was the annual change in estimated GFR, expressed as an estimated GFR slope.
+Measurements	How did you define proteinuria?	In the main analysis, proteinuria meant trace or greater on a baseline urine dipstick test.
+Measurements	How many participants had proteinuria?	At baseline, 371 of the 8,266 participants had proteinuria, or 4.5 percent.
+Measurements	Was proteinuria measured more than once?	No. It was assessed using a single daytime spot urine sample, so we could not distinguish transient from persistent proteinuria.
+Measurements	Did you measure the urine albumin-to-creatinine ratio?	No. We used dipstick proteinuria and did not have a quantitative albumin-to-creatinine ratio for this analysis.
+Methods	Why did you use a linear mixed-effects model?	We had repeated estimated GFR measurements. The model included a random intercept and a random time slope for each participant.
+Methods	How did you model serum uric acid?	We modeled it as a continuous variable using restricted cubic splines, with knots at the tenth, fiftieth, and ninetieth percentiles.
+Methods	Why did you use splines instead of a straight line?	Splines allowed the estimated association to be nonlinear without forcing it to follow a straight line.
+Methods	How did you test whether proteinuria modified the association?	We tested the interaction among time, spline-transformed serum uric acid, and baseline proteinuria in the mixed-effects model.
+Methods	Which factors did you adjust for?	We adjusted for baseline estimated GFR, age, sex, body mass index, blood pressure, diabetes, smoking, alcohol use, dyslipidemia, and disaster-related home damage or flooding.
+Results	Were there baseline differences between the proteinuria groups?	Yes. Participants with proteinuria were older on average and had higher blood pressure and uric acid and lower baseline estimated GFR.
+Results	What did you find in participants without proteinuria?	Their estimated GFR slope changed little across uric acid levels. The mean slope was minus 1.11 milliliters per minute per 1.73 square meters per year.
+Results	What did you find in participants with proteinuria?	The estimated GFR slope was least negative at 5.0 milligrams per deciliter, at minus 1.27, and reached minus 2.04 at 7.8 milligrams per deciliter. Both slopes are per year.
+Results	Was the interaction statistically significant?	Yes. The interaction between serum uric acid and proteinuria for estimated GFR slope had a P value below 0.001.
+Results	Did the association appear to be linear in the proteinuria group?	No. The association was nonlinear, with steeper estimated GFR decline at higher serum uric acid levels.
+Results	What do the shaded areas in the main figure show?	They show 95 percent confidence intervals around the estimated GFR slopes from the model.
+Results	Which subgroup finding remained significant after correction?	Only baseline estimated GFR showed significant heterogeneity after Bonferroni correction. With baseline estimated GFR below 60, the proteinuria group had steeper decline across the displayed uric acid range.
+Results	Did age, sex, or other subgroups show the same heterogeneity?	No other prespecified factor, including age, sex, body mass index, blood pressure, or diabetes, showed significant heterogeneity after Bonferroni correction.
+Results	Did the result persist with a stricter definition of proteinuria?	Yes. Defining proteinuria as dipstick 1 plus or greater gave a similar overall pattern. That definition identified 146 participants.
+Interpretation	Why did you limit the stricter-definition analysis to the overall cohort?	Only 146 participants met the stricter proteinuria definition, so further subgroup analyses would have been too sparse.
+Interpretation	Does the low point near 5.0 mean that we should target that uric acid level?	No. This is an observational curve, not a treatment trial, and it does not establish an optimal uric acid target.
+Interpretation	Could reduced kidney function itself raise uric acid?	Yes. Reverse causation is possible. We adjusted for baseline estimated GFR, but that cannot fully resolve the issue.
+Interpretation	What is your main clinical takeaway?	Higher uric acid was associated with faster kidney function decline mainly when proteinuria was present. This does not show that urate-lowering treatment will prevent decline; independent replication is needed.

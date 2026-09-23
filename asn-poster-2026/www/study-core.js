@@ -1,6 +1,11 @@
 "use strict";
 (function (root) {
-  function segments(card) {
+  function segments(card, deck = 'phrases') {
+    if (deck === 'qa') return [
+      {text: card.question, lang: 'en-US', label: 'Question'},
+      {text: card.answer, lang: 'en-US', label: 'Answer 1'},
+      {text: card.answer, lang: 'en-US', label: 'Answer 2'},
+    ];
     return [
       {text: card.phrase, lang: 'en-US', label: '英語表現'},
       {text: card.japanese, lang: 'ja-JP', label: '日本語'},
@@ -13,7 +18,8 @@
     return cards.filter(card =>
       (category === 'all' || card.category === category) &&
       (status === 'all' || (status === 'learned') === mastered.has(card.id)) &&
-      (!search || [card.phrase, card.japanese, card.example, card.category].some(value => value.toLocaleLowerCase().includes(search)))
+      (!search || [card.phrase, card.japanese, card.example, card.question, card.answer, card.category]
+        .filter(Boolean).some(value => value.toLocaleLowerCase().includes(search)))
     );
   }
   const api = {segments, filter};

@@ -6,6 +6,7 @@ on:
       - 'asn-poster-2026/android/**'
       - 'asn-poster-2026/www/**'
       - 'asn-poster-2026/cards.tsv'
+      - 'asn-poster-2026/qa.tsv'
       - '.github/workflows/asn-poster-apk.yml'
   workflow_dispatch:
 

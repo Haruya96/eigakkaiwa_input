@@ -1,33 +1,39 @@
 "use strict";
 
 const CARDS = window.ASN_CARDS || [];
+const QA = window.ASN_QA || [];
 const CORE = window.PosterStudyCore;
 const MASTERED_KEY = "asn-poster-2026-mastered-v1";
+const QA_MASTERED_KEY = "asn-poster-2026-qa-mastered-v1";
 const RATE_KEY = "asn-poster-2026-rate-v1";
 const $ = selector => document.querySelector(selector);
 
-function loadMastery() {
+function loadMastery(key) {
   try {
-    const saved = JSON.parse(localStorage.getItem(MASTERED_KEY) || "[]");
+    const saved = JSON.parse(localStorage.getItem(key) || "[]");
     return new Set(Array.isArray(saved) ? saved.filter(Number.isInteger) : []);
   } catch { return new Set(); }
 }
 
 const state = {
-  mastered: loadMastery(), visible: [], currentId: 1, order: [], shuffled: false,
+  deck: "phrases", mastered: {phrases: loadMastery(MASTERED_KEY), qa: loadMastery(QA_MASTERED_KEY)},
+  visible: [], currentId: 1, lastId: {phrases: 1, qa: 1}, order: [], shuffled: false,
   mode: "listen", flipped: false, playing: false, playbackToken: 0,
   pendingSpeech: null, wakeLock: null,
 };
 
 function saveMastery() {
-  try { localStorage.setItem(MASTERED_KEY, JSON.stringify([...state.mastered])); }
+  const key = state.deck === "qa" ? QA_MASTERED_KEY : MASTERED_KEY;
+  try { localStorage.setItem(key, JSON.stringify([...masteredCards()])); }
   catch { status("このブラウザでは暗記状態を保存できません。"); }
 }
-function currentCard() { return CARDS.find(card => card.id === state.currentId); }
+function deckCards() { return state.deck === "qa" ? QA : CARDS; }
+function masteredCards() { return state.mastered[state.deck]; }
+function currentCard() { return deckCards().find(card => card.id === state.currentId); }
 function status(message) { $("#playStatus").textContent = message; }
 
 function filteredCards() {
-  const cards = CORE.filter(CARDS, $("#category").value, $("#status").value, $("#search").value, state.mastered);
+  const cards = CORE.filter(deckCards(), $("#category").value, $("#status").value, $("#search").value, masteredCards());
   return state.shuffled ? cards.sort((a, b) => state.order.indexOf(a.id) - state.order.indexOf(b.id)) : cards;
 }
 
@@ -41,29 +47,35 @@ function render() {
   $("#flashPanel").hidden = !hasCard || state.mode !== "flash";
   $("#position").textContent = hasCard ? `${index + 1} / ${state.visible.length}` : "0 / 0";
   for (const selector of ["#previous", "#next", "#playOne", "#playAll", "#flashNext", "#flashPlay"]) $(selector).disabled = !hasCard;
-  const mastered = CARDS.filter(card => state.mastered.has(card.id)).length;
-  $("#progressText").textContent = `${mastered} / ${CARDS.length}`;
-  $("#progressFill").style.width = `${CARDS.length ? mastered / CARDS.length * 100 : 0}%`;
+  const mastered = deckCards().filter(card => masteredCards().has(card.id)).length;
+  $("#progressText").textContent = `${mastered} / ${deckCards().length}`;
+  $("#progressFill").style.width = `${deckCards().length ? mastered / deckCards().length * 100 : 0}%`;
   if (!hasCard) return;
 
   const card = currentCard();
+  const isQa = state.deck === "qa";
   $("#listenCategory").textContent = card.category;
-  $("#listenNumber").textContent = `CARD ${String(card.id).padStart(3, "0")}`;
-  $("#phrase").textContent = card.phrase;
-  $("#japanese").textContent = card.japanese;
-  $("#example").textContent = card.example;
+  $("#listenNumber").textContent = `${isQa ? "Q" : "CARD"} ${String(card.id).padStart(3, "0")}`;
+  $("#phraseLabel").textContent = isQa ? "01 · QUESTION" : "01 · PHRASE";
+  $("#phrase").textContent = isQa ? card.question : card.phrase;
+  $("#japaneseItem").hidden = isQa;
+  $("#japanese").textContent = isQa ? "" : card.japanese;
+  $("#exampleLabel").textContent = isQa ? "02 · ANSWER" : "03 · MY POSTER";
+  $("#example").textContent = isQa ? card.answer : card.example;
+  $("#sequenceLabel").textContent = isQa ? "質問 ×1 → 回答 ×2" : "英語表現 ×1 → 日本語 ×1 → 例文 ×2";
   $("#flashCategory").textContent = card.category;
-  $("#flashNumber").textContent = `CARD ${String(card.id).padStart(3, "0")}`;
+  $("#flashNumber").textContent = `${isQa ? "Q" : "CARD"} ${String(card.id).padStart(3, "0")}`;
+  $("#flashDirectionWrap").hidden = isQa;
   const japaneseFront = $("#flashDirection").value === "ja";
-  $("#flashPromptLabel").textContent = japaneseFront ? "日本語から英語を思い出す" : "英語から日本語を思い出す";
-  $("#flashPrompt").textContent = japaneseFront ? card.japanese : card.phrase;
-  $("#flashAnswer").textContent = `${japaneseFront ? card.phrase : card.japanese}\n\n例文：${card.example}`;
+  $("#flashPromptLabel").textContent = isQa ? "QUESTION" : japaneseFront ? "日本語から英語を思い出す" : "英語から日本語を思い出す";
+  $("#flashPrompt").textContent = isQa ? card.question : japaneseFront ? card.japanese : card.phrase;
+  $("#flashAnswer").textContent = isQa ? card.answer : `${japaneseFront ? card.phrase : card.japanese}\n\n例文：${card.example}`;
   $("#flashAnswer").hidden = !state.flipped;
   $("#flashHint").textContent = state.flipped ? "タップして表面に戻る" : "タップして答えを見る ↗";
   $("#flip").setAttribute("aria-label", state.flipped ? "表面に戻る" : "答えを表示");
   for (const selector of ["#learnButton", "#flashLearn"]) {
     const button = $(selector);
-    const learned = state.mastered.has(card.id);
+    const learned = masteredCards().has(card.id);
     button.textContent = learned ? "✓ 覚えた" : "まだ不安";
     button.classList.toggle("learned", learned);
     button.setAttribute("aria-pressed", String(learned));
@@ -107,6 +119,7 @@ function move(delta) {
   stopPlayback();
   const index = state.visible.findIndex(card => card.id === state.currentId);
   state.currentId = state.visible[(index + delta + state.visible.length) % state.visible.length].id;
+  state.lastId[state.deck] = state.currentId;
   state.flipped = false;
   render();
 }
@@ -114,14 +127,15 @@ function move(delta) {
 function toggleMastered() {
   if (!state.visible.length) return;
   const id = state.currentId;
-  if (state.mastered.has(id)) state.mastered.delete(id);
-  else state.mastered.add(id);
+  if (masteredCards().has(id)) masteredCards().delete(id);
+  else masteredCards().add(id);
   saveMastery();
   if ($("#status").value !== "all") {
     stopPlayback();
     const index = state.visible.findIndex(card => card.id === id);
     const remaining = filteredCards();
     state.currentId = remaining[Math.min(index, remaining.length - 1)]?.id ?? id;
+    state.lastId[state.deck] = state.currentId;
     state.flipped = false;
   }
   render();
@@ -177,9 +191,10 @@ async function playCards(queue) {
   for (const [index, card] of queue.entries()) {
     if (token !== state.playbackToken) return;
     state.currentId = card.id;
+    state.lastId[state.deck] = card.id;
     state.flipped = false;
     render();
-    for (const segment of CORE.segments(card)) {
+    for (const segment of CORE.segments(card, state.deck)) {
       if (token !== state.playbackToken) return;
       status(`${index + 1}/${queue.length}　${segment.label}を再生中`);
       const success = await speak(segment.text, segment.lang, token);
@@ -207,8 +222,31 @@ function setMode(mode) {
   render();
 }
 
+function setDeck(deck) {
+  if (state.deck === deck) return;
+  stopPlayback();
+  state.lastId[state.deck] = state.currentId;
+  state.deck = deck;
+  state.currentId = state.lastId[deck];
+  state.flipped = false;
+  state.shuffled = false;
+  state.order = deckCards().map(card => card.id);
+  $("#shuffle").textContent = "シャッフル";
+  $("#shuffle").setAttribute("aria-pressed", "false");
+  $("#category").innerHTML = '<option value="all">すべてのカテゴリー</option>';
+  for (const category of new Set(deckCards().map(card => card.category))) $("#category").append(new Option(category, category));
+  $("#category").value = "all";
+  $("#status").value = "all";
+  $("#search").value = "";
+  for (const [name, selector] of [["phrases", "#phrasesDeck"], ["qa", "#qaDeck"]]) {
+    $(selector).classList.toggle("selected", name === deck);
+    $(selector).setAttribute("aria-pressed", String(name === deck));
+  }
+  render();
+}
+
 function init() {
-  if (CARDS.length !== 100 || !CORE) {
+  if (CARDS.length !== 100 || QA.length !== 30 || !CORE) {
     $("#empty").textContent = "カードデータの読み込みに失敗しました。";
     $("#empty").hidden = false;
     $("#listenPanel").hidden = true;
@@ -233,6 +271,8 @@ function init() {
   $("#flashNext").addEventListener("click", () => move(1));
   $("#listenTab").addEventListener("click", () => setMode("listen"));
   $("#flashTab").addEventListener("click", () => setMode("flash"));
+  $("#phrasesDeck").addEventListener("click", () => setDeck("phrases"));
+  $("#qaDeck").addEventListener("click", () => setDeck("qa"));
   $("#flashDirection").addEventListener("change", () => { state.flipped = false; render(); });
   $("#flip").addEventListener("click", () => { state.flipped = !state.flipped; render(); });
   for (const selector of ["#learnButton", "#flashLearn"]) $(selector).addEventListener("click", toggleMastered);
