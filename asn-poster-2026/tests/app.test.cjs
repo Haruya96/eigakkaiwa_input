@@ -23,8 +23,11 @@ test('questions and answers are 50 distinct English-only study cards', () => {
     assert.equal(card.japanese, undefined);
     assert.equal((card.hint.match(/________/g) || []).length >= 2, true, `Q${card.id}: multiple blanks`);
     assert.ok(card.hint.length > 50, `Q${card.id}: hint retains the full answer context`);
+    const numbers = text => text.match(/\d+(?:[.,]\d+)*\+?/g) || [];
+    assert.deepEqual(numbers(card.hint), numbers(card.answer), `Q${card.id}: study numbers stay visible`);
   });
-  assert.equal(qa[0].hint, "Higher uric acid was linked to ________, mostly among ________. Because this is observational, we ________.");
+  assert.equal(qa[0].hint, "Higher uric acid ________ faster eGFR decline, ________ people with proteinuria. Because this is observational, we ________.");
+  assert.equal(qa[4].hint, "With proteinuria, ________ 1.3 a year ________ 5.0, ________ 2.0 at 7.8. That's in milliliters per minute per 1.73 square meters per year.");
   assert.ok(qa.some(card => card.answer.includes('8,266')));
   assert.ok(qa.some(card => card.answer.includes('Bonferroni')));
   assert.match(qa[4].answer, /milliliters per minute per 1\.73 square meters per year/);
