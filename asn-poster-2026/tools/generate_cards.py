@@ -22,3 +22,23 @@ cards = [{"id": i, **row} for i, row in enumerate(rows, 1)]
     encoding="utf-8",
 )
 print(f"Generated {len(cards)} cards")
+
+with (ROOT / "qa.tsv").open(encoding="utf-8", newline="") as source:
+    qa_rows = list(csv.DictReader(source, delimiter="\t"))
+
+qa_fields = {"category", "question", "answer"}
+assert len(qa_rows) == 30, f"Expected 30 questions, found {len(qa_rows)}"
+assert all(set(row) == qa_fields and all(row.values()) for row in qa_rows), "Missing Q&A field"
+assert len({row["question"].casefold() for row in qa_rows}) == 30, "Duplicate questions"
+assert all(row["question"].endswith("?") for row in qa_rows), "Question needs a question mark"
+assert all(all(ord(char) < 128 for char in row["question"] + row["answer"]) for row in qa_rows), "Q&A must be English only"
+
+qa = [{"id": i, **row} for i, row in enumerate(qa_rows, 1)]
+(ROOT / "www" / "qa-data.js").write_text(
+    "// Generated from qa.tsv. Do not edit by hand.\n"
+    + "window.ASN_QA = "
+    + json.dumps(qa, ensure_ascii=False, separators=(",", ":"))
+    + ";\n",
+    encoding="utf-8",
+)
+print(f"Generated {len(qa)} questions and answers")
