@@ -1,51 +1,51 @@
 id	blanks
-1	faster subsequent kidney function decline|baseline proteinuria|does not establish causality
-2	modifying role of proteinuria|allowing the uric acid association to be nonlinear
-3	8,266 Japanese community residents|7.1 years
-4	371 participants|trace or greater|sensitivity analysis
-5	minus 1.27|minus 2.04|proteinuria
-6	linear mixed-effects models|random intercept|random time slope
-7	arbitrary uric acid categories|Restricted cubic splines|tenth, fiftieth, and ninetieth percentiles
-8	interaction among time, spline-transformed uric acid, and proteinuria|did not infer interaction merely because
-9	baseline estimated GFR|disaster-related home damage or flooding|interactions with time
-10	prespecified subgroup factors|Bonferroni correction
-11	varied little across uric acid levels|minus 1.11|does not imply stable kidney function
-12	steeper decline throughout the displayed uric acid range|does not show that uric acid is uniformly more harmful
-13	Only baseline estimated GFR|Bonferroni correction|nonsignificant results do not prove
-14	146 participants|similar overall pattern|limited precision
-15	estimated annual GFR change|95 percent confidence intervals|rather than ranges predicting each individual's future slope
-16	injured kidney|urate-related stress|did not test that pathway
-17	existing kidney damage|tubular inflammation|cannot determine which role
-18	albumin overload and urate exposure|inflammatory pathways|mechanistic context rather than a finding
-19	soluble urate and urate crystals|cannot tell us whether crystals were present|did not assess crystal deposition
-20	less capacity to tolerate additional stress|did not measure nephron number or renal functional reserve
-21	underlying cardiometabolic disease|residual confounding
-22	did not test tubular injury or inflammatory pathways|would need direct testing
-23	temporal ordering|kidney disease could already have affected uric acid|reverse causation
-24	reduce urate excretion|subsequent decline|even without a causal effect
-25	imperfect measure of kidney health|variation within each category|unmeasured kidney damage
-26	same baseline visit|temporal relationship is unclear|did not perform a causal mediation analysis
-27	conditioning on it could introduce collider bias|conditional associations|causal structure still uncertain
-28	Diet, diuretic use, and renin-angiotensin system inhibitor use|residual confounding
-29	baseline uric acid and proteinuria|effects of changes in either exposure|Repeated measurements
-30	below 0.001|size, precision, and reproducibility|does not establish a useful treatment decision
-31	randomized trials|did not demonstrate kidney-function benefit|prognostic marker does not necessarily become an effective treatment target
-32	many patients with substantial albuminuria|prespecified randomized comparison
-33	prognosis, not treatment response|lowering uric acid prevents decline|clinical indication
-34	least negative point of an observational curve|not a randomized treatment target|uncertain
-35	exposure extremes are less precise|nutrition or underlying illness|cannot infer
-36	No validated cutoff|modeled uric acid continuously|separate validation
-37	adjusted association does not establish added predictive value|calibration and discrimination|independent population
-38	interpreting uric acid together with proteinuria|improves decisions and patient outcomes
-39	misclassify transient proteinuria|weaken or distort|direction is not certain
-40	graded association|distinguish persistent albuminuria|would not remove all confounding
-41	1,334 people|selection could affect our estimates|cannot determine the direction
-42	371 participants|extreme uric acid levels|146 positive participants
-43	muscle mass and other non-GFR factors|cystatin C or measured GFR
-44	annual GFR change|cannot directly estimate an effect on kidney failure|time to dialysis
-45	disaster-affected communities|replication in other community and clinical populations
-46	diet, stress, medication use, or access to care|reported home damage or flooding|cannot capture every consequence
-47	independent cohort|repeated uric acid, quantitative albuminuria, and kidney function measurements|Detailed medication data
-48	alternative spline specifications|sensitivity to early follow-up and dropout|not part of the reported results
-49	controlled tubular-cell experiment|albumin exposure, urate exposure, and their combination|Soluble urate and crystals
-50	adequately powered randomized trial|treatment-by-proteinuria interaction|kidney outcomes and safety
+1	faster eGFR decline|people with proteinuria|can't say uric acid caused the decline
+2	whether proteinuria changes that relationship|nonlinear
+3	8,266 adults|RIAS cohort|seven years
+4	371 people|trace or greater|stricter cutoff
+5	uric acid level of 5.0|1.3 a year|2.0 at 7.8
+6	linear mixed models|random intercept|different rates
+7	throw away information|restricted cubic splines|10th, 50th, and 90th percentiles
+8	three-way interaction|compare the P values
+9	baseline eGFR|home damage or flooding|interactions with time
+10	cardiometabolic risk|in advance|Bonferroni correction
+11	about 1.1 per year|didn't change much|flat curve doesn't mean stable kidney function
+12	below 60|higher-risk group|more harmful for everyone with low eGFR
+13	baseline eGFR subgroup|Bonferroni correction|doesn't prove they're identical
+14	1+ cutoff|146 participants|didn't repeat the subgroup analyses
+15	annual eGFR change|95 percent confidence intervals|not a prediction for an individual
+16	already injured|urate-related stress|Tubular inflammation
+17	mark existing damage|inflame tubules|can't tell which
+18	albumin and urate|inflammation in tubular cells|worth testing
+19	soluble urate and crystals|inflammatory triggers|didn't assess crystal deposition
+20	less capacity to handle another stressor|didn't measure renal reserve
+21	Cardiometabolic disease|high uric acid and proteinuria|residual confounding
+22	didn't assess biomarkers|tubular injury or inflammation|testing in people
+23	before the follow-up decline|kidney damage may already have raised it|Reverse causation and confounding
+24	reduce urate excretion|raise serum uric acid|even if uric acid isn't causing it
+25	eGFR categories|variation within each category|can't capture every kind of kidney damage
+26	same visit|which came first|interaction, not mediation
+27	other causes of kidney decline|collider bias|conditional associations
+28	Diet, diuretics, and RAS inhibitors|treatment changes|residual confounding
+29	baseline measurements|Repeated uric acid and proteinuria measurements|persistent values
+30	below 0.001|large and reliable the difference is
+31	allopurinol lowered urate|kidney decline wasn't slowed|doesn't show that lowering uric acid will help
+32	substantial albuminuria|prespecifies the interaction with proteinuria
+33	not from this poster alone|prognosis|urate-lowering treatment helps
+34	curve was least negative|uncertain|wasn't tested as a treatment target
+35	low end are less precise|illness or poor nutrition|can't conclude
+36	modeled uric acid continuously|example on the curve|separate validation
+37	didn't test prediction|calibration and discrimination|another cohort
+38	alongside proteinuria|improves care
+39	temporary proteinuria|low-grade albuminuria|can't say in which direction
+40	range of albuminuria levels|persistent albuminuria
+41	1,334 people|depended on both the exposures and subsequent kidney function|don't know the direction
+42	371 people|146 under the stricter cutoff|less certain
+43	muscle mass|kidney filtration|Cystatin C or measured GFR
+44	eGFR slope|kidney failure|time to dialysis
+45	disaster-affected region of Japan|replicated elsewhere
+46	medication use, and access to care|home damage or flooding|can't capture every effect
+47	independent cohort|repeated uric acid, UACR, and eGFR measurements|medication data
+48	different spline settings|more flexible adjustment|early follow-up and missing data
+49	albumin alone, urate alone, and both|injury and inflammation|soluble urate and crystals
+50	randomized trial of urate-lowering therapy|works differently with and without proteinuria|kidney outcomes and safety
