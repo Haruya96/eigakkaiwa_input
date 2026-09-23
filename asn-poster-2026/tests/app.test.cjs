@@ -24,9 +24,12 @@ test('questions and answers are 50 distinct English-only study cards', () => {
     assert.equal((card.hint.match(/________/g) || []).length >= 2, true, `Q${card.id}: multiple blanks`);
     assert.ok(card.hint.length > 50, `Q${card.id}: hint retains the full answer context`);
   });
-  assert.equal(qa[0].hint, 'Higher serum uric acid was associated with ________ mainly among participants with ________. Proteinuria may help us interpret the prognostic meaning of uric acid, although the study ________.');
+  assert.equal(qa[0].hint, "Higher uric acid was linked to ________, mostly among ________. Because this is observational, we ________.");
   assert.ok(qa.some(card => card.answer.includes('8,266')));
   assert.ok(qa.some(card => card.answer.includes('Bonferroni')));
+  assert.match(qa[4].answer, /milliliters per minute per 1\.73 square meters per year/);
+  assert.match(qa[26].answer, /uric acid and other causes of kidney decline both affect proteinuria/);
+  assert.match(qa[30].answer, /populations studied/);
 });
 
 test('question is spoken once and answer twice, all in English', () => {
