@@ -1,0 +1,99 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+
+const root = path.resolve(__dirname, '..');
+const html = fs.readFileSync(path.join(root, 'www/index.html'), 'utf8');
+
+function makeApp() {
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+  class Element {
+    constructor(id) {
+      this.id = id;
+      this.hidden = false;
+      this.value = {category: 'all', status: 'all', flashDirection: 'ja', rate: '0.90'}[id] ?? '';
+      this.textContent = '';
+      this.handlers = {};
+      this.attributes = {};
+      this.style = {};
+      this.classList = {toggle: () => {}};
+    }
+    addEventListener(type, handler) { this.handlers[type] = handler; }
+    append() {}
+    setAttribute(key, value) { this.attributes[key] = value; }
+    click() { this.handlers.click?.({}); }
+    change() { this.handlers.change?.({target: this}); }
+  }
+  const elements = Object.fromEntries(ids.map(id => [id, new Element(id)]));
+  const storage = new Map();
+  const spoken = [];
+  const document = {
+    querySelector: selector => elements[selector.slice(1)],
+    addEventListener: () => {},
+    visibilityState: 'visible',
+    activeElement: {tagName: 'BODY'},
+  };
+  const window = {
+    speechSynthesis: {
+      speak(utterance) { spoken.push({text: utterance.text, lang: utterance.lang}); queueMicrotask(() => utterance.onend()); },
+      cancel() {},
+    },
+  };
+  class SpeechSynthesisUtterance { constructor(text) { this.text = text; } }
+  window.SpeechSynthesisUtterance = SpeechSynthesisUtterance;
+  const context = vm.createContext({window, document, navigator: {}, location: {protocol: 'http:'}, localStorage: {
+    getItem: key => storage.get(key) ?? null,
+    setItem: (key, value) => storage.set(key, value),
+  }, Option: class Option {}, SpeechSynthesisUtterance, queueMicrotask, console});
+  for (const file of ['cards-data.js', 'study-core.js', 'app.js']) {
+    vm.runInContext(fs.readFileSync(path.join(root, 'www', file), 'utf8'), context, {filename: file});
+  }
+  return {elements, spoken, storage};
+}
+
+test('audio control speaks exactly four ordered segments and stops', async () => {
+  const {elements, spoken} = makeApp();
+  assert.equal(elements.phrase.textContent, 'Thank you for stopping by.');
+  elements.playOne.click();
+  await new Promise(resolve => setTimeout(resolve, 10));
+  assert.deepEqual(spoken.map(item => item.text), [
+    'Thank you for stopping by.', 'お立ち寄りありがとうございます。',
+    'Thank you for stopping by our poster.', 'Thank you for stopping by our poster.',
+  ]);
+  assert.deepEqual(spoken.map(item => item.lang), ['en-US', 'ja-JP', 'en-US', 'en-US']);
+  assert.equal(elements.stop.hidden, true);
+});
+
+test('flashcard flips, reverses direction, remembers mastery and filters it', () => {
+  const {elements, storage} = makeApp();
+  elements.flashTab.click();
+  assert.equal(elements.flashPrompt.textContent, 'お立ち寄りありがとうございます。');
+  elements.flip.click();
+  assert.equal(elements.flashAnswer.hidden, false);
+  assert.ok(elements.flashAnswer.textContent.includes('Thank you for stopping by.'));
+  elements.flashDirection.value = 'en';
+  elements.flashDirection.change();
+  assert.equal(elements.flashPrompt.textContent, 'Thank you for stopping by.');
+  assert.equal(elements.flashAnswer.hidden, true);
+  elements.flashLearn.click();
+  assert.deepEqual(JSON.parse(storage.get('asn-poster-2026-mastered-v1')), [1]);
+  elements.status.value = 'unlearned';
+  elements.status.change();
+  assert.equal(elements.flashNumber.textContent, 'CARD 002');
+  assert.equal(elements.position.textContent, '1 / 99');
+});
+
+test('continuous playback advances through every visible card in order', async () => {
+  const {elements, spoken} = makeApp();
+  elements.category.value = 'Sensitivity';
+  elements.category.change();
+  assert.equal(elements.position.textContent, '1 / 5');
+  elements.playAll.click();
+  await new Promise(resolve => setTimeout(resolve, 20));
+  assert.equal(spoken.length, 20);
+  assert.equal(spoken[0].text, 'a stricter proteinuria threshold');
+  assert.equal(spoken[19].text, 'We restricted this sensitivity analysis to the overall cohort because few participants were positive.');
+  assert.equal(elements.stop.hidden, true);
+});

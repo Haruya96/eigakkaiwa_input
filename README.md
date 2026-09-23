@@ -1,5 +1,11 @@
 # ASN Kidney Week English Phrase Trainer
 
+## 2026年ポスター専用の新アプリ
+
+尿酸・蛋白尿・eGFRのポスターに特化した英語表現100題、英語表現→日本語→例文2回の音声再生、暗記用フラッシュカードは [`asn-poster-2026/`](asn-poster-2026/) にあります。既存の300文のアプリとは別のAndroidアプリ／PWAです。
+
+GitHub Pages上では `https://haruya96.github.io/eigakkaiwa_input/asn-poster-2026/www/` から起動できます。AndroidのAPKは「Build ASN poster Android APK」ワークフローの成果物です。
+
 ASN Kidney Weekで使える英会話表現300文を、音声再生とチェック保存で学習する静的Webアプリです。
 
 ## 機能

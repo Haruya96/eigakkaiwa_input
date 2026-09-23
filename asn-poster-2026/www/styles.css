@@ -1,0 +1,90 @@
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #173139;
+  background: #f3f7f6;
+  font-size: 16px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select { font: inherit; }
+button {
+  cursor: pointer; border: 1px solid #ceddda; border-radius: 12px;
+  background: #fff; color: #174750; min-height: 44px;
+  padding: 10px 16px; font-weight: 700;
+}
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #dfb554; outline-offset: 2px; }
+button:hover { border-color: #137b78; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+[hidden] { display: none !important; }
+.shell { max-width: 900px; margin: auto; padding: env(safe-area-inset-top) 18px calc(36px + env(safe-area-inset-bottom)); }
+.masthead { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 28px 0 24px; }
+.identity { display: flex; align-items: center; gap: 15px; }
+.seal { width: 58px; height: 58px; display: grid; place-content: center; text-align: center; border-radius: 16px; background: #143d47; color: #fff; font-size: 15px; font-weight: 900; line-height: 1.1; box-shadow: 0 7px 17px #123d4730; }
+.eyebrow { font-size: 11px; color: #947127; letter-spacing: .14em; font-weight: 900; margin: 0 0 4px; }
+h1 { margin: 0; font-size: clamp(25px, 5vw, 35px); line-height: 1.12; letter-spacing: -.035em; }
+.subtitle { margin: 5px 0 0; font-size: 13px; color: #60787b; }
+.progress { min-width: 126px; padding: 12px; border: 1px solid #dce7e3; background: #fff; border-radius: 14px; text-align: right; }
+.progress strong { font-size: 20px; }
+.progress span { font-size: 11px; color: #667e80; display: block; }
+.progress-track { height: 5px; border-radius: 5px; background: #e9f0ec; margin-top: 8px; overflow: hidden; }
+.progress-track > div { width: 0; height: 100%; background: #138878; }
+.tabs { display: flex; border-bottom: 1px solid #d6e4df; gap: 5px; }
+.tab { border: 0; border-radius: 12px 12px 0 0; background: transparent; color: #647a7b; padding: 13px 21px; }
+.tab.active { background: #fff; color: #155e5c; box-shadow: inset 0 -3px #138878; }
+.filters { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 12px; padding: 20px 0 16px; }
+.filters label, .flash-options label { display: grid; gap: 6px; color: #5f7778; font-size: 12px; font-weight: 700; }
+select, input[type=search] { width: 100%; min-height: 44px; border: 1px solid #d5e3df; border-radius: 10px; background: #fff; color: #173139; padding: 9px 11px; }
+.workbar { display: flex; align-items: center; gap: 9px; margin-bottom: 15px; }
+.workbar #position { font-weight: 800; margin-right: auto; color: #2a6469; }
+.workbar .quiet { border: 0; background: transparent; font-size: 13px; }
+.study-card, .flash-card { background: #fff; border: 1px solid #e2ebe7; border-radius: 20px; box-shadow: 0 11px 32px #23464b12; }
+.study-card { padding: 22px clamp(19px, 4vw, 32px); }
+.card-meta { display: flex; justify-content: space-between; align-items: center; color: #718888; font-size: 13px; font-weight: 750; }
+.pill { background: #eaf4f1; color: #17736c; border-radius: 99px; padding: 5px 12px; font-size: 12px; }
+.item { padding: 19px 0 18px; border-bottom: 1px solid #edf1ef; }
+.step { font-size: 11px; font-weight: 900; letter-spacing: .12em; color: #698a89; }
+.item p { margin: 9px 0 0; line-height: 1.46; }
+.expression { font-size: clamp(23px, 4.2vw, 32px); font-weight: 760; letter-spacing: -.018em; }
+.translation { font-size: 19px; font-weight: 650; }
+.example { font-size: clamp(18px, 3vw, 22px); color: #27525a; }
+.card-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 18px; }
+.card-footer > span { font-size: 12px; color: #698080; }
+.mark { flex: none; font-size: 13px; }
+.mark.learned { background: #e2f5ed; border-color: #86cfab; color: #135c42; }
+.playbar, .flash-actions { display: flex; gap: 10px; margin: 15px 0; }
+.primary { background: #156d6d; border-color: #156d6d; color: #fff; }
+.primary:hover { background: #105a5b; color: #fff; }
+.playbar button { flex: 1; }
+.speed-label { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; color: #536e70; }
+.speed-label input { flex: 1; accent-color: #156d6d; }
+.play-status { color: #607a79; min-height: 24px; font-size: 13px; }
+.flash-options { display: flex; align-items: end; justify-content: space-between; gap: 10px; margin: 0 0 14px; color: #687e80; font-size: 12px; }
+.flash-options label { min-width: 180px; }
+.flash-card { width: 100%; min-height: 340px; display: flex; flex-direction: column; text-align: center; justify-content: flex-start; padding: 20px clamp(18px, 4vw, 32px); color: #173139; }
+.flash-card > .card-meta { width: 100%; }
+.flash-label { font-size: 12px; color: #758c8b; letter-spacing: .1em; margin-top: 50px; }
+.flash-prompt { font-size: clamp(23px, 4vw, 31px); line-height: 1.4; margin: 12px auto 15px; max-width: 680px; }
+.flash-answer { padding: 15px 0; border-top: 1px solid #e6efeb; width: 100%; font-size: 19px; line-height: 1.6; color: #235b5b; white-space: pre-line; }
+.flash-hint { margin-top: auto; color: #55797a; font-size: 13px; }
+.flash-actions > * { flex: 1; }
+.empty { text-align: center; background: #fff; padding: 36px; border-radius: 16px; color: #657a7c; }
+footer { font-size: 11px; color: #718888; margin-top: 36px; text-align: center; }
+@media (max-width: 650px) {
+  .shell { padding-left: 12px; padding-right: 12px; }
+  .masthead { align-items: flex-start; }
+  .seal { width: 46px; height: 46px; font-size: 12px; }
+  .identity { gap: 9px; }
+  .progress { min-width: 92px; padding: 9px; }
+  .progress strong { font-size: 15px; }
+  .subtitle { font-size: 11px; }
+  .filters { grid-template-columns: 1fr 1fr; }
+  .search-label { grid-column: 1 / -1; }
+  .workbar { flex-wrap: wrap; }
+  .workbar #position { flex: 1; }
+  .workbar #previous, .workbar #next { order: 2; flex: 1; }
+  .card-footer { align-items: flex-start; flex-direction: column; }
+  .playbar, .flash-actions { flex-wrap: wrap; }
+  .playbar button, .flash-actions button { min-width: calc(50% - 5px); }
+  .flash-options > span { max-width: 135px; }
+  .tab { flex: 1; padding: 12px 5px; font-size: 13px; }
+}
