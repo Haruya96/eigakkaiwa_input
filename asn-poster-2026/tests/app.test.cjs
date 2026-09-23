@@ -9,12 +9,12 @@ const dataSource = fs.readFileSync(path.join(root, 'www/cards-data.js'), 'utf8')
 const qaSource = fs.readFileSync(path.join(root, 'www/qa-data.js'), 'utf8');
 const core = require('../www/study-core.js');
 
-test('questions and answers are 30 distinct English-only study cards', () => {
+test('questions and answers are 50 distinct English-only study cards', () => {
   const context = {window: {}};
   vm.runInNewContext(qaSource, context);
   const qa = context.window.ASN_QA;
-  assert.equal(qa.length, 30);
-  assert.equal(new Set(qa.map(card => card.question)).size, 30);
+  assert.equal(qa.length, 50);
+  assert.equal(new Set(qa.map(card => card.question)).size, 50);
   qa.forEach((card, index) => {
     assert.equal(card.id, index + 1);
     assert.ok(card.question.endsWith('?'));
