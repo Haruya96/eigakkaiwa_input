@@ -18,7 +18,7 @@ function loadMastery(key) {
 const state = {
   deck: "phrases", mastered: {phrases: loadMastery(MASTERED_KEY), qa: loadMastery(QA_MASTERED_KEY)},
   visible: [], currentId: 1, lastId: {phrases: 1, qa: 1}, order: [], shuffled: false,
-  mode: "listen", flipped: false, playing: false, playbackToken: 0,
+  mode: "listen", flipped: false, hintShown: false, playing: false, playbackToken: 0,
   pendingSpeech: null, wakeLock: null,
 };
 
@@ -46,7 +46,7 @@ function render() {
   $("#listenPanel").hidden = !hasCard || state.mode !== "listen";
   $("#flashPanel").hidden = !hasCard || state.mode !== "flash";
   $("#position").textContent = hasCard ? `${index + 1} / ${state.visible.length}` : "0 / 0";
-  for (const selector of ["#previous", "#next", "#playOne", "#playAll", "#flashNext", "#flashPlay"]) $(selector).disabled = !hasCard;
+  for (const selector of ["#previous", "#next", "#playOne", "#playAll", "#flashNext", "#flashPlay", "#showHint"]) $(selector).disabled = !hasCard;
   const mastered = deckCards().filter(card => masteredCards().has(card.id)).length;
   $("#progressText").textContent = `${mastered} / ${deckCards().length}`;
   $("#progressFill").style.width = `${deckCards().length ? mastered / deckCards().length * 100 : 0}%`;
@@ -71,6 +71,11 @@ function render() {
   $("#flashPrompt").textContent = isQa ? card.question : japaneseFront ? card.japanese : card.phrase;
   $("#flashAnswer").textContent = isQa ? card.answer : `${japaneseFront ? card.phrase : card.japanese}\n\n例文：${card.example}`;
   $("#flashAnswer").hidden = !state.flipped;
+  $("#clozeHint").textContent = isQa ? card.hint : "";
+  $("#clozeHint").hidden = !isQa || state.flipped || !state.hintShown;
+  $("#showHint").hidden = !isQa || state.flipped;
+  $("#showHint").textContent = state.hintShown ? "ヒントを隠す" : "ヒントを表示";
+  $("#showHint").setAttribute("aria-expanded", String(isQa && !state.flipped && state.hintShown));
   $("#flashHint").textContent = state.flipped ? "タップして表面に戻る" : "タップして答えを見る ↗";
   $("#flip").setAttribute("aria-label", state.flipped ? "表面に戻る" : "答えを表示");
   for (const selector of ["#learnButton", "#flashLearn"]) {
@@ -121,6 +126,7 @@ function move(delta) {
   state.currentId = state.visible[(index + delta + state.visible.length) % state.visible.length].id;
   state.lastId[state.deck] = state.currentId;
   state.flipped = false;
+  state.hintShown = false;
   render();
 }
 
@@ -137,6 +143,7 @@ function toggleMastered() {
     state.currentId = remaining[Math.min(index, remaining.length - 1)]?.id ?? id;
     state.lastId[state.deck] = state.currentId;
     state.flipped = false;
+    state.hintShown = false;
   }
   render();
 }
@@ -193,6 +200,7 @@ async function playCards(queue) {
     state.currentId = card.id;
     state.lastId[state.deck] = card.id;
     state.flipped = false;
+    state.hintShown = false;
     render();
     for (const segment of CORE.segments(card, state.deck)) {
       if (token !== state.playbackToken) return;
@@ -215,6 +223,7 @@ function setMode(mode) {
   stopPlayback();
   state.mode = mode;
   state.flipped = false;
+  state.hintShown = false;
   for (const [name, selector] of [["listen", "#listenTab"], ["flash", "#flashTab"]]) {
     $(selector).classList.toggle("active", name === mode);
     $(selector).setAttribute("aria-selected", String(name === mode));
@@ -229,6 +238,7 @@ function setDeck(deck) {
   state.deck = deck;
   state.currentId = state.lastId[deck];
   state.flipped = false;
+  state.hintShown = false;
   state.shuffled = false;
   state.order = deckCards().map(card => card.id);
   $("#shuffle").textContent = "シャッフル";
@@ -261,7 +271,7 @@ function init() {
   $("#rateLabel").textContent = `${Number($("#rate").value).toFixed(2)}×`;
 
   for (const selector of ["#category", "#status", "#search"]) {
-    $(selector).addEventListener(selector === "#search" ? "input" : "change", () => { stopPlayback(); state.flipped = false; render(); });
+    $(selector).addEventListener(selector === "#search" ? "input" : "change", () => { stopPlayback(); state.flipped = false; state.hintShown = false; render(); });
   }
   $("#rate").addEventListener("input", () => {
     $("#rateLabel").textContent = `${Number($("#rate").value).toFixed(2)}×`;
@@ -274,8 +284,9 @@ function init() {
   $("#flashTab").addEventListener("click", () => setMode("flash"));
   $("#phrasesDeck").addEventListener("click", () => setDeck("phrases"));
   $("#qaDeck").addEventListener("click", () => setDeck("qa"));
-  $("#flashDirection").addEventListener("change", () => { state.flipped = false; render(); });
-  $("#flip").addEventListener("click", () => { state.flipped = !state.flipped; render(); });
+  $("#flashDirection").addEventListener("change", () => { state.flipped = false; state.hintShown = false; render(); });
+  $("#flip").addEventListener("click", () => { state.flipped = !state.flipped; state.hintShown = false; render(); });
+  $("#showHint").addEventListener("click", () => { state.hintShown = !state.hintShown; render(); });
   for (const selector of ["#learnButton", "#flashLearn"]) $(selector).addEventListener("click", toggleMastered);
   $("#playOne").addEventListener("click", () => void playCards([currentCard()]));
   $("#flashPlay").addEventListener("click", () => { if (state.playing) stopPlayback(); else void playCards([currentCard()]); });
@@ -303,7 +314,7 @@ function init() {
     if (["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement?.tagName)) return;
     if (event.key === "ArrowRight") move(1);
     else if (event.key === "ArrowLeft") move(-1);
-    else if (event.code === "Space" && state.mode === "flash") { event.preventDefault(); state.flipped = !state.flipped; render(); }
+    else if (event.code === "Space" && state.mode === "flash") { event.preventDefault(); state.flipped = !state.flipped; state.hintShown = false; render(); }
   });
   render();
   if (!window.AndroidTts && "serviceWorker" in navigator && location.protocol === "https:") {

@@ -127,6 +127,33 @@ test('Q&A switches to English-only audio, question-front flashcards, and indepen
   assert.equal(elements.flashDirectionWrap.hidden, false);
 });
 
+test('Q&A flashcards reveal multiple-blank full-answer hint without revealing the answer', () => {
+  const {elements} = makeApp();
+  elements.flashTab.click();
+  assert.equal(elements.showHint.hidden, true, 'phrase cards have no hint control');
+  elements.qaDeck.click();
+  assert.equal(elements.showHint.hidden, false);
+  assert.equal(elements.clozeHint.hidden, true);
+  assert.equal(elements.flashAnswer.hidden, true);
+  elements.showHint.click();
+  assert.equal(elements.clozeHint.hidden, false);
+  assert.equal(elements.flashAnswer.hidden, true);
+  assert.equal(elements.showHint.attributes['aria-expanded'], 'true');
+  assert.equal(elements.clozeHint.textContent, 'Higher serum uric acid was associated with ________ mainly among participants with ________. Proteinuria may help us interpret the prognostic meaning of uric acid, although the study ________.');
+  elements.flip.click();
+  assert.equal(elements.clozeHint.hidden, true);
+  assert.equal(elements.showHint.hidden, true);
+  assert.equal(elements.flashAnswer.hidden, false);
+  elements.flip.click();
+  assert.equal(elements.clozeHint.hidden, true, 'returning to the question resets the hint');
+  elements.showHint.click();
+  elements.flashNext.click();
+  assert.equal(elements.clozeHint.hidden, true, 'next Q&A begins without a hint');
+  assert.equal(elements.showHint.textContent, 'ヒントを表示');
+  elements.phrasesDeck.click();
+  assert.equal(elements.showHint.hidden, true);
+});
+
 test('rewritten Q&A starts fresh, retains phrase progress, and plays only the 35 discussion cards', async () => {
   const {elements, spoken, storage} = makeApp([
     ['asn-poster-2026-qa-mastered-v1', '[1,2]'],
