@@ -1,51 +1,51 @@
 id	blanks
-1	faster eGFR decline|people with proteinuria|can't say uric acid caused the decline
-2	whether proteinuria changes that relationship|nonlinear
-3	8,266 adults|RIAS cohort|seven years
-4	371 people|trace or greater|stricter cutoff
-5	uric acid level of 5.0|1.3 a year|2.0 at 7.8
-6	linear mixed models|random intercept|different rates
-7	throw away information|restricted cubic splines|10th, 50th, and 90th percentiles
-8	three-way interaction|compare the P values
+1	was linked to|mostly among|can't say uric acid caused the decline
+2	What's less clear|changes that relationship|allowing the uric acid curve to be nonlinear
+3	from the RIAS cohort|Their average age|mean follow-up
+4	single baseline dipstick reading|trace or greater|checked a stricter cutoff
+5	eGFR declined by about|at a uric acid level of|compared with about
+6	linear mixed models|random intercept and slope|decline at different rates
+7	throw away information|draw the cutoffs|restricted cubic splines
+8	tested the three-way interaction|didn't just compare the P values
 9	baseline eGFR|home damage or flooding|interactions with time
 10	cardiometabolic risk|in advance|Bonferroni correction
-11	about 1.1 per year|didn't change much|flat curve doesn't mean stable kidney function
-12	below 60|higher-risk group|more harmful for everyone with low eGFR
-13	baseline eGFR subgroup|Bonferroni correction|doesn't prove they're identical
-14	1+ cutoff|146 participants|didn't repeat the subgroup analyses
-15	annual eGFR change|95 percent confidence intervals|not a prediction for an individual
-16	already injured|urate-related stress|Tubular inflammation
-17	mark existing damage|inflame tubules|can't tell which
-18	albumin and urate|inflammation in tubular cells|worth testing
-19	soluble urate and crystals|inflammatory triggers|didn't assess crystal deposition
+11	Kidney function still declined|didn't change much across uric acid levels|A flat curve doesn't mean stable kidney function
+12	declined faster across the uric acid range shown|higher-risk group|doesn't mean uric acid is more harmful
+13	remained significant after Bonferroni correction|didn't find clear differences|doesn't prove they're identical
+14	saw a similar overall pattern|made the estimates less precise|didn't repeat the subgroup analyses
+15	annual eGFR change|More negative means faster decline|confidence intervals|not a prediction for an individual
+16	One idea is that|already injured|might play a role
+17	It could be either|may mark existing damage|can't tell which is driving our result
+18	In experimental work|have each been linked to|worth testing
+19	soluble urate and crystals|possible inflammatory triggers|didn't assess crystal deposition
 20	less capacity to handle another stressor|didn't measure renal reserve
-21	Cardiometabolic disease|high uric acid and proteinuria|residual confounding
-22	didn't assess biomarkers|tubular injury or inflammation|testing in people
-23	before the follow-up decline|kidney damage may already have raised it|Reverse causation and confounding
-24	reduce urate excretion|raise serum uric acid|even if uric acid isn't causing it
-25	eGFR categories|variation within each category|can't capture every kind of kidney damage
-26	same visit|which came first|interaction, not mediation
-27	other causes of kidney decline|collider bias|conditional associations
-28	Diet, diuretics, and RAS inhibitors|treatment changes|residual confounding
-29	baseline measurements|Repeated uric acid and proteinuria measurements|persistent values
-30	below 0.001|large and reliable the difference is
-31	allopurinol lowered urate|kidney decline wasn't slowed|doesn't show that lowering uric acid will help
-32	substantial albuminuria|prespecifies the interaction with proteinuria
-33	not from this poster alone|prognosis|urate-lowering treatment helps
-34	curve was least negative|uncertain|wasn't tested as a treatment target
-35	low end are less precise|illness or poor nutrition|can't conclude
+21	could be linked to both|adjusted for|residual confounding
+22	biomarkers of tubular injury or inflammation|comes from experimental work|needs testing in people
+23	before the follow-up decline|may already have raised it at baseline|Reverse causation and confounding
+24	reduce urate excretion|may also predict later decline|even if uric acid isn't causing it
+25	It helps, but not completely|variation within each category|can't capture every kind of kidney damage
+26	at the same visit|can't tell which came first|tested interaction, not mediation
+27	other causes of kidney decline both affect proteinuria|could create collider bias|conditional associations
+28	come to mind|don't have complete data|residual confounding
+29	only used baseline measurements|could tell us whether|persistent values behave differently
+30	interaction P value|clinical importance|large and reliable the difference is
+31	allopurinol lowered urate|wasn't slowed in the populations studied|doesn't show that lowering uric acid will help
+32	can't infer that|substantial albuminuria|prespecifies the interaction with proteinuria
+33	poster alone|prognosis|urate-lowering treatment helps
+34	estimated curve was least negative|It's uncertain|wasn't tested as a treatment target
+35	wouldn't take it that way|less precise|might reflect illness or poor nutrition
 36	modeled uric acid continuously|example on the curve|separate validation
-37	didn't test prediction|calibration and discrimination|another cohort
-38	alongside proteinuria|improves care
-39	temporary proteinuria|low-grade albuminuria|can't say in which direction
-40	range of albuminuria levels|persistent albuminuria
-41	1,334 people|depended on both the exposures and subsequent kidney function|don't know the direction
-42	371 people|146 under the stricter cutoff|less certain
-43	muscle mass|kidney filtration|Cystatin C or measured GFR
-44	eGFR slope|kidney failure|time to dialysis
-45	disaster-affected region of Japan|replicated elsewhere
-46	medication use, and access to care|home damage or flooding|can't capture every effect
-47	independent cohort|repeated uric acid, UACR, and eGFR measurements|medication data
-48	different spline settings|more flexible adjustment|early follow-up and missing data
-49	albumin alone, urate alone, and both|injury and inflammation|soluble urate and crystals
-50	randomized trial of urate-lowering therapy|works differently with and without proteinuria|kidney outcomes and safety
+37	didn't test prediction|compare models with and without uric acid|validate in another cohort
+38	alongside proteinuria|discuss kidney risk|improves care
+39	catch temporary proteinuria|miss low-grade albuminuria|can't say in which direction
+40	range of albuminuria levels|instead of just yes or no|persistent albuminuria
+41	with no follow-up eGFR|could bias the association|don't know the direction
+42	under the stricter cutoff|estimates at the extremes and in small subgroups|less certain
+43	muscle mass|besides kidney filtration|help check the pattern
+44	Our outcome was the eGFR slope|can't estimate an individual's time to dialysis
+45	disaster-affected region of Japan|may differ in|see it replicated elsewhere
+46	could have changed|adjusted for home damage or flooding|can't capture every effect
+47	I'd start with|independent cohort|repeated uric acid, UACR, and eGFR measurements
+48	different spline settings|more flexible adjustment|how sensitive the results are|haven't done those analyses yet
+49	I'd compare|exposed to albumin alone, urate alone, and both|measure injury and inflammation
+50	I'd prespecify|The key test would be|works differently with and without proteinuria|tracking kidney outcomes and safety

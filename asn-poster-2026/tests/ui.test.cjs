@@ -139,7 +139,7 @@ test('Q&A flashcards reveal multiple-blank full-answer hint without revealing th
   assert.equal(elements.clozeHint.hidden, false);
   assert.equal(elements.flashAnswer.hidden, true);
   assert.equal(elements.showHint.attributes['aria-expanded'], 'true');
-  assert.equal(elements.clozeHint.textContent, "Higher uric acid was linked to ________, mostly among ________. Because this is observational, we ________.");
+  assert.equal(elements.clozeHint.textContent, "Higher uric acid ________ faster eGFR decline, ________ people with proteinuria. Because this is observational, we ________.");
   elements.flip.click();
   assert.equal(elements.clozeHint.hidden, true);
   assert.equal(elements.showHint.hidden, true);

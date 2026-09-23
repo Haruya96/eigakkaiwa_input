@@ -46,6 +46,7 @@ def make_hint(answer, blanks):
     spans = []
     for target in targets:
         assert target.strip() == target and len(target) >= 3, f"Invalid hint expression: {target!r}"
+        assert not any(char.isdigit() for char in target), f"Keep study numbers visible in hints: {target!r}"
         assert answer.count(target) == 1, f"Hint expression must occur exactly once: {target!r}"
         start = answer.index(target)
         spans.append((start, start + len(target)))
