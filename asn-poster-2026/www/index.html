@@ -54,7 +54,8 @@
       </section>
       <section id="flashPanel" aria-label="フラッシュカード" hidden>
         <div class="flash-options"><label id="flashDirectionWrap">表面<select id="flashDirection"><option value="ja">日本語 → 英語</option><option value="en">英語 → 日本語</option></select></label><span>カードをタップして答えを表示</span></div>
-        <button type="button" class="flash-card" id="flip" aria-label="答えを表示"><span class="card-meta"><span class="pill" id="flashCategory"></span><span id="flashNumber"></span></span><span class="flash-label" id="flashPromptLabel"></span><strong class="flash-prompt" id="flashPrompt"></strong><span class="flash-answer" id="flashAnswer" hidden></span><span class="flash-hint" id="flashHint">タップして答えを見る ↗</span></button>
+        <button type="button" class="flash-card" id="flip" aria-label="答えを表示"><span class="card-meta"><span class="pill" id="flashCategory"></span><span id="flashNumber"></span></span><span class="flash-label" id="flashPromptLabel"></span><strong class="flash-prompt" id="flashPrompt"></strong><span class="cloze-hint" id="clozeHint" hidden></span><span class="flash-answer" id="flashAnswer" hidden></span><span class="flash-hint" id="flashHint">タップして答えを見る ↗</span></button>
+        <button type="button" id="showHint" class="show-hint" aria-controls="clozeHint" aria-expanded="false" hidden>ヒントを表示</button>
         <div class="flash-actions"><button type="button" id="flashPlay">▶ 音声を再生</button><button type="button" id="flashLearn" class="mark">まだ不安</button><button type="button" id="flashNext" class="primary">次のカード →</button></div>
       </section>
       <p id="empty" class="empty" hidden>該当するカードがありません。絞り込みを変更してください。</p>

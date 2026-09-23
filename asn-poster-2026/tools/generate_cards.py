@@ -33,7 +33,34 @@ assert len({row["question"].casefold() for row in qa_rows}) == 50, "Duplicate qu
 assert all(row["question"].endswith("?") for row in qa_rows), "Question needs a question mark"
 assert all(all(ord(char) < 128 for char in row["question"] + row["answer"]) for row in qa_rows), "Q&A must be English only"
 
-qa = [{"id": i, **row} for i, row in enumerate(qa_rows, 1)]
+with (ROOT / "qa-hints.tsv").open(encoding="utf-8", newline="") as source:
+    hint_rows = list(csv.DictReader(source, delimiter="\t"))
+assert len(hint_rows) == len(qa_rows), "Every Q&A card needs a hint"
+assert all(set(row) == {"id", "blanks"} and all(row.values()) for row in hint_rows), "Missing hint field"
+assert [int(row["id"]) for row in hint_rows] == list(range(1, len(qa_rows) + 1)), "Hint IDs must match Q&A IDs"
+
+
+def make_hint(answer, blanks):
+    targets = blanks.split("|")
+    assert 2 <= len(targets) <= 4, "Each hint needs two to four important expressions"
+    spans = []
+    for target in targets:
+        assert target.strip() == target and len(target) >= 3, f"Invalid hint expression: {target!r}"
+        assert answer.count(target) == 1, f"Hint expression must occur exactly once: {target!r}"
+        start = answer.index(target)
+        spans.append((start, start + len(target)))
+    spans.sort()
+    assert all(a[1] <= b[0] for a, b in zip(spans, spans[1:])), "Hint expressions overlap"
+    hint = answer
+    for start, end in reversed(spans):
+        hint = hint[:start] + "________" + hint[end:]
+    return hint
+
+
+qa = [
+    {"id": i, **row, "hint": make_hint(row["answer"], hint_rows[i - 1]["blanks"])}
+    for i, row in enumerate(qa_rows, 1)
+]
 (ROOT / "www" / "qa-data.js").write_text(
     "// Generated from qa.tsv. Do not edit by hand.\n"
     + "window.ASN_QA = "
