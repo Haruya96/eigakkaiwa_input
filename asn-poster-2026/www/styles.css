@@ -58,6 +58,11 @@ select, input[type=search] { width: 100%; min-height: 44px; border: 1px solid #d
 .primary { background: #156d6d; border-color: #156d6d; color: #fff; }
 .primary:hover { background: #105a5b; color: #fff; }
 .playbar button { flex: 1; }
+.voice-settings { background: #eaf4f1; border-radius: 14px; padding: 14px; margin: 12px 0 16px; }
+.voice-setting { display: grid; grid-template-columns: minmax(100px, 1fr) minmax(120px, 2fr) auto; gap: 8px; align-items: center; margin-bottom: 9px; }
+.voice-setting label { font-size: 13px; font-weight: 700; }
+.voice-setting button { font-size: 12px; padding: 8px; }
+.voice-note { margin: 5px 0 0; font-size: 12px; color: #536e70; }
 .speed-label { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; color: #536e70; }
 .speed-label input { flex: 1; accent-color: #156d6d; }
 .play-status { color: #607a79; min-height: 24px; font-size: 13px; }
@@ -90,6 +95,8 @@ footer { font-size: 11px; color: #718888; margin-top: 36px; text-align: center; 
   .card-footer { align-items: flex-start; flex-direction: column; }
   .playbar, .flash-actions { flex-wrap: wrap; }
   .playbar button, .flash-actions button { min-width: calc(50% - 5px); }
+  .voice-setting { grid-template-columns: 1fr auto; }
+  .voice-setting label { grid-column: 1 / -1; }
   .flash-options > span { max-width: 135px; }
   .tab { flex: 1; padding: 12px 5px; font-size: 13px; }
   .deck-choice { padding: 9px 5px; font-size: 13px; }

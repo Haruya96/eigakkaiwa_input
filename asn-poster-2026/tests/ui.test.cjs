@@ -7,7 +7,7 @@ const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'www/index.html'), 'utf8');
 
-function makeApp(initialStorage = []) {
+function makeApp(initialStorage = [], options = {}) {
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   class Element {
     constructor(id) {
@@ -37,10 +37,19 @@ function makeApp(initialStorage = []) {
   };
   const window = {
     speechSynthesis: {
-      speak(utterance) { spoken.push({text: utterance.text, lang: utterance.lang}); queueMicrotask(() => utterance.onend()); },
+      speak(utterance) { spoken.push({text: utterance.text, lang: utterance.lang, voice: utterance.voice?.voiceURI}); queueMicrotask(() => utterance.onend()); },
       cancel() {},
+      getVoices() { return options.webVoices || []; },
+      addEventListener(type, handler) { if (type === 'voiceschanged') this.onVoicesChanged = handler; },
     },
   };
+  if (options.nativeVoices) {
+    window.AndroidTts = {
+      speak(text, lang, rate, id, voice) { spoken.push({text, lang, voice}); queueMicrotask(() => window.onNativeSpeechDone(id, true)); },
+      cancel() {}, keepScreenOn() {},
+      requestVoices() { queueMicrotask(() => window.onNativeVoices(JSON.stringify(options.nativeVoices))); },
+    };
+  }
   class SpeechSynthesisUtterance { constructor(text) { this.text = text; } }
   window.SpeechSynthesisUtterance = SpeechSynthesisUtterance;
   const context = vm.createContext({window, document, navigator: {}, location: {protocol: 'http:'}, localStorage: {
@@ -50,8 +59,50 @@ function makeApp(initialStorage = []) {
   for (const file of ['cards-data.js', 'qa-data.js', 'study-core.js', 'app.js']) {
     vm.runInContext(fs.readFileSync(path.join(root, 'www', file), 'utf8'), context, {filename: file});
   }
-  return {elements, spoken, storage};
+  return {elements, spoken, storage, window};
 }
+
+test('Android Q&A uses separate voices, allows an override, and leaves phrase audio unchanged', async () => {
+  const voices = [
+    {id: 'f', name: 'English female_1', lang: 'en-US'},
+    {id: 'm', name: 'English male_1', lang: 'en-US'},
+    {id: 'other', name: 'English alternate', lang: 'en-US'},
+  ];
+  const {elements, spoken, storage} = makeApp([], {nativeVoices: voices});
+  await new Promise(resolve => setTimeout(resolve, 0));
+  assert.equal(elements.qaVoices.hidden, true);
+  elements.qaDeck.click();
+  assert.equal(elements.qaVoices.hidden, false);
+  elements.playOne.click();
+  await new Promise(resolve => setTimeout(resolve, 10));
+  assert.deepEqual(spoken.map(item => item.voice), ['f', 'm', 'm']);
+  spoken.length = 0;
+  elements.answerVoice.value = 'other';
+  elements.answerVoice.change();
+  assert.equal(storage.get('asn-poster-2026-answer-voice-v1'), 'other');
+  elements.previewAnswer.click();
+  await new Promise(resolve => setTimeout(resolve, 10));
+  assert.equal(spoken.length, 1);
+  assert.equal(spoken[0].voice, 'other');
+  elements.phrasesDeck.click();
+  elements.playOne.click();
+  await new Promise(resolve => setTimeout(resolve, 10));
+  assert.deepEqual(spoken.slice(1).map(item => item.voice), ['', '', '', '']);
+});
+
+test('web speech applies the two selected voices after asynchronous voice discovery', async () => {
+  const {elements, spoken, window} = makeApp();
+  window.speechSynthesis.getVoices = () => [
+    {voiceURI: 'f', name: 'English Female', lang: 'en-US'},
+    {voiceURI: 'm', name: 'English Male', lang: 'en-US'},
+  ];
+  window.speechSynthesis.onVoicesChanged();
+  elements.qaDeck.click();
+  elements.flashTab.click();
+  elements.flashPlay.click();
+  await new Promise(resolve => setTimeout(resolve, 10));
+  assert.deepEqual(spoken.map(item => item.voice), ['f', 'm', 'm']);
+});
 
 test('audio control speaks exactly four ordered segments and stops', async () => {
   const {elements, spoken} = makeApp();
