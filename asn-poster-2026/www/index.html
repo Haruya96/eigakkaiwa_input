@@ -49,6 +49,11 @@
           <div class="card-footer"><span id="sequenceLabel">英語表現 ×1 → 日本語 ×1 → 例文 ×2</span><button type="button" id="learnButton" class="mark">まだ不安</button></div>
         </article>
         <div class="playbar"><button type="button" id="playOne" class="primary">▶ このカードを再生</button><button type="button" id="playAll">▶ 表示中を連続再生</button><button type="button" id="stop" hidden>■ 停止</button></div>
+        <div id="qaVoices" class="voice-settings" aria-label="想定Q&Aの音声設定" hidden>
+          <div class="voice-setting"><label for="questionVoice">質問の声（女性）</label><select id="questionVoice"><option value="">自動で選ぶ</option></select><button type="button" id="previewQuestion">▶ 試聴</button></div>
+          <div class="voice-setting"><label for="answerVoice">回答の声（男性）</label><select id="answerVoice"><option value="">自動で選ぶ</option></select><button type="button" id="previewAnswer">▶ 試聴</button></div>
+          <p class="voice-note">端末にある英語音声から選びます。声が異なる場合は試聴して指定してください。</p>
+        </div>
         <label class="speed-label">読み上げ速度 <span id="rateLabel">0.90×</span><input type="range" id="rate" min="0.65" max="1.15" step="0.05" value="0.90"></label>
         <p class="play-status" id="playStatus" role="status" aria-live="polite">端末の英語・日本語音声を使用します。</p>
       </section>

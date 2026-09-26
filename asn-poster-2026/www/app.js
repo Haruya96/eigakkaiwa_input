@@ -6,7 +6,9 @@ const CORE = window.PosterStudyCore;
 const MASTERED_KEY = "asn-poster-2026-mastered-v1";
 const QA_MASTERED_KEY = "asn-poster-2026-qa-mastered-v2";
 const RATE_KEY = "asn-poster-2026-rate-v1";
+const VOICE_KEYS = {question: "asn-poster-2026-question-voice-v1", answer: "asn-poster-2026-answer-voice-v1"};
 const $ = selector => document.querySelector(selector);
+let availableVoices = [];
 
 function loadMastery(key) {
   try {
@@ -45,6 +47,7 @@ function render() {
   $("#empty").hidden = hasCard;
   $("#listenPanel").hidden = !hasCard || state.mode !== "listen";
   $("#flashPanel").hidden = !hasCard || state.mode !== "flash";
+  $("#qaVoices").hidden = state.deck !== "qa" || state.mode !== "listen";
   $("#position").textContent = hasCard ? `${index + 1} / ${state.visible.length}` : "0 / 0";
   for (const selector of ["#previous", "#next", "#playOne", "#playAll", "#flashNext", "#flashPlay", "#showHint"]) $(selector).disabled = !hasCard;
   const mastered = deckCards().filter(card => masteredCards().has(card.id)).length;
@@ -153,7 +156,30 @@ window.onNativeSpeechDone = (id, successful) => {
   if (window.nativeSpeechId === id && state.pendingSpeech) state.pendingSpeech(Boolean(successful));
 };
 
-function speak(text, language, token) {
+function updateVoiceOptions(voices) {
+  availableVoices = voices.filter(voice => /^en(?:[-_]|$)/i.test(voice.lang));
+  for (const role of ["question", "answer"]) {
+    const select = $(`#${role}Voice`);
+    const saved = select.value;
+    select.innerHTML = "";
+    select.append(new Option(`自動（${role === "question" ? "女性" : "男性"}の声を優先）`, ""));
+    for (const voice of availableVoices) select.append(new Option(`${voice.name} (${voice.lang})`, voice.id));
+    select.value = availableVoices.some(voice => voice.id === saved) ? saved : "";
+  }
+}
+
+window.onNativeVoices = json => {
+  try { updateVoiceOptions(JSON.parse(json)); }
+  catch { /* Device voice list is optional; playback can use the default voice. */ }
+};
+
+function voiceFor(role) {
+  if (!role) return null;
+  const selected = $(`#${role}Voice`).value;
+  return availableVoices.find(voice => voice.id === selected) || CORE.preferredVoice(availableVoices, role);
+}
+
+function speak(text, language, token, role) {
   if (token !== state.playbackToken) return Promise.resolve(false);
   return new Promise(resolve => {
     let done = false;
@@ -165,15 +191,17 @@ function speak(text, language, token) {
     };
     state.pendingSpeech = finish;
     const rate = Number($("#rate").value);
+    const selectedVoice = voiceFor(role);
     if (window.AndroidTts) {
       const id = String(++utteranceId);
       window.nativeSpeechId = id;
-      try { window.AndroidTts.speak(text, language, rate, id); }
+      try { window.AndroidTts.speak(text, language, rate, id, selectedVoice?.id || ""); }
       catch { finish(false); }
     } else if (window.speechSynthesis && window.SpeechSynthesisUtterance) {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = language;
       utterance.rate = rate;
+      if (selectedVoice) utterance.voice = window.speechSynthesis.getVoices().find(voice => voice.voiceURI === selectedVoice.id) || null;
       utterance.onend = () => finish(true);
       utterance.onerror = () => finish(false);
       window.speechSynthesis.speak(utterance);
@@ -205,7 +233,7 @@ async function playCards(queue) {
     for (const segment of CORE.segments(card, state.deck)) {
       if (token !== state.playbackToken) return;
       status(`${index + 1}/${queue.length}　${segment.label}を再生中`);
-      const success = await speak(segment.text, segment.lang, token);
+      const success = await speak(segment.text, segment.lang, token, segment.role);
       if (!success) {
         if (token === state.playbackToken) {
           stopPlayback();
@@ -217,6 +245,22 @@ async function playCards(queue) {
   }
   stopPlayback();
   status("再生が完了しました。");
+}
+
+async function previewVoice(role) {
+  if (!QA.length) return;
+  stopPlayback();
+  state.playing = true;
+  const token = state.playbackToken;
+  $("#stop").hidden = false;
+  $("#playOne").hidden = true;
+  $("#playAll").hidden = true;
+  const sample = role === "question" ? QA[0].question : QA[0].answer;
+  status(`${role === "question" ? "質問" : "回答"}の声を試聴中`);
+  const success = await speak(sample, 'en-US', token, role);
+  if (token !== state.playbackToken) return;
+  stopPlayback();
+  status(success ? "試聴が完了しました。" : "音声を再生できませんでした。端末の音声設定を確認してください。");
 }
 
 function setMode(mode) {
@@ -269,6 +313,23 @@ function init() {
   try { rate = Number(localStorage.getItem(RATE_KEY)); } catch { /* Private storage can be disabled. */ }
   if (rate >= .65 && rate <= 1.15) $("#rate").value = rate.toFixed(2);
   $("#rateLabel").textContent = `${Number($("#rate").value).toFixed(2)}×`;
+
+  for (const role of ["question", "answer"]) {
+    try { $(`#${role}Voice`).value = localStorage.getItem(VOICE_KEYS[role]) || ""; }
+    catch { /* Voice selection is still available for this session. */ }
+    $(`#${role}Voice`).addEventListener("change", () => {
+      stopPlayback();
+      try { localStorage.setItem(VOICE_KEYS[role], $(`#${role}Voice`).value); }
+      catch { /* Playback still works. */ }
+    });
+    $(`#preview${role[0].toUpperCase()}${role.slice(1)}`).addEventListener("click", () => void previewVoice(role));
+  }
+  if (window.AndroidTts) window.AndroidTts.requestVoices();
+  else if (window.speechSynthesis?.getVoices) {
+    const refreshVoices = () => updateVoiceOptions(window.speechSynthesis.getVoices().map(voice => ({id: voice.voiceURI, name: voice.name, lang: voice.lang})));
+    refreshVoices();
+    window.speechSynthesis.addEventListener?.("voiceschanged", refreshVoices);
+  }
 
   for (const selector of ["#category", "#status", "#search"]) {
     $(selector).addEventListener(selector === "#search" ? "input" : "change", () => { stopPlayback(); state.flipped = false; state.hintShown = false; render(); });

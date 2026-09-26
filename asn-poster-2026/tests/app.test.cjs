@@ -40,6 +40,18 @@ test('question is spoken once and answer twice, all in English', () => {
   const parts = core.segments(card, 'qa');
   assert.deepEqual(parts.map(part => part.text), [card.question, card.answer, card.answer]);
   assert.deepEqual(parts.map(part => part.lang), ['en-US', 'en-US', 'en-US']);
+  assert.deepEqual(parts.map(part => part.role), ['question', 'answer', 'answer']);
+});
+
+test('female and male English voices are selected by their names when available', () => {
+  const voices = [
+    {id: 'm', name: 'en-us-x-iom#male_1-local', lang: 'en-US'},
+    {id: 'f', name: 'en-us-x-sfg#female_1-local', lang: 'en-US'},
+    {id: 'other', name: 'English Female', lang: 'en-GB'},
+  ];
+  assert.equal(core.preferredVoice(voices, 'question').id, 'f');
+  assert.equal(core.preferredVoice(voices, 'answer').id, 'm');
+  assert.equal(core.preferredVoice([{id: 'unknown', name: 'English US', lang: 'en-US'}], 'answer'), null);
 });
 
 test('Q&A search covers both questions and answers', () => {
