@@ -21,7 +21,10 @@ import java.io.ByteArrayInputStream;
 import java.util.Locale;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class MainActivity extends Activity {
@@ -31,6 +34,10 @@ public class MainActivity extends Activity {
     private boolean ttsReady;
     private boolean ttsInitialized;
     private PendingSpeech waiting;
+    private String defaultEngine;
+    private final Map<String, TextToSpeech> engines = new HashMap<>();
+    private final Map<String, String> engineLabels = new HashMap<>();
+    private final Set<String> readyEngines = new HashSet<>();
 
     private static final class PendingSpeech {
         final String text, language, id, voiceId;
@@ -77,16 +84,36 @@ public class MainActivity extends Activity {
         tts = new TextToSpeech(this, status -> runOnUiThread(() -> {
             ttsInitialized = true;
             ttsReady = status == TextToSpeech.SUCCESS;
-            reportVoices();
             if (ttsReady) {
-                tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                    @Override public void onStart(String id) { }
-                    @Override public void onDone(String id) { reportSpeech(id, true); }
-                    @Override public void onError(String id) { reportSpeech(id, false); }
-                    @Override public void onError(String id, int code) { reportSpeech(id, false); }
-                    @Override public void onStop(String id, boolean interrupted) { reportSpeech(id, false); }
-                });
+                defaultEngine = tts.getDefaultEngine();
+                if (defaultEngine == null) defaultEngine = "default";
+                engines.put(defaultEngine, tts);
+                readyEngines.add(defaultEngine);
+                attachSpeechListener(tts);
+                List<TextToSpeech.EngineInfo> installed = tts.getEngines();
+                if (installed != null) for (TextToSpeech.EngineInfo info : installed) {
+                    engineLabels.put(info.name, info.label);
+                    if (info.name.equals(defaultEngine)) continue;
+                    final String engineName = info.name;
+                    TextToSpeech alternate = new TextToSpeech(this, result -> runOnUiThread(() -> {
+                        TextToSpeech instance = engines.get(engineName);
+                        if (instance == null) return;
+                        if (result == TextToSpeech.SUCCESS) {
+                            readyEngines.add(engineName);
+                            attachSpeechListener(instance);
+                        }
+                        reportVoices();
+                        if (waiting != null && waiting.voiceId.startsWith(engineName + "|")) {
+                            PendingSpeech pending = waiting;
+                            waiting = null;
+                            if (result == TextToSpeech.SUCCESS) startSpeech(pending);
+                            else reportSpeech(pending.id, false);
+                        }
+                    }), engineName);
+                    engines.put(engineName, alternate);
+                }
             }
+            reportVoices();
             PendingSpeech pending = waiting;
             waiting = null;
             if (pending != null) {
@@ -98,6 +125,16 @@ public class MainActivity extends Activity {
         webView.loadUrl("https://" + ASSET_HOST + "/assets/index.html");
     }
 
+    private void attachSpeechListener(TextToSpeech engine) {
+        engine.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+            @Override public void onStart(String id) { }
+            @Override public void onDone(String id) { reportSpeech(id, true); }
+            @Override public void onError(String id) { reportSpeech(id, false); }
+            @Override public void onError(String id, int code) { reportSpeech(id, false); }
+            @Override public void onStop(String id, boolean interrupted) { reportSpeech(id, false); }
+        });
+    }
+
     private void reportSpeech(String id, boolean success) {
         runOnUiThread(() -> {
             if (webView != null) {
@@ -107,29 +144,34 @@ public class MainActivity extends Activity {
         });
     }
 
-    private List<Voice> englishVoices() {
+    private List<Voice> englishVoices(TextToSpeech engine) {
         List<Voice> result = new ArrayList<>();
-        if (!ttsReady || tts == null) return result;
-        Set<Voice> voices = tts.getVoices();
+        if (engine == null) return result;
+        Set<Voice> voices = engine.getVoices();
         if (voices == null) return result;
         for (Voice voice : voices) {
-            if (voice.getLocale() != null && "en".equals(voice.getLocale().getLanguage())
-                    && !voice.isNetworkConnectionRequired()) result.add(voice);
+            if (voice.getLocale() != null && "en".equals(voice.getLocale().getLanguage())) result.add(voice);
         }
-        result.sort(Comparator.comparing(Voice::getName));
+        result.sort(Comparator.comparing(Voice::isNetworkConnectionRequired).thenComparing(Voice::getName));
         return result;
     }
 
     private void reportVoices() {
         JSONArray names = new JSONArray();
-        for (Voice voice : englishVoices()) {
-            JSONObject entry = new JSONObject();
-            try {
-                entry.put("id", voice.getName());
-                entry.put("name", voice.getName());
-                entry.put("lang", voice.getLocale().toLanguageTag());
-                names.put(entry);
-            } catch (org.json.JSONException ignored) { }
+        List<String> engineNames = new ArrayList<>(readyEngines);
+        engineNames.sort(Comparator.comparing((String name) -> !name.equals(defaultEngine)).thenComparing(name -> name));
+        for (String engineName : engineNames) {
+            for (Voice voice : englishVoices(engines.get(engineName))) {
+                JSONObject entry = new JSONObject();
+                try {
+                    entry.put("id", engineName + "|" + voice.getName());
+                    entry.put("name", voice.getName());
+                    entry.put("engine", engineLabels.getOrDefault(engineName, engineName));
+                    entry.put("network", voice.isNetworkConnectionRequired());
+                    entry.put("lang", voice.getLocale().toLanguageTag());
+                    names.put(entry);
+                } catch (org.json.JSONException ignored) { }
+            }
         }
         if (webView != null) {
             String script = "window.onNativeVoices(" + JSONObject.quote(names.toString()) + ");";
@@ -139,21 +181,36 @@ public class MainActivity extends Activity {
 
     private void startSpeech(PendingSpeech pending) {
         if (tts == null || !ttsReady) { reportSpeech(pending.id, false); return; }
-        int support = tts.setLanguage(Locale.forLanguageTag(pending.language));
+        TextToSpeech engine = tts;
+        Voice selected = null;
+        if (!pending.voiceId.isEmpty()) {
+            int separator = pending.voiceId.indexOf('|');
+            if (separator > 0) {
+                String engineName = pending.voiceId.substring(0, separator);
+                if (!readyEngines.contains(engineName)) {
+                    if (engines.containsKey(engineName)) { waiting = pending; return; }
+                    reportSpeech(pending.id, false);
+                    return;
+                }
+                engine = engines.get(engineName);
+                String voiceName = pending.voiceId.substring(separator + 1);
+                for (Voice voice : englishVoices(engine)) {
+                    if (voiceName.equals(voice.getName())) { selected = voice; break; }
+                }
+            }
+            if (selected == null) { reportSpeech(pending.id, false); return; }
+        }
+        int support = engine.setLanguage(selected != null ? selected.getLocale() : Locale.forLanguageTag(pending.language));
         if (support == TextToSpeech.LANG_MISSING_DATA || support == TextToSpeech.LANG_NOT_SUPPORTED) {
             reportSpeech(pending.id, false);
             return;
         }
-        if (!pending.voiceId.isEmpty()) {
-            for (Voice voice : englishVoices()) {
-                if (pending.voiceId.equals(voice.getName())) {
-                    tts.setVoice(voice);
-                    break;
-                }
-            }
+        if (selected != null && engine.setVoice(selected) == TextToSpeech.ERROR) {
+            reportSpeech(pending.id, false);
+            return;
         }
-        tts.setSpeechRate(pending.rate);
-        if (tts.speak(pending.text, TextToSpeech.QUEUE_FLUSH, null, pending.id) == TextToSpeech.ERROR) {
+        engine.setSpeechRate(pending.rate);
+        if (engine.speak(pending.text, TextToSpeech.QUEUE_FLUSH, null, pending.id) == TextToSpeech.ERROR) {
             reportSpeech(pending.id, false);
         }
     }
@@ -174,6 +231,7 @@ public class MainActivity extends Activity {
             runOnUiThread(() -> {
                 waiting = null;
                 if (tts != null) tts.stop();
+                for (TextToSpeech engine : engines.values()) if (engine != tts) engine.stop();
             });
         }
         @JavascriptInterface public void keepScreenOn(boolean enabled) {
@@ -182,7 +240,8 @@ public class MainActivity extends Activity {
     }
 
     @Override protected void onDestroy() {
-        if (tts != null) { tts.stop(); tts.shutdown(); }
+        for (TextToSpeech engine : engines.values()) { engine.stop(); engine.shutdown(); }
+        if (tts != null && !engines.containsValue(tts)) { tts.stop(); tts.shutdown(); }
         if (webView != null) { webView.destroy(); webView = null; }
         super.onDestroy();
     }
