@@ -12,6 +12,8 @@ function makeApp(initialStorage = [], options = {}) {
   class Element {
     constructor(id) {
       this.id = id;
+      this.options = id.endsWith('Voice') ? [{value: ''}] : [];
+      this._value = '';
       this.hidden = false;
       this.value = {category: 'all', status: 'all', flashDirection: 'ja', rate: '0.90'}[id] ?? '';
       this.textContent = '';
@@ -20,8 +22,11 @@ function makeApp(initialStorage = [], options = {}) {
       this.style = {};
       this.classList = {toggle: () => {}};
     }
+    get value() { return this._value; }
+    set value(next) { this._value = this.id.endsWith('Voice') && !this.options.some(option => option.value === next) ? '' : next; }
+    set innerHTML(value) { if (this.id.endsWith('Voice')) { this.options = []; this._value = ''; } }
     addEventListener(type, handler) { this.handlers[type] = handler; }
-    append() {}
+    append(option) { if (this.id.endsWith('Voice')) this.options.push(option); }
     setAttribute(key, value) { this.attributes[key] = value; }
     click() { this.handlers.click?.({}); }
     change() { this.handlers.change?.({target: this}); }
@@ -55,7 +60,7 @@ function makeApp(initialStorage = [], options = {}) {
   const context = vm.createContext({window, document, navigator: {}, location: {protocol: 'http:'}, localStorage: {
     getItem: key => storage.get(key) ?? null,
     setItem: (key, value) => storage.set(key, value),
-  }, Option: class Option {}, SpeechSynthesisUtterance, queueMicrotask, console});
+  }, Option: class Option { constructor(text, value) { this.text = text; this.value = value; } }, SpeechSynthesisUtterance, queueMicrotask, console});
   for (const file of ['cards-data.js', 'qa-data.js', 'study-core.js', 'app.js']) {
     vm.runInContext(fs.readFileSync(path.join(root, 'www', file), 'utf8'), context, {filename: file});
   }
@@ -88,6 +93,34 @@ test('Android Q&A uses separate voices, allows an override, and leaves phrase au
   elements.playOne.click();
   await new Promise(resolve => setTimeout(resolve, 10));
   assert.deepEqual(spoken.slice(1).map(item => item.voice), ['', '', '', '']);
+});
+
+test('Galaxy keeps a saved male answer voice while the other voice engine loads', async () => {
+  const key = 'asn-poster-2026-answer-voice-v1';
+  const maleId = 'com.google.android.tts|en-US-male';
+  const {elements, spoken, window} = makeApp([[key, maleId]], {nativeVoices: [
+    {id: 'com.samsung.SMT|en-US-default', name: 'English US', lang: 'en-US', engine: 'Samsung'},
+  ]});
+  await new Promise(resolve => setTimeout(resolve, 0));
+  assert.equal(elements.answerVoice.value, maleId);
+  window.onNativeVoices(JSON.stringify([
+    {id: 'com.samsung.SMT|en-US-default', name: 'English US', lang: 'en-US', engine: 'Samsung'},
+    {id: maleId, name: 'en-us#male_1', lang: 'en-US', engine: 'Google'},
+  ]));
+  assert.equal(elements.answerVoice.value, maleId);
+  elements.qaDeck.click();
+  elements.playOne.click();
+  await new Promise(resolve => setTimeout(resolve, 10));
+  assert.deepEqual(spoken.map(item => item.voice), ['', maleId, maleId]);
+});
+
+test('Galaxy shows a clear warning if no English voice is identified as male', async () => {
+  const {elements} = makeApp([], {nativeVoices: [
+    {id: 'com.samsung.SMT|en-US-default', name: 'English US', lang: 'en-US', engine: 'Samsung'},
+  ]});
+  await new Promise(resolve => setTimeout(resolve, 0));
+  assert.match(elements.voiceAvailability.textContent, /男性の声を自動判別できません/);
+  assert.equal(elements.answerVoice.options.length, 2);
 });
 
 test('web speech applies the two selected voices after asynchronous voice discovery', async () => {

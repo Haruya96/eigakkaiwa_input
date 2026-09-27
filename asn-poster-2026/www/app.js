@@ -9,6 +9,7 @@ const RATE_KEY = "asn-poster-2026-rate-v1";
 const VOICE_KEYS = {question: "asn-poster-2026-question-voice-v1", answer: "asn-poster-2026-answer-voice-v1"};
 const $ = selector => document.querySelector(selector);
 let availableVoices = [];
+const voiceChoice = {question: "", answer: ""};
 
 function loadMastery(key) {
   try {
@@ -160,12 +161,21 @@ function updateVoiceOptions(voices) {
   availableVoices = voices.filter(voice => /^en(?:[-_]|$)/i.test(voice.lang));
   for (const role of ["question", "answer"]) {
     const select = $(`#${role}Voice`);
-    const saved = select.value;
+    const saved = voiceChoice[role];
     select.innerHTML = "";
     select.append(new Option(`自動（${role === "question" ? "女性" : "男性"}の声を優先）`, ""));
-    for (const voice of availableVoices) select.append(new Option(`${voice.name} (${voice.lang})`, voice.id));
-    select.value = availableVoices.some(voice => voice.id === saved) ? saved : "";
+    for (const voice of availableVoices) {
+      const name = `${voice.engine ? `${voice.engine} · ` : ""}${voice.name} (${voice.lang})${voice.network ? " · 通信が必要" : ""}`;
+      select.append(new Option(name, voice.id));
+    }
+    if (saved && !availableVoices.some(voice => voice.id === saved)) select.append(new Option("前回の声（現在利用できません）", saved));
+    select.value = saved || "";
   }
+  const male = CORE.preferredVoice(availableVoices, "answer");
+  $("#voiceAvailability").textContent = !availableVoices.length
+    ? "英語音声の一覧を取得できませんでした。Galaxyの設定で英語音声を追加し、アプリを再起動してください。"
+    : male ? "回答の男性音声を自動選択します。「試聴」で声を確認できます。"
+      : "男性の声を自動判別できません。回答の声を試聴して選んでください。候補がなければGalaxyの音声設定で英語音声を追加してください。";
 }
 
 window.onNativeVoices = json => {
@@ -175,8 +185,9 @@ window.onNativeVoices = json => {
 
 function voiceFor(role) {
   if (!role) return null;
-  const selected = $(`#${role}Voice`).value;
-  return availableVoices.find(voice => voice.id === selected) || CORE.preferredVoice(availableVoices, role);
+  const selected = voiceChoice[role];
+  if (selected) return availableVoices.find(voice => voice.id === selected) || null;
+  return CORE.preferredVoice(availableVoices, role);
 }
 
 function speak(text, language, token, role) {
@@ -192,6 +203,7 @@ function speak(text, language, token, role) {
     state.pendingSpeech = finish;
     const rate = Number($("#rate").value);
     const selectedVoice = voiceFor(role);
+    if (role && voiceChoice[role] && !selectedVoice) { finish(false); return; }
     if (window.AndroidTts) {
       const id = String(++utteranceId);
       window.nativeSpeechId = id;
@@ -237,7 +249,9 @@ async function playCards(queue) {
       if (!success) {
         if (token === state.playbackToken) {
           stopPlayback();
-          status("音声を再生できませんでした。端末の音声設定を確認してください。");
+          status(voiceChoice[segment.role] && !voiceFor(segment.role)
+            ? "選択した音声が見つかりません。音声を選び直してください。"
+            : "音声を再生できませんでした。端末の音声設定を確認してください。");
         }
         return;
       }
@@ -315,11 +329,12 @@ function init() {
   $("#rateLabel").textContent = `${Number($("#rate").value).toFixed(2)}×`;
 
   for (const role of ["question", "answer"]) {
-    try { $(`#${role}Voice`).value = localStorage.getItem(VOICE_KEYS[role]) || ""; }
+    try { voiceChoice[role] = localStorage.getItem(VOICE_KEYS[role]) || ""; }
     catch { /* Voice selection is still available for this session. */ }
     $(`#${role}Voice`).addEventListener("change", () => {
       stopPlayback();
-      try { localStorage.setItem(VOICE_KEYS[role], $(`#${role}Voice`).value); }
+      voiceChoice[role] = $(`#${role}Voice`).value;
+      try { localStorage.setItem(VOICE_KEYS[role], voiceChoice[role]); }
       catch { /* Playback still works. */ }
     });
     $(`#preview${role[0].toUpperCase()}${role.slice(1)}`).addEventListener("click", () => void previewVoice(role));
