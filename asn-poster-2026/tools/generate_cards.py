@@ -72,7 +72,7 @@ qa = [
 print(f"Generated {len(qa)} questions and answers")
 
 review = ["# ASN 2026 Poster: 50 Questions and Answers", "",
-          "All questions and answers were rewritten for this edition. Questions 16-50 focus on discussion (35 questions).", "",
+          "Updated on 11 October 2026 to match the completed poster and manuscript draft. Questions 16-50 focus on discussion (35 questions).", "",
           "Audio: question once, answer twice. Flashcards: question on the front, answer on the back.", "",
           "[Sources and interpretation notes](qa-sources.md)", ""]
 previous_category = None

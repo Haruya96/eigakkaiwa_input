@@ -178,7 +178,7 @@ test('continuous playback advances through every visible card in order', async (
   await new Promise(resolve => setTimeout(resolve, 20));
   assert.equal(spoken.length, 20);
   assert.equal(spoken[0].text, 'a stricter proteinuria threshold');
-  assert.equal(spoken[19].text, 'We restricted this sensitivity analysis to the overall cohort because few participants were positive.');
+  assert.equal(spoken[19].text, 'The stricter proteinuria definition produced similar results in the overall cohort.');
   assert.equal(elements.stop.hidden, true);
 });
 
@@ -192,7 +192,7 @@ test('Q&A switches to English-only audio, question-front flashcards, and indepen
   elements.flashTab.click();
   assert.equal(elements.flashPrompt.textContent, 'What should a visitor take away from your poster?');
   elements.flip.click();
-  assert.ok(elements.flashAnswer.textContent.includes('people with proteinuria'));
+  assert.ok(elements.flashAnswer.textContent.includes('participants with baseline proteinuria'));
   assert.equal(elements.flashAnswer.hidden, false);
   elements.flashLearn.click();
   assert.deepEqual(JSON.parse(storage.get('asn-poster-2026-qa-mastered-v2')), [1]);
@@ -201,8 +201,8 @@ test('Q&A switches to English-only audio, question-front flashcards, and indepen
   await new Promise(resolve => setTimeout(resolve, 10));
   assert.deepEqual(spoken.map(item => item.text), [
     'What should a visitor take away from your poster?',
-    "Higher uric acid was linked to faster eGFR decline, mostly among people with proteinuria. Because this is observational, we can't say uric acid caused the decline.",
-    "Higher uric acid was linked to faster eGFR decline, mostly among people with proteinuria. Because this is observational, we can't say uric acid caused the decline.",
+    "Higher serum uric acid was associated with faster subsequent eGFR decline in participants with baseline proteinuria, but not in those without proteinuria. Proteinuria can help identify individuals with hyperuricemia at greater risk of kidney function decline.",
+    "Higher serum uric acid was associated with faster subsequent eGFR decline in participants with baseline proteinuria, but not in those without proteinuria. Proteinuria can help identify individuals with hyperuricemia at greater risk of kidney function decline.",
   ]);
   assert.ok(spoken.every(item => item.lang === 'en-US'));
   elements.phrasesDeck.click();
@@ -223,7 +223,7 @@ test('Q&A flashcards reveal multiple-blank full-answer hint without revealing th
   assert.equal(elements.clozeHint.hidden, false);
   assert.equal(elements.flashAnswer.hidden, true);
   assert.equal(elements.showHint.attributes['aria-expanded'], 'true');
-  assert.equal(elements.clozeHint.textContent, "Higher uric acid ________ faster eGFR decline, ________ people with proteinuria. Because this is observational, we ________.");
+  assert.equal(elements.clozeHint.textContent, "Higher serum uric acid ________ faster subsequent eGFR decline in participants with ________, but not in those without proteinuria. Proteinuria can help identify individuals with hyperuricemia ________ of kidney function decline.");
   elements.flip.click();
   assert.equal(elements.clozeHint.hidden, true);
   assert.equal(elements.showHint.hidden, true);

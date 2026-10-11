@@ -1,45 +1,35 @@
-# Sources and interpretation notes for the 50-question edition
+# Sources for the poster practice materials
 
-Reviewed on 23 September 2026. All 50 question-answer pairs replace the earlier 30-question edition. The answers are short oral responses, with no Japanese translations.
+Updated on 11 October 2026 using the completed poster and manuscript draft. The app contains 100 phrase cards and 50 questions with short oral answers. Questions 16-50 cover discussion. The existing card numbers and topics are retained.
 
-## Content balance
+## Study sources
 
-| Question numbers | Topic | Count |
-| --- | --- | --- |
-| 1-5 | Study overview | 5 |
-| 6-10 | Methods | 5 |
-| 11-15 | Reading the figures | 5 |
-| 16-22 | Discussion: mechanisms | 7 |
-| 23-30 | Discussion: causal interpretation | 8 |
-| 31-38 | Discussion: trials and clinical meaning | 8 |
-| 39-46 | Discussion: limitations | 8 |
-| 47-50 | Discussion: next studies | 4 |
+Results and conclusions follow the supplied completed poster, `ASN_Poster_120x60 (240x120) cm_完成版(1).pptx`. Methods and discussion details also draw on `下書き_20261005.docx`.
 
-Discussion accounts for 35 of the 50 questions. The app includes a category option that selects all 35 discussion questions.
+| Item | Current material |
+| --- | --- |
+| Cohort | 8,266 adults aged 20 years or older, coastal Iwate, Japan |
+| Proteinuria | Baseline dipstick trace or greater, 371 participants, 4.5 percent |
+| Follow-up | Mean 7.1 years, SD 2.6 years |
+| Without proteinuria | Nearly constant eGFR slope across SUA levels, mean -1.11 mL/min/1.73 m²/year, association P = 0.220 |
+| With proteinuria | Nonlinear association, slope -1.27 at SUA 5.0 mg/dL and -2.04 at 7.8 mg/dL |
+| Proteinuria interaction | P <0.001 |
+| Sensitivity analysis | Dipstick one-plus or greater, 146 participants, similar overall pattern |
+| Subgroup interaction | Only baseline eGFR remained significant after Bonferroni correction, P <0.001 |
+| Baseline eGFR ≥60 | Pattern similar to the overall analysis |
+| Baseline eGFR <60 | Little variation in slope across SUA levels regardless of proteinuria status, consistently steeper decline with proteinuria |
 
-## Study-specific sources
+The main-analysis association P value of 0.220 follows the completed poster's main-results text and manuscript. The value of 0.225 belongs to the sensitivity analysis. Answers describe effect modification and associations using the poster's wording.
 
-The supplied September 2026 manuscript draft and revision 13 poster were reread for this edition. Study facts come from those materials: 8,266 participants; 371 with trace-or-greater proteinuria; mean follow-up of 7.1 years; 146 positive under the stricter definition; the reported model, slopes, interaction, subgroup results, and limitations. This revision does not incorporate findings from the separate blood-pressure project or the older manuscript population.
+## Discussion literature
 
-The draft still has author queries about such details as the exact GFR equation, assay methods, GFR measurement counts, estimation method, and why 7.8 mg/dL was selected for reporting. Answers do not invent these details. Describing 7.8 mg/dL as an illustrative point on the curve does not assert that it was a prespecified clinical cutoff.
+1. Badve SV et al. *Effects of Allopurinol on the Progression of Chronic Kidney Disease.* N Engl J Med. 2020;382:2504-2513. [PubMed](https://pubmed.ncbi.nlm.nih.gov/32579811/). Questions 31-32 address CKD-FIX, which included participants with substantial albuminuria and did not demonstrate slower eGFR decline with allopurinol.
+2. Doria A et al. *Serum Urate Lowering with Allopurinol and Kidney Function in Type 1 Diabetes.* N Engl J Med. 2020;382:2493-2503. [Full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC7375708/). Question 31 also addresses PERL, which did not demonstrate kidney benefit from serum urate lowering with allopurinol.
+3. Liu D et al. *Megalin/Cubulin-Lysosome-mediated Albumin Reabsorption Is Involved in the Tubular Cell Activation of NLRP3 Inflammasome and Tubulointerstitial Inflammation.* J Biol Chem. 2015;290:18018-18028. [PubMed](https://pubmed.ncbi.nlm.nih.gov/26025362/). This is the albumin-overload experimental study cited in the completed poster and informs questions 16-18.
+4. Xiao J et al. *Soluble uric acid increases NALP3 inflammasome and interleukin-1β expression in human primary renal proximal tubule epithelial cells through the Toll-like receptor 4-mediated pathway.* Int J Mol Med. 2015;35:1347-1354. [PubMed](https://pubmed.ncbi.nlm.nih.gov/25813103/). This is the soluble-urate study cited in the completed poster and informs questions 18-19.
 
-## Primary literature used for the discussion
+## Wording and study behavior
 
-1. Badve SV et al. *Effects of Allopurinol on the Progression of Chronic Kidney Disease.* N Engl J Med. 2020. [DOI](https://doi.org/10.1056/NEJMoa1915833), [PubMed](https://pubmed.ncbi.nlm.nih.gov/32579811/). Used for questions 31-32: no demonstrated slowing of GFR decline with allopurinol in the trial population; substantial albuminuria was already represented in CKD-FIX.
-2. Doria A et al. *Serum Urate Lowering with Allopurinol and Kidney Function in Type 1 Diabetes.* N Engl J Med. 2020. [Full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC7375708/). Used for question 31: sustained urate lowering did not demonstrate clinically meaningful kidney benefit in PERL's population.
-3. *Activation of the Nlrp3 inflammasome by mitochondrial reactive oxygen species: A novel mechanism of albumin-induced tubulointerstitial inflammation.* [Primary study](https://pmc.ncbi.nlm.nih.gov/articles/PMC4414121/). Experimental context for questions 17-18, not evidence of a demonstrated mechanism in this cohort.
-4. *Soluble uric acid increases NALP3 inflammasome and interleukin-1beta expression in human primary renal proximal tubule epithelial cells through the Toll-like receptor 4-mediated pathway.* [Primary study](https://pubmed.ncbi.nlm.nih.gov/25813103/). Experimental context for questions 18-19.
-5. *Peroxisome proliferator-activated receptor gamma prevents the production of NOD-like receptor family, pyrin domain containing 3 inflammasome and interleukin 1beta in HK-2 renal tubular epithelial cells stimulated by monosodium urate crystals.* [Primary study](https://pubmed.ncbi.nlm.nih.gov/26238426/). Crystal-exposure context for question 19; the cohort did not establish crystal deposition.
+Routine results and mechanism answers state their main point directly. Repeated appended disclaimers were removed. Dedicated questions about causality, biomarkers, treatment targets, prediction, and limitations retain direct answers to those questions. Mechanistic explanations remain hypotheses, and proposed studies are described in future or conditional terms.
 
-## Interpretation boundaries
-
-- Mechanisms, nephron reserve, mediation, collider bias, nutrition, and disaster-related pathways are presented as hypotheses or possible explanations. They were not demonstrated by this analysis.
-- Statistical effect modification does not establish a causal biological interaction, treatment benefit, or added predictive value.
-- The lower-GFR subgroup shows greater proteinuria-related decline across the displayed uric acid range. It is not used to claim that uric acid has a universally stronger causal effect in reduced GFR.
-- A nearly flat curve across uric acid levels does not mean that GFR was stable over time.
-- The stricter dipstick definition supports robustness to that definition but cannot remove misclassification or residual confounding.
-- Questions 47-50 propose future research. They do not imply that additional analyses, experiments, or trials have already been performed.
-
-## App update
-
-Because all Q&A items were rewritten and renumbered, their mastery state uses a new storage key. The original 100-phrase deck uses its existing storage key. Android debug APK reinstallation can erase both decks' local data, as described in the README.
+The English-only answers and their cloze hints are generated together. Numerical results remain visible in hints. The PWA cache version is updated for the revised materials. Existing Web mastery and voice settings use their current storage keys.
