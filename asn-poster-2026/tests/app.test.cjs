@@ -27,7 +27,7 @@ test('questions and answers are 50 distinct English-only study cards', () => {
     assert.deepEqual(numbers(card.hint), numbers(card.answer), `Q${card.id}: study numbers stay visible`);
   });
   assert.equal(qa[0].hint, "Higher serum uric acid ________ faster subsequent eGFR decline in participants with ________, but not in those without proteinuria. Proteinuria can help identify individuals with hyperuricemia ________ of kidney function decline.");
-  assert.equal(qa[4].hint, "With proteinuria, ________ at a serum uric acid level of 5.0 milligrams per deciliter, ________ minus 1.27. At 7.8 milligrams per deciliter, the slope was minus 2.04. ________ milliliters per minute per 1.73 square meters per year.");
+  assert.equal(qa[4].hint, "With proteinuria, ________ 1.27 a year ________ 5.0 milligrams per deciliter, ________ 2.04 at 7.8. That's in milliliters per minute per 1.73 square meters per year.");
   assert.ok(qa.some(card => card.answer.includes('8,266')));
   assert.ok(qa.some(card => card.answer.includes('Bonferroni')));
   assert.match(qa[4].answer, /milliliters per minute per 1\.73 square meters per year/);

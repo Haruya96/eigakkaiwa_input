@@ -26,7 +26,7 @@ Proteinuria was present in 371 participants, or 4.5 percent. We defined proteinu
 
 ### 05. Can you give one numerical example of the main result?
 
-With proteinuria, eGFR decline was slowest at a serum uric acid level of 5.0 milligrams per deciliter, where the slope was minus 1.27. At 7.8 milligrams per deciliter, the slope was minus 2.04. Slopes are expressed in milliliters per minute per 1.73 square meters per year.
+With proteinuria, eGFR declined by 1.27 a year at a serum uric acid level of 5.0 milligrams per deciliter, compared with 2.04 at 7.8. That's in milliliters per minute per 1.73 square meters per year.
 
 ## Methods
 
