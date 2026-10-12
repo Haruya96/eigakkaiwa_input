@@ -1,6 +1,6 @@
 # ASN 2026 Poster: 50 Questions and Answers
 
-Updated on 11 October 2026 to match the completed poster and manuscript draft. Questions 16-50 focus on discussion (35 questions).
+Updated on 12 October 2026. Questions 1-15 follow the completed poster. Discussion questions 16-50 return to the previous conversational answers with only minor corrections.
 
 Audio: question once, answer twice. Flashcards: question on the front, answer on the back.
 
@@ -76,148 +76,148 @@ The vertical axis shows annual eGFR decline, expressed as the eGFR slope. More n
 
 ### 16. Why might proteinuria amplify the association with uric acid?
 
-Proteinuria may reflect increased susceptibility to urate-related tubulointerstitial inflammation. NLRP3 inflammasome activation provides a plausible explanation for the stronger association in participants with proteinuria.
+One idea is that proteinuria marks a kidney that's already injured and more sensitive to urate-related stress. Tubular inflammation might play a role.
 
 ### 17. Is proteinuria itself causing injury, or marking existing damage?
 
-Proteinuria may reflect existing kidney injury and may also contribute to tubular inflammation. Experimental studies link albumin overload to NLRP3 inflammasome activation in proximal tubular cells.
+It could be either. Proteinuria may mark existing damage, and protein overload can also inflame tubules in experiments.
 
 ### 18. What is the proposed role of tubular inflammation?
 
-Our hypothesis is that albumin exposure primes tubular inflammatory pathways and urate enhances NLRP3 inflammasome signaling. This could increase tubular susceptibility to urate-related injury when proteinuria is present.
+In experimental work, albumin and urate have each been linked to inflammation in tubular cells. That's why we think this pathway is worth testing.
 
 ### 19. Does your explanation require urate crystal deposition?
 
-No. Experimental studies have linked soluble urate to TLR4-dependent NLRP3 inflammasome signaling in proximal tubular cells. Soluble urate therefore provides a possible pathway without requiring crystal deposition.
+No. Both soluble urate and crystals have been studied as possible inflammatory triggers.
 
 ### 20. Could reduced nephron reserve explain the pattern?
 
-Reduced nephron reserve could make an injured kidney more vulnerable to additional stress. Proteinuria may identify kidneys with greater susceptibility to urate-related tubular inflammation.
+Possibly. A kidney that's already injured may have less capacity to handle another stressor.
 
 ### 21. Could the association reflect shared metabolic or vascular disease?
 
-Yes. Metabolic and vascular disease may contribute to both higher serum uric acid and proteinuria. We adjusted for BMI, blood pressure, diabetes, and other baseline covariates.
+Yes. Cardiometabolic disease could be linked to both high uric acid and proteinuria. We adjusted for blood pressure, diabetes, and BMI, but residual confounding is still possible.
 
 ### 22. Did you evaluate biomarkers that support the proposed mechanism?
 
-We did not measure biomarkers of tubular injury or inflammation in this analysis. The proposed mechanism is based on experimental studies of albumin and urate exposure.
+We didn't assess biomarkers of tubular injury or inflammation in this analysis. The idea comes from experimental work and needs testing in people.
 
 ## Discussion: Causal interpretation
 
 ### 23. Can you conclude that higher uric acid caused the faster decline?
 
-No. The observational design cannot establish causality. Existing kidney dysfunction can raise serum uric acid, and residual confounding remains possible.
+No. We measured uric acid before the follow-up decline, but kidney damage may already have raised it at baseline. Reverse causation and confounding are still possible.
 
 ### 24. How could reverse causation operate in this cohort?
 
-Existing kidney dysfunction can reduce urate excretion and raise serum uric acid. Kidney dysfunction may also predict subsequent eGFR decline, producing an association between higher serum uric acid and faster decline.
+Existing kidney dysfunction can reduce urate excretion and raise serum uric acid. That same damage may also predict later decline, even if uric acid isn't causing it.
 
 ### 25. Does adjusting for baseline GFR solve reverse causation?
 
-Adjustment for baseline eGFR reduces confounding by initial kidney function. However, the model used eGFR categories, which leave variation within each category, and eGFR does not capture all aspects of kidney injury.
+It helps, but not completely. We adjusted using eGFR categories, and there's still variation within each category. eGFR can't capture every kind of kidney damage.
 
 ### 26. Could proteinuria lie on the pathway from uric acid to kidney damage?
 
-Proteinuria could lie on that pathway. Serum uric acid and proteinuria were assessed at the same baseline visit, so their temporal order is unclear. Our model evaluated effect modification rather than mediation.
+It could. We measured uric acid and proteinuria at the same visit, so we can't tell which came first. Our analysis tested interaction, not mediation.
 
 ### 27. Could stratifying by proteinuria introduce bias?
 
-Yes. If uric acid and other causes of kidney decline both affect proteinuria, stratifying by proteinuria could introduce collider bias. The estimated associations are conditional on baseline proteinuria status.
+Possibly. If uric acid and other causes of kidney decline both affect proteinuria, stratifying on proteinuria could create collider bias. So these are conditional associations.
 
 ### 28. Which unmeasured factors concern you most?
 
-Diet, diuretic use, and renin-angiotensin system inhibitor use are important potential confounders. Detailed information on these factors and treatment changes was unavailable, leaving the possibility of residual confounding.
+Diet, diuretics, and RAS inhibitors come to mind. We don't have complete data on their use or treatment changes, so residual confounding is possible.
 
 ### 29. Could changes in uric acid or proteinuria during follow-up alter the interpretation?
 
-Yes. The analysis used baseline serum uric acid and proteinuria. Repeated measurements would distinguish persistent exposure from transient changes and assess how changes during follow-up relate to eGFR decline.
+Yes. We only used baseline measurements. Repeated uric acid and proteinuria measurements could tell us whether persistent values behave differently from temporary ones.
 
 ### 30. Is a statistically significant interaction necessarily clinically important?
 
-Clinical importance depends on the size and precision of the difference as well as statistical significance. The interaction P value was below 0.001, and the estimated slopes illustrate the magnitude of the association.
+No. The interaction P value was below 0.001, but clinical importance also depends on how large and reliable the difference is.
 
 ## Discussion: Trials and clinical meaning
 
 ### 31. How do your findings fit with CKD-FIX and PERL?
 
-CKD-FIX and PERL found that allopurinol lowered serum urate without slowing kidney function decline in the populations studied. Our findings suggest that proteinuria status and baseline kidney function are relevant factors to examine when comparing observational associations across populations.
+In those trials, allopurinol lowered urate, but kidney decline wasn't slowed in the populations studied. Our finding is about prognosis.
 
 ### 32. Could a proteinuria-positive subgroup explain why those trials were negative?
 
-CKD-FIX already included many participants with substantial albuminuria. A randomized trial with prespecified proteinuria and baseline eGFR strata would directly test whether these factors modify the response to urate-lowering therapy.
+We can't infer that. CKD-FIX included many people with substantial albuminuria. To test that idea, we'd need a trial that prespecifies the interaction with proteinuria.
 
 ### 33. Would you prescribe urate-lowering treatment on the basis of this poster?
 
-No. This observational study evaluated the association between serum uric acid and subsequent eGFR decline. Treatment decisions require evidence of benefit from randomized trials.
+No, not from this poster alone. We studied prognosis, not whether urate-lowering treatment helps.
 
 ### 34. Should 5.0 milligrams per deciliter be considered the ideal treatment target?
 
-No. The eGFR slope was least negative at 5.0 milligrams per deciliter on the estimated observational curve. That value was not evaluated as a treatment target.
+No. Five was simply where the estimated curve was least negative. It's uncertain and wasn't tested as a treatment target.
 
 ### 35. Does the lower end of the curve mean that low uric acid is harmful?
 
-The lower end of the curve does not establish a harmful effect of low serum uric acid. Estimates are less precise at the extremes, and low serum uric acid may reflect illness or poor nutrition.
+I wouldn't take it that way. Estimates at the low end are less precise, and low uric acid might reflect illness or poor nutrition. We can't conclude that low uric acid harms the kidney.
 
 ### 36. Does the study identify a clinically useful uric acid cutoff?
 
-We modeled serum uric acid continuously. The value of 7.8 milligrams per deciliter is a point used to describe the curve, rather than a validated clinical threshold.
+No. We modeled uric acid continuously, and 7.8 was just an example on the curve. A clinical cutoff would need separate validation.
 
 ### 37. Did you show that uric acid improves risk prediction beyond proteinuria and GFR?
 
-We did not evaluate added predictive value. A prediction study would compare models with and without serum uric acid, assess calibration and discrimination, and validate the models in an independent cohort.
+No, we didn't test prediction. We'd need to compare models with and without uric acid, including calibration and discrimination, and validate in another cohort.
 
 ### 38. What could change in clinical practice if the association is replicated?
 
-Proteinuria can help identify individuals with hyperuricemia at greater risk of kidney function decline. The findings support considering proteinuria and baseline kidney function when interpreting serum uric acid.
+It might help us interpret uric acid alongside proteinuria when we discuss kidney risk.
 
 ## Discussion: Limitations
 
 ### 39. How could a single dipstick measurement affect the interaction?
 
-A single dipstick test may miss low-grade albuminuria and cannot distinguish transient from persistent proteinuria. Misclassification may affect the estimated interaction.
+A single dipstick can catch temporary proteinuria or miss low-grade albuminuria. That could change the estimated interaction, though we can't say in which direction.
 
 ### 40. Why would quantitative albuminuria strengthen the study?
 
-The urine albumin-to-creatinine ratio would quantify albuminuria and allow analysis across different levels. Repeated measurements would distinguish persistent from transient albuminuria.
+UACR would give us a range of albuminuria levels, instead of just yes or no. Repeated measurements would also tell us who has persistent albuminuria.
 
 ### 41. Could excluding participants without follow-up bias the result?
 
-Yes. We excluded 1,334 participants without follow-up eGFR data. Selection bias may arise if the availability of follow-up is related to both baseline exposures and subsequent kidney function decline.
+Possibly. We excluded 1,334 people with no follow-up eGFR. If missing follow-up depended on both the exposures and subsequent kidney function, that could bias the association. We don't know the direction.
 
 ### 42. How does the small proteinuria-positive group affect your confidence?
 
-Proteinuria was present in 371 participants, and 146 met the stricter definition. These relatively small groups limit the precision of estimates, particularly within subgroups and at the extremes of serum uric acid.
+There were only 371 people with proteinuria, and just 146 under the stricter cutoff. So estimates at the extremes and in small subgroups are less certain.
 
 ### 43. Could factors affecting creatinine distort the estimated GFR slopes?
 
-Yes. Changes in muscle mass and other factors affecting serum creatinine may influence creatinine-based eGFR. Cystatin C or measured GFR would provide complementary assessments.
+Yes. Creatinine can change with muscle mass and other factors besides kidney filtration. Cystatin C or measured GFR could help check the pattern.
 
 ### 44. Does a slower GFR slope necessarily translate into fewer kidney-failure events?
 
-The study evaluated eGFR slope rather than kidney-failure events. Direct analysis of kidney failure would be needed to relate the observed slope differences to dialysis risk.
+We didn't analyze that. Our outcome was the eGFR slope, not kidney failure, so we can't estimate an individual's time to dialysis from this figure.
 
 ### 45. How transferable are these findings to other populations?
 
-Generalizability beyond this disaster-affected Japanese population is uncertain. Replication in cohorts with different demographic and clinical characteristics would help establish the wider relevance of the findings.
+Our cohort was from one disaster-affected region of Japan. Other populations may differ in age, kidney disease, and access to care, so I'd want to see it replicated elsewhere.
 
 ### 46. Could the earthquake and tsunami have influenced the association?
 
-The disaster may have affected diet, stress, medication use, and access to care. Models were adjusted for home damage or flooding, and the interaction was consistent across home damage groups.
+Yes, it could have changed diet, stress, medication use, and access to care. We adjusted for home damage or flooding, but that can't capture every effect of the disaster.
 
 ## Discussion: Next studies
 
 ### 47. What would be your highest-priority follow-up study?
 
-I would prioritize an independent cohort with repeated serum uric acid, quantitative albuminuria, and eGFR measurements, together with detailed medication data.
+I'd start with an independent cohort with repeated uric acid, UACR, and eGFR measurements, plus good medication data.
 
 ### 48. Which additional analyses would strengthen the observational evidence?
 
-Useful next analyses would examine different spline settings, continuous adjustment for baseline eGFR, and the sensitivity of the results to early follow-up and missing data.
+I'd check different spline settings and a more flexible adjustment for baseline eGFR. I'd also test how sensitive the results are to early follow-up and missing data.
 
 ### 49. What experiment would directly test your biological hypothesis?
 
-I would expose proximal tubular cells to albumin alone, urate alone, and both, then measure NLRP3 inflammasome signaling and tubular injury. Separate soluble-urate and crystal-exposure conditions would help identify the relevant pathway.
+I'd compare tubular cells exposed to albumin alone, urate alone, and both, then measure injury and inflammation. I'd also keep soluble urate and crystals separate.
 
 ### 50. How would you design a trial to test the treatment hypothesis?
 
-I would prespecify proteinuria and baseline eGFR strata in a randomized trial of urate-lowering therapy. The trial would test whether kidney outcomes differ by these strata and assess treatment safety.
+I'd prespecify proteinuria and baseline eGFR strata in a randomized trial of urate-lowering therapy. The key test would be whether treatment works differently with and without proteinuria, while tracking kidney outcomes and safety.

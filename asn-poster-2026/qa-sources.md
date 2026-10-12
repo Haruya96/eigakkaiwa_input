@@ -1,6 +1,6 @@
 # Sources for the poster practice materials
 
-Updated on 11 October 2026 using the completed poster and manuscript draft. The app contains 100 phrase cards and 50 questions with short oral answers. Questions 16-50 cover discussion. The existing card numbers and topics are retained.
+Updated on 12 October 2026. Overview, methods, and results use the completed poster and manuscript draft. Discussion questions 16-50 and the Interpretation and Limitations phrase cards restore the pre-11 October wording with minor corrections. The app contains 100 phrase cards and 50 questions with short oral answers. Questions 16-50 cover discussion. The existing card numbers and topics are retained.
 
 ## Study sources
 
@@ -23,13 +23,17 @@ The main-analysis association P value of 0.220 follows the completed poster's ma
 
 ## Discussion literature
 
-1. Badve SV et al. *Effects of Allopurinol on the Progression of Chronic Kidney Disease.* N Engl J Med. 2020;382:2504-2513. [PubMed](https://pubmed.ncbi.nlm.nih.gov/32579811/). Questions 31-32 address CKD-FIX, which included participants with substantial albuminuria and did not demonstrate slower eGFR decline with allopurinol.
-2. Doria A et al. *Serum Urate Lowering with Allopurinol and Kidney Function in Type 1 Diabetes.* N Engl J Med. 2020;382:2493-2503. [Full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC7375708/). Question 31 also addresses PERL, which did not demonstrate kidney benefit from serum urate lowering with allopurinol.
-3. Liu D et al. *Megalin/Cubulin-Lysosome-mediated Albumin Reabsorption Is Involved in the Tubular Cell Activation of NLRP3 Inflammasome and Tubulointerstitial Inflammation.* J Biol Chem. 2015;290:18018-18028. [PubMed](https://pubmed.ncbi.nlm.nih.gov/26025362/). This is the albumin-overload experimental study cited in the completed poster and informs questions 16-18.
-4. Xiao J et al. *Soluble uric acid increases NALP3 inflammasome and interleukin-1β expression in human primary renal proximal tubule epithelial cells through the Toll-like receptor 4-mediated pathway.* Int J Mol Med. 2015;35:1347-1354. [PubMed](https://pubmed.ncbi.nlm.nih.gov/25813103/). This is the soluble-urate study cited in the completed poster and informs questions 18-19.
+1. Badve SV et al. *Effects of Allopurinol on the Progression of Chronic Kidney Disease.* N Engl J Med. 2020. [DOI](https://doi.org/10.1056/NEJMoa1915833), [PubMed](https://pubmed.ncbi.nlm.nih.gov/32579811/). Used for questions 31-32: no demonstrated slowing of GFR decline with allopurinol in the trial population; substantial albuminuria was already represented in CKD-FIX.
+2. Doria A et al. *Serum Urate Lowering with Allopurinol and Kidney Function in Type 1 Diabetes.* N Engl J Med. 2020. [Full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC7375708/). Used for question 31: sustained urate lowering did not demonstrate clinically meaningful kidney benefit in PERL's population.
+3. *Activation of the Nlrp3 inflammasome by mitochondrial reactive oxygen species: A novel mechanism of albumin-induced tubulointerstitial inflammation.* [Primary study](https://pmc.ncbi.nlm.nih.gov/articles/PMC4414121/). Experimental context for questions 17-18, not evidence of a demonstrated mechanism in this cohort.
+4. *Soluble uric acid increases NALP3 inflammasome and interleukin-1beta expression in human primary renal proximal tubule epithelial cells through the Toll-like receptor 4-mediated pathway.* [Primary study](https://pubmed.ncbi.nlm.nih.gov/25813103/). Experimental context for questions 18-19.
+5. *Peroxisome proliferator-activated receptor gamma prevents the production of NOD-like receptor family, pyrin domain containing 3 inflammasome and interleukin 1beta in HK-2 renal tubular epithelial cells stimulated by monosodium urate crystals.* [Primary study](https://pubmed.ncbi.nlm.nih.gov/26238426/). Crystal-exposure context for question 19; the cohort did not establish crystal deposition.
+
 
 ## Wording and study behavior
 
-Routine results and mechanism answers state their main point directly. Repeated appended disclaimers were removed. Dedicated questions about causality, biomarkers, treatment targets, prediction, and limitations retain direct answers to those questions. Mechanistic explanations remain hypotheses, and proposed studies are described in future or conditional terms.
+The previous conversational answers are retained. Only six repeated appended caveats are removed from ordinary explanations. Questions specifically addressing causality, biomarkers, treatment, prediction, and limitations retain their original answers. Mechanisms remain hypotheses, and future studies remain proposals.
 
-The English-only answers and their cloze hints are generated together. Numerical results remain visible in hints. The PWA cache version is updated for the revised materials. Existing Web mastery and voice settings use their current storage keys.
+The low-eGFR caution phrase now refers to limited subgroup precision instead of treating a negative slope difference as a reason for caution. The baseline-measurement phrase describes the measurements used in the analysis rather than claiming that no follow-up measurements were taken.
+
+English-only Q&A and cloze hints are regenerated together. Numerical results stay visible. Card numbers, question topics, and Web mastery and voice storage keys are preserved.

@@ -69,25 +69,25 @@ Sensitivity	one-plus or greater on dipstick	尿試験紙で1＋以上。	For the
 Sensitivity	classify 146 participants as positive	146人を陽性に分類する。	This stricter cutoff classified 146 participants as proteinuria-positive.
 Sensitivity	a similar overall pattern	全体として同様の傾向。	The sensitivity analysis showed a similar overall pattern.
 Sensitivity	produce similar results in the overall cohort	全体集団で同様の結果を示す。	The stricter proteinuria definition produced similar results in the overall cohort.
-Interpretation	identify individuals at greater risk	リスクの高い人を見分ける。	Proteinuria can help identify individuals with hyperuricemia at greater risk of kidney function decline.
-Interpretation	similar to the overall analysis	全体解析と同様である。	With baseline eGFR of 60 or higher, the association was similar to the overall analysis.
-Interpretation	increased susceptibility to urate-related inflammation	尿酸に関連する炎症への感受性の増加。	Proteinuria may reflect increased susceptibility to urate-related tubulointerstitial inflammation.
-Interpretation	a biologically plausible explanation	生物学的にもっともらしい説明。	NLRP3 inflammasome activation offers a biologically plausible explanation for the association.
+Interpretation	may identify a higher-risk group	リスクの高い群を見分ける手がかりとなり得る。	Proteinuria may identify a group in which elevated uric acid is more prognostically relevant.
+Interpretation	a context-dependent prognostic marker	状況によって予後的意義が異なる指標。	Serum uric acid may be a context-dependent prognostic marker.
+Interpretation	proteinuria may mark kidney injury	蛋白尿は腎障害を示しているかもしれない。	Proteinuria may mark underlying kidney injury.
+Interpretation	a biologically plausible explanation	生物学的にもっともらしい説明。	Tubular injury and inflammation offer a biologically plausible explanation.
 Interpretation	we did not test the mechanism	機序は検証していません。	We did not test that mechanism in this cohort.
 Interpretation	cannot establish causality	因果関係を証明できない。	Our observational analysis cannot establish causality.
 Interpretation	does not establish treatment benefit	治療効果を証明するものではない。	Our finding does not establish a benefit from urate-lowering treatment.
-Interpretation	need confirmation in other cohorts	他のコホートで確認が必要である。	Confirmation in other cohorts with quantitative albuminuria measurements would strengthen the evidence.
-Interpretation	interpret the low eGFR subgroup carefully	低eGFR群を慎重に解釈する。	The findings in the low-eGFR subgroup need confirmation in other cohorts.
-Interpretation	a possible clinical implication	考えられる臨床的示唆。	A possible clinical implication is to consider proteinuria when assessing kidney risk in individuals with hyperuricemia.
-Limitations	measured only at baseline	ベースライン時のみ測定された。	Proteinuria was assessed only at baseline in this analysis.
+Interpretation	need confirmation in other cohorts	他のコホートで確認が必要である。	This finding needs confirmation in cohorts with quantitative albuminuria data.
+Interpretation	interpret the low eGFR subgroup carefully	低eGFR群を慎重に解釈する。	We interpret the low eGFR subgroup carefully because subgroup estimates have limited precision.
+Interpretation	a possible clinical implication	考えられる臨床的示唆。	A possible clinical implication is to consider proteinuria when interpreting serum uric acid.
+Limitations	use only baseline measurements	ベースラインの測定値のみを用いる。	We used only baseline uric acid and proteinuria measurements in the analysis.
 Limitations	a single dipstick test	単回の尿試験紙検査。	A single dipstick test cannot establish persistent proteinuria.
-Limitations	miss low-grade albuminuria	軽度のアルブミン尿を見逃す。	Dipstick testing may miss low-grade albuminuria.
-Limitations	residual confounding	残余交絡。	Residual confounding by diet, diuretics, or renin-angiotensin system inhibitors remains possible.
+Limitations	misclassify low-grade albuminuria	軽度のアルブミン尿を誤分類する。	Dipstick testing may misclassify low-grade albuminuria.
+Limitations	residual confounding	残余交絡。	Residual confounding by factors such as diet or medication is possible.
 Limitations	selection bias from missing follow-up	追跡データ欠損に伴う選択バイアス。	Excluding people without follow-up eGFR data may cause selection bias.
 Limitations	wide confidence intervals at the extremes	両端で広い信頼区間。	The confidence intervals were wider at the extremes of the uric acid range.
-Limitations	limited subgroup precision	サブグループ推定の精度に限界がある。	Relatively few participants with proteinuria limit the precision of subgroup estimates.
+Limitations	limited subgroup precision	サブグループ推定の精度に限界がある。	The small proteinuria-positive group limits subgroup precision.
 Limitations	creatinine-based eGFR	クレアチニンに基づくeGFR。	Creatinine-based eGFR can be affected by factors other than filtration.
-Limitations	limited generalizability	一般化可能性に限界がある。	Generalizability beyond this disaster-affected population is uncertain.
+Limitations	limited generalizability	一般化可能性に限界がある。	The disaster-affected regional cohort may have limited generalizability.
 Limitations	an observational association	観察された関連性。	An observational association should not be interpreted as a treatment effect.
 Q&A	Thank you for that question.	ご質問ありがとうございます。	Thank you for that question about our proteinuria definition.
 Q&A	To clarify, we defined ...	明確にすると、私たちは…と定義しました。	To clarify, we defined proteinuria as trace or greater in the main analysis.

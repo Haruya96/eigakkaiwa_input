@@ -1,6 +1,6 @@
 # ASN Kidney Week 2026：ポスター発表用英語表現100題
 
-2026年10月11日に完成版ポスターと「下書き_20261005.docx」を照合して更新しました。結果と結論の表現は完成版ポスターに合わせ、機序や解析の詳細は論文原稿を参照しています。通常の説明に繰り返し付いていた防御的な但し書きを削り、限界そのものを練習するカードは残しています。
+2026年10月12日に考察・限界の英語表現を10月11日の改訂前に戻しました。通常の説明に重ねた不要な但し書きと、明らかに不適切な説明だけを微修正しています。対象者、方法、結果の表現は完成版ポスターに合わせた10月11日の改訂を維持しています。
 
 1カード＝①英語表現 → ②日本語訳 → ③発表に関連する短い例文。音声順は①1回 → ②1回 → ③2回です。
 
@@ -76,25 +76,25 @@
 | 068 | Sensitivity | classify 146 participants as positive | 146人を陽性に分類する。 | This stricter cutoff classified 146 participants as proteinuria-positive. |
 | 069 | Sensitivity | a similar overall pattern | 全体として同様の傾向。 | The sensitivity analysis showed a similar overall pattern. |
 | 070 | Sensitivity | produce similar results in the overall cohort | 全体集団で同様の結果を示す。 | The stricter proteinuria definition produced similar results in the overall cohort. |
-| 071 | Interpretation | identify individuals at greater risk | リスクの高い人を見分ける。 | Proteinuria can help identify individuals with hyperuricemia at greater risk of kidney function decline. |
-| 072 | Interpretation | similar to the overall analysis | 全体解析と同様である。 | With baseline eGFR of 60 or higher, the association was similar to the overall analysis. |
-| 073 | Interpretation | increased susceptibility to urate-related inflammation | 尿酸に関連する炎症への感受性の増加。 | Proteinuria may reflect increased susceptibility to urate-related tubulointerstitial inflammation. |
-| 074 | Interpretation | a biologically plausible explanation | 生物学的にもっともらしい説明。 | NLRP3 inflammasome activation offers a biologically plausible explanation for the association. |
+| 071 | Interpretation | may identify a higher-risk group | リスクの高い群を見分ける手がかりとなり得る。 | Proteinuria may identify a group in which elevated uric acid is more prognostically relevant. |
+| 072 | Interpretation | a context-dependent prognostic marker | 状況によって予後的意義が異なる指標。 | Serum uric acid may be a context-dependent prognostic marker. |
+| 073 | Interpretation | proteinuria may mark kidney injury | 蛋白尿は腎障害を示しているかもしれない。 | Proteinuria may mark underlying kidney injury. |
+| 074 | Interpretation | a biologically plausible explanation | 生物学的にもっともらしい説明。 | Tubular injury and inflammation offer a biologically plausible explanation. |
 | 075 | Interpretation | we did not test the mechanism | 機序は検証していません。 | We did not test that mechanism in this cohort. |
 | 076 | Interpretation | cannot establish causality | 因果関係を証明できない。 | Our observational analysis cannot establish causality. |
 | 077 | Interpretation | does not establish treatment benefit | 治療効果を証明するものではない。 | Our finding does not establish a benefit from urate-lowering treatment. |
-| 078 | Interpretation | need confirmation in other cohorts | 他のコホートで確認が必要である。 | Confirmation in other cohorts with quantitative albuminuria measurements would strengthen the evidence. |
-| 079 | Interpretation | interpret the low eGFR subgroup carefully | 低eGFR群を慎重に解釈する。 | The findings in the low-eGFR subgroup need confirmation in other cohorts. |
-| 080 | Interpretation | a possible clinical implication | 考えられる臨床的示唆。 | A possible clinical implication is to consider proteinuria when assessing kidney risk in individuals with hyperuricemia. |
-| 081 | Limitations | measured only at baseline | ベースライン時のみ測定された。 | Proteinuria was assessed only at baseline in this analysis. |
+| 078 | Interpretation | need confirmation in other cohorts | 他のコホートで確認が必要である。 | This finding needs confirmation in cohorts with quantitative albuminuria data. |
+| 079 | Interpretation | interpret the low eGFR subgroup carefully | 低eGFR群を慎重に解釈する。 | We interpret the low eGFR subgroup carefully because subgroup estimates have limited precision. |
+| 080 | Interpretation | a possible clinical implication | 考えられる臨床的示唆。 | A possible clinical implication is to consider proteinuria when interpreting serum uric acid. |
+| 081 | Limitations | use only baseline measurements | ベースラインの測定値のみを用いる。 | We used only baseline uric acid and proteinuria measurements in the analysis. |
 | 082 | Limitations | a single dipstick test | 単回の尿試験紙検査。 | A single dipstick test cannot establish persistent proteinuria. |
-| 083 | Limitations | miss low-grade albuminuria | 軽度のアルブミン尿を見逃す。 | Dipstick testing may miss low-grade albuminuria. |
-| 084 | Limitations | residual confounding | 残余交絡。 | Residual confounding by diet, diuretics, or renin-angiotensin system inhibitors remains possible. |
+| 083 | Limitations | misclassify low-grade albuminuria | 軽度のアルブミン尿を誤分類する。 | Dipstick testing may misclassify low-grade albuminuria. |
+| 084 | Limitations | residual confounding | 残余交絡。 | Residual confounding by factors such as diet or medication is possible. |
 | 085 | Limitations | selection bias from missing follow-up | 追跡データ欠損に伴う選択バイアス。 | Excluding people without follow-up eGFR data may cause selection bias. |
 | 086 | Limitations | wide confidence intervals at the extremes | 両端で広い信頼区間。 | The confidence intervals were wider at the extremes of the uric acid range. |
-| 087 | Limitations | limited subgroup precision | サブグループ推定の精度に限界がある。 | Relatively few participants with proteinuria limit the precision of subgroup estimates. |
+| 087 | Limitations | limited subgroup precision | サブグループ推定の精度に限界がある。 | The small proteinuria-positive group limits subgroup precision. |
 | 088 | Limitations | creatinine-based eGFR | クレアチニンに基づくeGFR。 | Creatinine-based eGFR can be affected by factors other than filtration. |
-| 089 | Limitations | limited generalizability | 一般化可能性に限界がある。 | Generalizability beyond this disaster-affected population is uncertain. |
+| 089 | Limitations | limited generalizability | 一般化可能性に限界がある。 | The disaster-affected regional cohort may have limited generalizability. |
 | 090 | Limitations | an observational association | 観察された関連性。 | An observational association should not be interpreted as a treatment effect. |
 | 091 | Q&A | Thank you for that question. | ご質問ありがとうございます。 | Thank you for that question about our proteinuria definition. |
 | 092 | Q&A | To clarify, we defined ... | 明確にすると、私たちは…と定義しました。 | To clarify, we defined proteinuria as trace or greater in the main analysis. |
